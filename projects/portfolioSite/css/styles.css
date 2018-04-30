@@ -1,0 +1,277 @@
+body {
+	box-sizing: border-box;
+	min-height: 100vh;
+	font-family: sans-serif;
+	margin: 1rem;
+}
+
+:root {
+	--almost-black: #2d3c49;
+	--hot-pink: #c62079;
+	--light-gray:  #a0b3c4;
+}
+
+/* =================== HEADER ==================== */
+
+header {
+	border 1px solid pink;
+	border-bottom: 3px solid var(--hot-pink);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0.5rem;
+}
+
+.title {
+	border 1px solid blue;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 1.2rem;
+	font-weight: 400;
+	letter-spacing: 1.3px;
+	margin: 0 0 0.2rem 0;
+	color: var(--almost-black);
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.1rem;
+	font-weight: 300;
+	margin: 0.2rem 0 0 0;
+	color: var(--almost-black);
+	text-transform: uppercase;
+}
+
+header figure {
+	border 1px solid purple;
+	margin: 0;
+	padding: 0;
+	height: 100px;
+	width: 150px;
+}
+
+.logo {
+	margin-top: -110px;
+	margin-left: -30px;
+	margin-top: -50px;
+}
+
+/* ==================== HERO IMAGE ==================== */
+
+.hero {
+	margin: 2rem 0;
+	padding: 0;
+	position: relative;
+	height: 400px;
+
+}
+
+.hero-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: invert(.2);
+}
+
+/* =============== ABOUT ME SECTION ======================= */
+
+.about-wrapper {
+	position relative;
+}
+
+
+
+.about-grid {
+	display: grid;
+}
+
+.about-text {
+	order: 2;
+	border 1px solid blue;
+}
+
+q {
+	order: 1;
+	border 1px solid red;
+	display: block;
+
+	padding: 1rem;
+
+	justify-self: center;
+	align-self: center;
+
+	font-family: cursive;
+	font-size: 1.4rem;
+}
+
+
+.about-section {
+	border-bottom 1px solid pink;
+	margin: 2.5rem 0 50px 0;
+}
+
+.about-section::before {
+	content: '';
+	position: absolute;
+	display: block;
+
+	height: 400px;
+	width: 3px;
+	background: linear-gradient(#c62079, #fef8fb);
+}
+
+.about-section h2 {
+	margin-top: 1rem;
+
+	margin-bottom: 1rem;
+
+	color: var(--light-gray);
+	font-size: 2rem;
+	text-transform: inherit;
+	font-weight: 300;
+	padding-left: 1rem;
+}
+
+.about-section p {
+	color: var(--almost-black);
+	padding: 0 1rem;
+	line-height: 1.5;
+}
+
+/* =============== FEATURED WORK SECTION ================== */
+
+.featured-work {
+	margin: 2.5rem 0;
+	padding-bottom: 1rem;
+}
+
+.featured-work h2 {
+	text-transform: inherit;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	font-size: 2rem;
+	color: var(--light-gray);
+	font-weight: 300;
+}
+
+.work-examples {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 25px;
+}
+
+.work-examples figure {
+	margin: 0;
+	border: 1px solid rgba(0, 0, 0, .3);
+	padding-bottom: 1rem;
+}
+
+.work-example {
+	max-width: 100%;
+}
+
+figcaption {
+	text-align: center;
+}
+
+figcaption h3 {
+	color: var(--almost-black);
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	color: var(--almost-black);
+}
+
+a:hover {
+	color: var(--hot-pink);
+}
+
+
+/* ================= MEDIA QUERIES =================== */
+
+@media (min-width: 550px){
+	h1 {
+		font-size: 1.8rem;
+		letter-spacing: 3px;
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+		letter-spacing: 1.1px;
+		font-weight: normal;
+	}
+}
+
+
+@media (min-width: 680px){
+	h1 {
+		font-size: 2.6rem;
+	}
+
+	.about-section {
+		margin-bottom: 90px;
+	}
+
+}
+
+@media (min-width: 800px){
+
+	.about-section::before {
+		height: 280px;
+	}
+
+	.about-section h2 {
+		margin-bottom: 0;
+	}
+
+	.about-grid {
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 20px;
+
+	}
+
+	.about-text {
+		order: 0;
+		grid-column: 1 / 4;
+	}
+
+	q {
+		order: 0;
+		border 1px solid red;
+		
+		grid-column: 4 / -1;
+		justify-self: center;
+		align-self: center;
+
+		font-family: cursive;
+		font-size: 1.4rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
