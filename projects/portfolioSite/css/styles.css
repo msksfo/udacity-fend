@@ -5,6 +5,7 @@ body {
 	margin: 1rem;
 }
 
+
 :root {
 	--almost-black: #2d3c49;
 	--hot-pink: #c62079;
@@ -20,12 +21,14 @@ header {
 	padding: 1rem 0.5rem;
 }
 
+
 .title {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: center;
 }
+
 
 h1 {
 	font-size: 1.2rem;
@@ -36,6 +39,7 @@ h1 {
 	text-transform: uppercase;
 }
 
+
 h2 {
 	font-size: 1.1rem;
 	font-weight: 300;
@@ -44,12 +48,14 @@ h2 {
 	text-transform: uppercase;
 }
 
+
 header figure {
 	margin: 0;
 	padding: 0;
 	height: 100px;
 	width: 150px;
 }
+
 
 .logo {
 	margin-top: -110px;
@@ -65,6 +71,7 @@ header figure {
 	position: relative;
 	height: 400px;
 }
+
 
 .hero-img {
 	position: absolute;
@@ -82,9 +89,11 @@ header figure {
 	display: grid;
 }
 
+
 .about-text {
 	order: 2;
 }
+
 
 q {
 	order: 1;
@@ -100,6 +109,7 @@ q {
 	margin: 2.5rem 0 50px 0;
 }
 
+
 .about-section::before {
 	content: '';
 	position: absolute;
@@ -109,6 +119,7 @@ q {
 	background: linear-gradient(#c62079, #fef8fb);
 }
 
+
 .about-section h2 {
 	margin: 1rem 0;
 	color: var(--light-gray);
@@ -117,6 +128,7 @@ q {
 	font-weight: 300;
 	padding-left: 1rem;
 }
+
 
 .about-section p {
 	color: var(--almost-black);
@@ -131,6 +143,7 @@ q {
 	padding-bottom: 1rem;
 }
 
+
 .featured-work h2 {
 	text-transform: inherit;
 	margin-bottom: 1rem;
@@ -140,11 +153,13 @@ q {
 	font-weight: 300;
 }
 
+
 .work-examples {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 25px;
 }
+
 
 .work-examples figure {
 	margin: 0;
@@ -152,13 +167,16 @@ q {
 	padding-bottom: 1rem;
 }
 
+
 .work-example {
 	max-width: 100%;
 }
 
+
 figcaption {
 	text-align: center;
 }
+
 
 figcaption h3 {
 	color: var(--almost-black);
@@ -167,10 +185,12 @@ figcaption h3 {
 	text-transform: uppercase;
 }
 
+
 a {
 	text-decoration: none;
 	color: var(--almost-black);
 }
+
 
 a:hover {
 	color: var(--hot-pink);
@@ -186,6 +206,7 @@ a:hover {
 		font-weight: 300;
 	}
 
+
 	h2 {
 		font-size: 1.4rem;
 		letter-spacing: 1.1px;
@@ -199,6 +220,7 @@ a:hover {
 		font-size: 2.6rem;
 	}
 
+
 	.about-section {
 		margin-bottom: 90px;
 	}
@@ -211,9 +233,11 @@ a:hover {
 		height: 280px;
 	}
 
+
 	.about-section h2 {
 		margin-bottom: 0;
 	}
+
 
 	.about-grid {
 		grid-template-columns: repeat(5, 1fr);
@@ -221,10 +245,12 @@ a:hover {
 
 	}
 
+
 	.about-text {
 		order: 0;
 		grid-column: 1 / 4;
 	}
+
 
 	q {
 		order: 0;
