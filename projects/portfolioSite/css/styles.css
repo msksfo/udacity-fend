@@ -1,6 +1,7 @@
 body {
 	box-sizing: border-box;
 	min-height: 100vh;
+	max-width: 1280px;
 	font-family: sans-serif;
 	margin: 1rem;
 }
@@ -255,6 +256,13 @@ a:hover {
 		grid-column: 4 / -1;
 		justify-self: center;
 		align-self: center;
+	}
+}
+
+@media (min-width: 1280px){
+
+	body {
+		margin: 1rem auto;
 	}
 }
 
