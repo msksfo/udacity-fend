@@ -85,6 +85,23 @@ header figure {
 
 /* =============== ABOUT ME SECTION ======================= */
 
+.about-section {
+	margin: 2.5rem 0 50px 0;
+	position: relative; /* use position relative for the pseudo element to work properly */
+}
+
+
+/* this creates the left border on the about section */
+.about-section::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(#c62079, #fef8fb);
+}
+
+
 .about-grid {
 	display: grid;
 }
@@ -102,21 +119,6 @@ q {
 	justify-self: center;
 	align-self: center;
 	font: 1.4rem cursive;
-}
-
-
-.about-section {
-	margin: 2.5rem 0 50px 0;
-}
-
-
-.about-section::before {
-	content: '';
-	position: absolute;
-	display: block;
-	height: 400px;
-	width: 3px;
-	background: linear-gradient(#c62079, #fef8fb);
 }
 
 
@@ -216,23 +218,19 @@ a:hover {
 
 
 @media (min-width: 680px){
+
 	h1 {
 		font-size: 2.6rem;
 	}
 
 
 	.about-section {
-		margin-bottom: 90px;
+		margin: 90px 0;
 	}
 
 }
 
 @media (min-width: 800px){
-
-	.about-section::before {
-		height: 280px;
-	}
-
 
 	.about-section h2 {
 		margin-bottom: 0;
