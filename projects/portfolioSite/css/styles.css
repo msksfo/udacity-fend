@@ -1,7 +1,7 @@
 body {
 	box-sizing: border-box;
 	min-height: 100vh;
-	max-width: 1280px;
+	max-width: 1200px;
 	font-family: sans-serif;
 	margin: 1rem;
 }
@@ -259,7 +259,7 @@ a:hover {
 	}
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1200px){
 
 	body {
 		margin: 1rem auto;
