@@ -17,11 +17,9 @@ body {
 
 header {
 	border-bottom: 3px solid var(--hot-pink);
-
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 0.5rem;
-
 	padding: 1rem 0;
 }
 
