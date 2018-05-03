@@ -11,6 +11,8 @@ body {
 	--almost-black: #2d3c49;
 	--hot-pink: #c62079;
 	--light-gray:  #a0b3c4;
+	--active-link: #5f8c4e;
+	--visited-link: #e974b3;
 }
 
 /* =================== HEADER ==================== */
@@ -191,16 +193,19 @@ figcaption h3 {
 	text-transform: uppercase;
 }
 
-
 a {
 	text-decoration: none;
 	color: var(--almost-black);
 }
 
 
-a:hover,
-a:focus {
+a:focus,
+a:hover {
 	color: var(--hot-pink);
+}
+
+a:active {
+	color: var(--active-link);
 }
 
 
