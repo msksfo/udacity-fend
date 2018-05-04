@@ -53,7 +53,7 @@ h2 {
 }
 
 
-header figure {
+.logo-figure {
 	margin: 0;
 	padding: 0;
 	width: 100px;
@@ -146,13 +146,13 @@ q {
 
 /* =============== FEATURED WORK SECTION ================== */
 
-.featured-work {
+.featured-work-section {
 	margin: 2.5rem 0;
 	padding-bottom: 1rem;
 }
 
 
-.featured-work h2 {
+.featured-work-section h2 {
 	text-transform: inherit;
 	margin-bottom: 1rem;
 	padding-left: 1rem;
@@ -186,25 +186,27 @@ figcaption {
 }
 
 
-figcaption h3 {
+.work-example-title {
 	color: var(--almost-black);
 	font-size: 1.5rem;
 	font-weight: 400;
 	text-transform: uppercase;
 }
 
-a {
+
+.work-example-link {
 	text-decoration: none;
 	color: var(--almost-black);
 }
 
 
-a:focus,
-a:hover {
+.work-example-link:focus,
+.work-example-link:hover {
 	color: var(--hot-pink);
 }
 
-a:active {
+
+.work-example-link:active {
 	color: var(--active-link);
 }
 
@@ -273,19 +275,3 @@ a:active {
 		margin: 0 auto;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
