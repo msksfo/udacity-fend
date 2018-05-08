@@ -1,3 +1,4 @@
+
 // cards is an array of the li's
 const cards = document.querySelectorAll('.card');
 
@@ -22,6 +23,17 @@ function shuffle(array) {
     return array;
 }
 
+// disable right click for Alex's photos
+function disableRightClick(){
+    const images = document.querySelectorAll('.photo');
+    for (let i = 0; i < images.length; i++){
+        images[i].oncontextmenu = function(){
+            return false;
+        }
+    }
+}
+
+
 /* shuffle the cards, and populate the board with the images & alt text */
 function populateGameBoard(shuffleFunction, arr) {
     let shuffled = shuffleFunction(arr);
@@ -31,12 +43,16 @@ function populateGameBoard(shuffleFunction, arr) {
     for (let i = 0; i < lis.length; i++){
         let img = document.createElement('img');
         img.src = `images/${shuffled[i][0]}`;
+        img.classList.add('photo'); 
         img.alt = `${shuffled[i][1]}`;
         lis[i].appendChild(img);
     }
+
+    disableRightClick();
 }
 
 populateGameBoard(shuffle, photos);
+
 
 
 /*
