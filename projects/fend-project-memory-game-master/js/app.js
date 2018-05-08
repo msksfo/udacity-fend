@@ -1,3 +1,4 @@
+/* ====================== GLOBAL VARIABLES ======================= */
 
 // cards is an array of the li's
 const cards = document.querySelectorAll('.card');
@@ -8,6 +9,13 @@ each array in photos holds the img src attribute and the alt text
 */
 const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO'], ['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']];
 
+ const openCards = [];
+ let matches = 0;
+ let moves = 0;
+ let start;
+ let end;
+
+/* ========================= FUNCTIONS ============================== */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -52,8 +60,6 @@ function populateGameBoard(shuffleFunction, arr) {
     disableRightClick();
 }
 
-populateGameBoard(shuffle, photos);
-
 
 
 /*
@@ -67,24 +73,6 @@ populateGameBoard(shuffle, photos);
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
- const openCards = [];
- let matches = 0;
- let moves = 0;
-
- cards.forEach(value => value.addEventListener('click', function(e){
-     // get which card specifically was clicked
-     let target = e.target;
-
-     // count how many moves the user needed to win the game
-     moves += 1;
-   
-     showCard(target);
-     checkForMatch(openCards);
-     if (openCards.length === 16){
-         checkForWin(matches, moves);
-     }
- }));
- 
 
  function showCard(card){
      /* add the open-card class, which transitions the width of the cover to 0, allowing the photo to be seen. add the card to the array of open cards */
@@ -125,25 +113,27 @@ populateGameBoard(shuffle, photos);
  function checkForWin(numMatches, numMoves){
      /* if there are eight matching pairs, the user has won the game */
     if (numMatches === 8){
-        console.log(`Congratulations! You won the game in ${numMoves / 2} moves`);
+        // stop the timer
+        end = new Date();
+
+        // calculate the time user took to complete the game
+        const seconds = Math.round(Math.abs((start.getTime() - end.getTime()) / 1000));
+
+        console.log(`Congratulations! You won the game in ${numMoves / 2} moves in ${seconds} seconds`);
     } 
  }
-
- 
-
-document.querySelector('.fa-repeat').addEventListener('click', function(){
-    startOver(populateGameBoard, shuffle, photos);
-});
    
 
 function startOver(repopulate, reshuffle, arr){
    // hide the images 
    hideImages();
 
-   // reset the game global values
+   // reset the global game values
    matches = 0;
    moves = 0;
    openCards.length = 0;
+   start = '';
+   end = '';
 
    // use a timeout to allow the transition in the hideImages function to complete
    setTimeout(function(){
@@ -156,9 +146,9 @@ function startOver(repopulate, reshuffle, arr){
 
     // shuffle the images and repopulate the board
     repopulate(reshuffle, arr);
-   }, 1000);
 
-    
+   }, 1000);
+ 
 }
 
 function hideImages(){
@@ -166,3 +156,35 @@ function hideImages(){
     const cards = document.querySelectorAll('.card');
     cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
 }
+
+
+/* ============================ EVENT LISTENERS ============================== */
+
+cards.forEach(value => value.addEventListener('click', function(e){
+    // get which card specifically was clicked
+    let target = e.target;
+
+    // count how many moves the user needed to win the game
+    moves += 1;
+
+   // start the timer with the first click
+    if (moves === 1){
+       start = new Date
+   }
+
+    showCard(target);
+    checkForMatch(openCards);
+    if (openCards.length === 16){
+        checkForWin(matches, moves);
+    }
+}));
+
+
+document.querySelector('.fa-repeat').addEventListener('click', function(){
+    startOver(populateGameBoard, shuffle, photos);
+});
+
+/* ================= GAME INITIALIZATION ================ */
+
+
+populateGameBoard(shuffle, photos);
