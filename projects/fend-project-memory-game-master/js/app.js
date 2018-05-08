@@ -2,7 +2,8 @@
 // cards is an array of the li's
 const cards = document.querySelectorAll('.card');
 
-/* each array in photos holds the img src attribute and the alt text
+/* 
+each array in photos holds the img src attribute and the alt text
     - BT-13 photo by Owen Leipelt. All others by TouchNGo Aviation Photography
 */
 const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO'], ['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']];
@@ -68,19 +69,25 @@ populateGameBoard(shuffle, photos);
 
  const openCards = [];
  let matches = 0;
+ let moves = 0;
 
  cards.forEach(value => value.addEventListener('click', function(e){
+     // get which card specifically was clicked
      let target = e.target;
+
+     // count how many moves the user needed to win the game
+     moves += 1;
    
      showCard(target);
      checkForMatch(openCards);
      if (openCards.length === 16){
-         checkForWin(matches);
+         checkForWin(matches, moves);
      }
  }));
  
 
  function showCard(card){
+     /* add the open-card class, which transitions the width of the cover to 0, allowing the photo to be seen. add the card to the array of open cards */
     let openCard = card.nextElementSibling;
     openCards.push(openCard);
     card.classList.add('open-card');
@@ -91,6 +98,7 @@ populateGameBoard(shuffle, photos);
  }
 
  function checkForMatch(arr){
+     /* check the last two cards in the array of open cards. if they do not match, remove them from the array, and reapply the styling to hide the photo */
      let slicedArr;
 
      if (arr.length >= 2 && arr.length % 2 === 0){
@@ -114,8 +122,9 @@ populateGameBoard(shuffle, photos);
    
  }
 
- function checkForWin(numMatches){
+ function checkForWin(numMatches, numMoves){
+     /* if there are eight matching pairs, the user has won the game */
     if (numMatches === 8){
-        console.log('you won')
+        console.log(`Congratulations! You won the game in ${numMoves / 2} moves`);
     } 
  }
