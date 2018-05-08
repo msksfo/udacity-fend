@@ -67,8 +67,27 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+
+    position: relative;
 }
 
+/* hide the image until user clicks */
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    z-index: 5;
+    background: #02b3e4;
+    border-radius: 8px;
+    transition: width 0.67s ease;
+}
+
+.open-card {
+    width: 0;
+}
 
 img {
   width: 125px;
@@ -76,21 +95,9 @@ img {
   border-radius: 8px;
 }
 
-.deck .card.open {
-    transform: rotateY(0);
-    background: #02b3e4;
-    cursor: default;
-}
-
-.deck .card.show {
-    font-size: 33px;
-}
-
-.deck .card.match {
-    cursor: default;
-
-    background: #02ccba;
-    font-size: 33px;
+/* put a border on the images when user finds a match */
+.img-match {
+    border: 2px double hsl(253, 55%, 57%);
 }
 
 /*
