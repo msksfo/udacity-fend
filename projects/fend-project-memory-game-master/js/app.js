@@ -128,3 +128,41 @@ populateGameBoard(shuffle, photos);
         console.log(`Congratulations! You won the game in ${numMoves / 2} moves`);
     } 
  }
+
+ 
+
+document.querySelector('.fa-repeat').addEventListener('click', function(){
+    startOver(populateGameBoard, shuffle, photos);
+});
+   
+
+function startOver(repopulate, reshuffle, arr){
+   // hide the images 
+   hideImages();
+
+   // reset the game global values
+   matches = 0;
+   moves = 0;
+   openCards.length = 0;
+
+   // use a timeout to allow the transition in the hideImages function to complete
+   setTimeout(function(){
+    // remove the <img> from each .card
+    const lis = document.querySelectorAll('.card');
+   
+    for (let i = 0; i < lis.length; i++){
+        lis[i].removeChild(lis[i].children[1]);
+    }
+
+    // shuffle the images and repopulate the board
+    repopulate(reshuffle, arr);
+   }, 1000);
+
+    
+}
+
+function hideImages(){
+    // make sure the images are hidden
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
+}
