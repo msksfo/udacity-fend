@@ -11,8 +11,9 @@ const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'A
 
  const openCards = [];
  let matches = 0;
- let moves = 0
- console.log(moves);
+
+ let moves = 0;
+ 
  let start;
  let end;
 
@@ -123,6 +124,16 @@ function populateGameBoard(shuffleFunction, arr) {
         console.log(`Congratulations! You won the game in ${numMoves} moves in ${seconds} seconds`);
     } 
  }
+
+ function resetGlobals(){
+     // reset all the global values to zero/initial value
+     matches = 0;
+     openCards.length = 0;
+     start = '';
+     end = '';
+     moves = 0;
+     document.querySelector('.moves').innerHTML = moves;
+ }
    
 
 function startOver(repopulate, reshuffle, arr){
@@ -130,12 +141,8 @@ function startOver(repopulate, reshuffle, arr){
    hideImages();
 
    // reset the global game values
-   matches = 0;
-   document.querySelector('.moves').innerHTML = 0;
-   openCards.length = 0;
-   start = '';
-   end = '';
-
+   resetGlobals();
+   
    // use a timeout to allow the transition in the hideImages function to complete
    setTimeout(function(){
     // remove the <img> from each .card
@@ -158,6 +165,12 @@ function hideImages(){
     cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
 }
 
+function incrementMoves(){
+    // count the moves, and display number of moves to UI
+    moves += 1;
+    document.querySelector('.moves').innerHTML = moves;
+}
+
 
 /* ============================ EVENT LISTENERS ============================== */
 
@@ -165,10 +178,7 @@ cards.forEach(value => value.addEventListener('click', function(e){
     // get which card specifically was clicked
     let target = e.target;
 
-    // count how many moves the user needed to win the game
-    moves += 1;
-    //Number(document.querySelector('.moves').innerHTML)
-    document.querySelector ('.moves').innerHTML = moves;
+    incrementMoves();
 
    // start the timer with the first click
     if (moves === 1){
