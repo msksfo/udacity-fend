@@ -107,11 +107,16 @@ img {
  */
 
 .score-panel {
-    text-align: left;
-    width 345px;
-
+    border: 1px solid purple;
+    display: flex;
+    text-align: center;
     width: 660px;
     margin-bottom: 10px;
+}
+
+.score-panel > * {
+    border: 1px solid orange;
+    flex: 1 1 33.333%;
 }
 
 .score-panel .stars {
