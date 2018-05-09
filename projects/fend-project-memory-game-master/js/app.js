@@ -11,11 +11,12 @@ const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'A
 
  const openCards = [];
  let matches = 0;
-
  let moves = 0;
- 
  let start;
  let end;
+
+ let starIcons = document.querySelectorAll('.fa-star');
+ let index = starIcons.length - 1;
 
 /* ========================= FUNCTIONS ============================== */
 
@@ -133,6 +134,8 @@ function populateGameBoard(shuffleFunction, arr) {
      end = '';
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
+     starIcons.forEach(star => star.style.visibility = 'visible');
+     index = starIcons.length - 1;
  }
    
 
@@ -142,7 +145,7 @@ function startOver(repopulate, reshuffle, arr){
 
    // reset the global game values
    resetGlobals();
-   
+
    // use a timeout to allow the transition in the hideImages function to complete
    setTimeout(function(){
     // remove the <img> from each .card
@@ -171,6 +174,20 @@ function incrementMoves(){
     document.querySelector('.moves').innerHTML = moves;
 }
 
+function decrementStars(){
+    // deduct a star when user takes more than a certain number of moves 
+    starIcons[index].style.visibility = 'hidden';
+    index --;
+}
+
+function trackStars(mvs){
+    // track how many moves have been made, and decrement stars when appropriate
+    if (mvs === 30){
+        decrementStars();
+    } else if (mvs === 20){
+        decrementStars();
+    }
+}
 
 /* ============================ EVENT LISTENERS ============================== */
 
@@ -179,7 +196,7 @@ cards.forEach(value => value.addEventListener('click', function(e){
     let target = e.target;
 
     incrementMoves();
-
+    trackStars(moves);
    // start the timer with the first click
     if (moves === 1){
        start = new Date
