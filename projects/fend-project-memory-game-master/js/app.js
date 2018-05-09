@@ -1,7 +1,7 @@
 /* ====================== GLOBAL VARIABLES ======================= */
 
-// cards is an array of the li's
-const cards = document.querySelectorAll('.card');
+// covers is an array of the divs hide the photos
+const covers = document.querySelectorAll('.cover');
 
 /* 
 each array in photos holds the img src attribute and the alt text
@@ -13,11 +13,11 @@ const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'A
  let matches = 0;
  let moves = 0;
 
- let starIcons = document.querySelectorAll('.fa-star');
+ const starIcons = document.querySelectorAll('.fa-star');
  let index = starIcons.length - 1;
 
- let seconds = document.querySelector('.seconds');
- let minutes = document.querySelector('.minutes');
+ const seconds = document.querySelector('.seconds');
+ const minutes = document.querySelector('.minutes');
  let startTimer;
  let secondsCount = 0;
  let minutesCount = 0;
@@ -53,9 +53,9 @@ function disableRightClick(){
 
 /* shuffle the cards, and populate the board with the images & alt text */
 function populateGameBoard(shuffleFunction, arr) {
-    let shuffled = shuffleFunction(arr);
-    let gameBoard = document.querySelector('.deck');
-    let lis = gameBoard.children;
+    const shuffled = shuffleFunction(arr);
+    const gameBoard = document.querySelector('.deck');
+    const lis = gameBoard.children;
    
     for (let i = 0; i < lis.length; i++){
         let img = document.createElement('img');
@@ -84,9 +84,16 @@ function populateGameBoard(shuffleFunction, arr) {
 
  function showCard(card){
      /* add the open-card class, which transitions the width of the cover to 0, allowing the photo to be seen. add the card to the array of open cards */
-    let openCard = card.nextElementSibling;
+    const openCard = card.nextElementSibling;
     openCards.push(openCard);
     card.classList.add('open-card');
+ }
+
+ function handleMatch(elem1, elem2){
+    elem1.classList.add('img-match');
+    elem2.classList.add('img-match');
+    elem1.removeEventListener('click', showCard);
+    elem2.removeEventListener('click', showCard);
  }
 
  function checkForMatch(arr){
@@ -97,11 +104,12 @@ function populateGameBoard(shuffleFunction, arr) {
         slicedArr = arr.slice(arr.length - 2);
         if (slicedArr[0].src === slicedArr[1].src){
             matches += 1;
+            
             slicedArr[0].classList.add('img-match');
             slicedArr[1].classList.add('img-match');
         } else {
-            let cardOne = slicedArr[0];
-            let cardTwo = slicedArr[1];
+            const cardOne = slicedArr[0];
+            const cardTwo = slicedArr[1];
             
             setTimeout(function(){
                 cardOne.previousElementSibling.classList.remove('open-card');
@@ -242,9 +250,9 @@ function timer(){
 
 /* ============================ EVENT LISTENERS ============================== */
 
-cards.forEach(value => value.addEventListener('click', function(e){
+covers.forEach(value => value.addEventListener('click', function(e){
     // get which card specifically was clicked
-    let target = e.target;
+    const target = e.target;
 
     incrementMoves();
     trackStars(moves);
