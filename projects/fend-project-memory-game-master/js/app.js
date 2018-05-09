@@ -134,8 +134,11 @@ function populateGameBoard(shuffleFunction, arr) {
      end = '';
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
-     starIcons.forEach(star => star.style.visibility = 'visible');
      index = starIcons.length - 1;
+     starIcons.forEach(function(star){
+       star.style.visibility = 'visible';
+       star.style.color = 'goldenrod';
+     })
  }
    
 
@@ -184,8 +187,10 @@ function trackStars(mvs){
     // track how many moves have been made, and decrement stars when appropriate
     if (mvs === 30){
         decrementStars();
+        starIcons.forEach(star => star.style.color = 'blue');
     } else if (mvs === 20){
         decrementStars();
+        starIcons.forEach(star => star.style.color = 'green');
     }
 }
 

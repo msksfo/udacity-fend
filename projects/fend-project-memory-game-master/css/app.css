@@ -108,7 +108,9 @@ img {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width 345px;
+
+    width: 660px;
     margin-bottom: 10px;
 }
 
@@ -122,6 +124,7 @@ img {
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
+    color: goldenrod;
 }
 
 .score-panel .restart {
