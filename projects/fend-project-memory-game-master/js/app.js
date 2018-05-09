@@ -114,15 +114,26 @@ function populateGameBoard(shuffleFunction, arr) {
    
  }
 
- function checkForWin(numMatches, numMoves){
+ function checkForWin(numMatches){
      /* if there are eight matching pairs, the user has won the game */
     if (numMatches === 8){
         // stop the timer
         clearInterval(startTimer);
 
         // tell user their stats
-        console.log(`Congratulations! You won the game in ${numMoves} moves in ${totalSeconds} seconds`);
+        displayStats(starIcons, moves);
     } 
+ }
+
+ function displayStats(arr, numMoves){
+     // find out which star rating the user achieved, according to star color
+     if (arr[0].style.color === 'blue'){
+        console.log(`Congratulations! You achieved a one star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+     } else if (arr[0].style.color === 'green'){
+        console.log(`Congratulations! You achieved a two star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+     } else {
+        console.log(`Congratulations! You achieved a three star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+     }
  }
 
  function resetGlobals(){
@@ -251,7 +262,7 @@ cards.forEach(value => value.addEventListener('click', function(e){
 }));
 
 
-document.querySelector('.fa-repeat').addEventListener('click', function(){
+document.querySelector('#restart').addEventListener('click', function(){
     startOver(populateGameBoard, shuffle, photos);
 });
 
