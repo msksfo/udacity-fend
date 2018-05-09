@@ -11,7 +11,8 @@ const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'A
 
  const openCards = [];
  let matches = 0;
- let moves = 0;
+ let moves = 0
+ console.log(moves);
  let start;
  let end;
 
@@ -119,7 +120,7 @@ function populateGameBoard(shuffleFunction, arr) {
         // calculate the time user took to complete the game
         const seconds = Math.round(Math.abs((start.getTime() - end.getTime()) / 1000));
 
-        console.log(`Congratulations! You won the game in ${numMoves / 2} moves in ${seconds} seconds`);
+        console.log(`Congratulations! You won the game in ${numMoves} moves in ${seconds} seconds`);
     } 
  }
    
@@ -130,7 +131,7 @@ function startOver(repopulate, reshuffle, arr){
 
    // reset the global game values
    matches = 0;
-   moves = 0;
+   document.querySelector('.moves').innerHTML = 0;
    openCards.length = 0;
    start = '';
    end = '';
@@ -166,6 +167,8 @@ cards.forEach(value => value.addEventListener('click', function(e){
 
     // count how many moves the user needed to win the game
     moves += 1;
+    //Number(document.querySelector('.moves').innerHTML)
+    document.querySelector ('.moves').innerHTML = moves;
 
    // start the timer with the first click
     if (moves === 1){
