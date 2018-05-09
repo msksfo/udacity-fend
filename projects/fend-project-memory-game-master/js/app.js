@@ -12,11 +12,16 @@ const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'A
  const openCards = [];
  let matches = 0;
  let moves = 0;
- let start;
- let end;
 
  let starIcons = document.querySelectorAll('.fa-star');
  let index = starIcons.length - 1;
+
+ let seconds = document.querySelector('.seconds');
+ let minutes = document.querySelector('.minutes');
+ let startTimer;
+ let secondsCount = 0;
+ let minutesCount = 0;
+ let totalSeconds = 0;
 
 /* ========================= FUNCTIONS ============================== */
 
@@ -84,10 +89,6 @@ function populateGameBoard(shuffleFunction, arr) {
     card.classList.add('open-card');
  }
 
- function hideCard(e){
-    e.target.classList.remove('open-card');
- }
-
  function checkForMatch(arr){
      /* check the last two cards in the array of open cards. if they do not match, remove them from the array, and reapply the styling to hide the photo */
      let slicedArr;
@@ -117,32 +118,32 @@ function populateGameBoard(shuffleFunction, arr) {
      /* if there are eight matching pairs, the user has won the game */
     if (numMatches === 8){
         // stop the timer
-        end = new Date();
+        clearInterval(startTimer);
 
-        // calculate the time user took to complete the game
-        const seconds = Math.round(Math.abs((start.getTime() - end.getTime()) / 1000));
-
-        console.log(`Congratulations! You won the game in ${numMoves} moves in ${seconds} seconds`);
+        // tell user their stats
+        console.log(`Congratulations! You won the game in ${numMoves} moves in ${totalSeconds} seconds`);
     } 
  }
 
  function resetGlobals(){
-     // reset all the global values to zero/initial value
+     // reset all the global values, and the timer to zero/initial value
      matches = 0;
      openCards.length = 0;
-     start = '';
-     end = '';
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
      index = starIcons.length - 1;
      starIcons.forEach(function(star){
        star.style.visibility = 'visible';
        star.style.color = 'goldenrod';
-     })
+     });
+     resetTimer();
  }
    
 
 function startOver(repopulate, reshuffle, arr){
+    // stop the timer
+    clearInterval(startTimer)
+
    // hide the images 
    hideImages();
 
@@ -194,6 +195,40 @@ function trackStars(mvs){
     }
 }
 
+function resetTimer(){
+    // reset timer values in UI
+    seconds.innerHTML = '00';
+    minutes.innerHTML = '00';
+
+   // reset global timer variables
+    secondsCount = 0;
+    minutesCount = 0;
+    totalSeconds = 0;
+}
+
+function timer(){
+   secondsCount ++;
+   totalSeconds ++;
+
+   if (secondsCount < 10){
+    seconds.innerHTML = `0${secondsCount}`;
+   } else if (secondsCount === 60){
+    secondsCount = 0;
+    seconds.innerHTML = `0${secondsCount}`;
+
+    minutesCount += 1;
+    if (minutesCount < 10){
+        minutes.innerHTML = `0${minutesCount}`;
+    } else {
+        minutes.innerHTML = minutesCount;
+    }
+   } else {
+    seconds.innerHTML = secondsCount;
+   }
+  
+}
+
+
 /* ============================ EVENT LISTENERS ============================== */
 
 cards.forEach(value => value.addEventListener('click', function(e){
@@ -202,11 +237,12 @@ cards.forEach(value => value.addEventListener('click', function(e){
 
     incrementMoves();
     trackStars(moves);
+
    // start the timer with the first click
     if (moves === 1){
-       start = new Date
+       startTimer = setInterval(timer, 1000);
    }
-
+   
     showCard(target);
     checkForMatch(openCards);
     if (openCards.length === 16){
