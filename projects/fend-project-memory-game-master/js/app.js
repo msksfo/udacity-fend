@@ -7,7 +7,24 @@ const covers = document.querySelectorAll('.cover');
 each array in photos holds the img src attribute and the alt text
     - BT-13 photo by Owen Leipelt. All others by TouchNGo Aviation Photography
 */
-const photos = [['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO'], ['bt13.jpg', 'Alex and Tia flying in the BT-13.'], ['as.jpg', 'Alaska Airlines, more to love livery'],['ek.jpg', 'Emirates A380 taking off at SFO'], ['a2a.jpg', 'Belgian Airforce F-16'],['as-disney.jpg', 'Alaska Airlines, disney plane'], ['ei.jpg', 'Aer Lingus landing at SFO'], ['p51.jpg', 'P51 Mustang flying in an airshow'],['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']];
+const photos = [
+    ['bt13.jpg', 'Alex and Tia flying in the BT-13.'],
+    ['as.jpg', 'Alaska Airlines, more to love livery'],
+    ['ek.jpg', 'Emirates A380 taking off at SFO'],
+    ['a2a.jpg', 'Belgian Airforce F-16'],
+    ['as-disney.jpg', 'Alaska Airlines, disney plane'],
+    ['ei.jpg', 'Aer Lingus landing at SFO'],
+    ['p51.jpg', 'P51 Mustang flying in an airshow'],
+    ['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO'],
+    ['bt13.jpg', 'Alex and Tia flying in the BT-13.'],
+    ['as.jpg', 'Alaska Airlines, more to love livery'],
+    ['ek.jpg', 'Emirates A380 taking off at SFO'],
+    ['a2a.jpg', 'Belgian Airforce F-16'],
+    ['as-disney.jpg', 'Alaska Airlines, disney plane'],
+    ['ei.jpg', 'Aer Lingus landing at SFO'],
+    ['p51.jpg', 'P51 Mustang flying in an airshow'],
+    ['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']
+];
 
  const openCards = [];
  let matches = 0;
