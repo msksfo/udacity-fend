@@ -9,6 +9,7 @@ html {
     box-sizing: inherit;
 }
 
+
 html,
 body {
     width: 100%;
@@ -17,11 +18,13 @@ body {
     padding: 0;
 }
 
+
 body {
     background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
 
     font-family: 'Coda', cursive;
 }
+
 
 .container {
     display: flex;
@@ -29,6 +32,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
 
 h1 {
     font-family: 'Open Sans', sans-serif;
@@ -54,6 +58,7 @@ h1 {
     margin: 0 0 3em;
 }
 
+
 .deck .card {
     height: 125px;
     width: 125px;
@@ -74,6 +79,7 @@ h1 {
     position: relative;
 }
 
+
 /* hide the image until user clicks */
 .cover {
     position: absolute;
@@ -88,15 +94,18 @@ h1 {
     transition: width 0.67s ease;
 }
 
+
 .open-card {
     width: 0;
 }
+
 
 img {
   width: 125px;
   height: 125px;
   border-radius: 8px;
 }
+
 
 /* put a border on the images when user finds a match */
 .img-match {
@@ -115,10 +124,12 @@ img {
     margin-bottom: 10px;
 }
 
+
 .score-panel > * {
     border: 1px solid orange;
     flex: 1 1 33.333%;
 }
+
 
 .score-panel .stars {
     margin: 0;
@@ -127,14 +138,17 @@ img {
     margin: 0 5px 0 0;
 }
 
+
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
 }
 
+
 .fa-star {
     color: goldenrod;
 }
+
 
 .score-panel .restart {
     cursor: pointer;
