@@ -164,7 +164,6 @@ img {
  
 .modal-background {
     display: none;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -175,9 +174,11 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     padding: 1rem;
+
+    display block;
 }
+
 
 .modal-inner {
     font-size: 1.1rem;
@@ -196,16 +197,21 @@ img {
     transition: opacity 3s linear;
 }
 
+
+/* fade out the inner modal when the user clicks the quit button */
 .fade-out {
     opacity: 0;
 }
 
+
 .replay {
    display: grid;
    grid-template-columns: 1fr 1fr;
-    grid-gap: 4px;
+   grid-gap: 4px;
 }
 
+
+/* ==== MODAL BUTTON STYLES ==== */
 .button {
     padding: 8px 0;
     border-radius: 5px;
@@ -214,27 +220,64 @@ img {
     transition: all .2s ease;
 }
 
+
 .replay-button {
     border: 1px solid #082787;
     color: white;
     background-color: #082787;
 }
+
+
 .replay-button:hover {
     color: #082787;
     background-color: #e5ebfd;
 }
 
+
 .quit-button {
     border: 1px solid #641a06;;
     background-color: #a42a0a;
     color: white;
-
 }
+
 
 .quit-button:hover {
     background-color: #fde8e2;
     color: #641a06;
 }
+
+/* ====== MODAL FOOTER ===== */
+
+.modal-footer {
+    position: absolute;
+    width: calc(100% - 1rem);
+    left: 0;
+    right: 0;
+    bottom: .5rem;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.footer-button {
+    padding: 8px 12px;;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, .8);
+    color: white;
+    background-color: #b62442;
+}
+
+.footer-button:hover {
+    background-color: #da4463;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
 
 /* ==================== MEDIA QUERUES ======================= */
 

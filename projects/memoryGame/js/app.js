@@ -263,6 +263,10 @@ function timer(){
 
 function playAgain(){
     // to play the game again- hide the modal, shuffle cards, populate the board
+
+    document.querySelector('.modal-footer').classList.remove('fade-in');
+    document.querySelector('.modal-inner').classList.remove('fade-out');
+
     document.querySelector('.modal-background').style.display = 'none';
     startOver(populateGameBoard, shuffle, photos);
 }
@@ -270,6 +274,9 @@ function playAgain(){
 function quitGame() {
     // quit the game. leave user with aerial view of SFO
     document.querySelector('.modal-inner').classList.add('fade-out');
+
+    // give them one more chance to play again
+    document.querySelector('.modal-footer').classList.add('fade-in');
 }
 
 
@@ -311,6 +318,8 @@ document.querySelector('#restart').addEventListener('click', function(){
 document.querySelector('.replay-button').addEventListener('click', playAgain);
 
 document.querySelector('.quit-button').addEventListener('click', quitGame);
+
+document.querySelector('.play-again').addEventListener('click', playAgain);
 
 
 /* ================= GAME INITIALIZATION ================ */
