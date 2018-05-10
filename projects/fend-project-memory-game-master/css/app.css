@@ -130,10 +130,12 @@ img {
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
+}
+
+.fa-star {
     color: goldenrod;
 }
 
 .score-panel .restart {
-    float right;
     cursor: pointer;
 }

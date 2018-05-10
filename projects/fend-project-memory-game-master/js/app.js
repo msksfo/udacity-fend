@@ -68,20 +68,6 @@ function populateGameBoard(shuffleFunction, arr) {
     disableRightClick();
 }
 
-
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
-
-
  function showCard(card){
      /* add the open-card class, which transitions the width of the cover to 0, allowing the photo to be seen. add the card to the array of open cards */
     const openCard = card.nextElementSibling;
@@ -110,9 +96,9 @@ function populateGameBoard(shuffleFunction, arr) {
 
             arr.length = arr.length - 2;
         }
-     }
-   
+     } 
  }
+
 
  function checkForWin(numMatches){
      /* if there are eight matching pairs, the user has won the game */
@@ -125,18 +111,20 @@ function populateGameBoard(shuffleFunction, arr) {
     } 
  }
 
+
  function displayStats(arr, numMoves){
      // find out which star rating the user achieved, according to star color
      const length = arr.length - 1;
     
      if (arr[length].style.color === 'goldenrod'){
-        console.log(`Congratulations! You achieved a three star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+        console.log(`Congratulations! You achieved a three star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
      } else if (arr[length - 1].style.color === 'goldenrod' ){
-        console.log(`Congratulations! You achieved a two star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+        console.log(`Congratulations! You achieved a two star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
      } else {
-        console.log(`Congratulations! You achieved a one star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+        console.log(`Congratulations! You achieved a one star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
      }
  }
+
 
  function resetGlobals(){
      // reset all the global values, and the timer to zero/initial value
@@ -173,8 +161,8 @@ function startOver(repopulate, reshuffle, arr){
     repopulate(reshuffle, arr);
 
    }, 1000);
- 
 }
+
 
 function hideImages(){
     // make sure the images are hidden
@@ -182,11 +170,13 @@ function hideImages(){
     cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
 }
 
+
 function incrementMoves(){
     // count the moves, and display number of moves to UI
     moves += 1;
     document.querySelector('.moves').innerHTML = moves;
 }
+
 
 function decrementStars(){
     // deduct a star when user takes more than a certain number of moves 
@@ -194,14 +184,16 @@ function decrementStars(){
     index --;
 }
 
+
 function trackStars(mvs){
     // track how many moves have been made, and decrement stars when appropriate
-    if (mvs === 30){
+    if (mvs === 35){
         decrementStars();
-    } else if (mvs === 20){
+    } else if (mvs === 25){
         decrementStars();
     }
 }
+
 
 function resetTimer(){
     // reset timer values in UI
@@ -232,8 +224,14 @@ function timer(){
     }
    } else {
     seconds.innerHTML = secondsCount;
-   }
-  
+   } 
+}
+
+
+function main(){
+    // this is the function that begins the game 
+    starIcons.forEach(star => star.style.color = 'goldenrod');
+    populateGameBoard(shuffle, photos);
 }
 
 
@@ -263,7 +261,7 @@ document.querySelector('#restart').addEventListener('click', function(){
     startOver(populateGameBoard, shuffle, photos);
 });
 
+
 /* ================= GAME INITIALIZATION ================ */
 
-
-populateGameBoard(shuffle, photos);
+main();
