@@ -240,24 +240,36 @@ function resetTimer(){
 }
 
 function timer(){
+    // this function gets called once per second in setInterval
    secondsCount ++;
    totalSeconds ++;
 
-   if (secondsCount < 10){
+   if (secondsCount < 10){ // for seconds 1-9, pad the number with a 0
     seconds.innerHTML = `0${secondsCount}`;
    } else if (secondsCount === 60){
-    secondsCount = 0;
-    seconds.innerHTML = `0${secondsCount}`;
+        secondsCount = 0;
+        seconds.innerHTML = `0${secondsCount}`;
 
-    minutesCount += 1;
-    if (minutesCount < 10){
-        minutes.innerHTML = `0${minutesCount}`;
-    } else {
-        minutes.innerHTML = minutesCount;
-    }
+        minutesCount += 1;
+        if (minutesCount < 10){ // for minutes 1-9, pad the number with a 0
+            minutes.innerHTML = `0${minutesCount}`;
+        } else {
+            minutes.innerHTML = minutesCount;
+        }
    } else {
     seconds.innerHTML = secondsCount;
    } 
+}
+
+function playAgain(){
+    // to play the game again- hide the modal, shuffle cards, populate the board
+    document.querySelector('.modal-background').style.display = 'none';
+    startOver(populateGameBoard, shuffle, photos);
+}
+
+function quitGame() {
+    // quit the game. leave user with aerial view of SFO
+    document.querySelector('.modal-inner').classList.add('fade-out');
 }
 
 
@@ -289,19 +301,16 @@ covers.forEach(value => value.addEventListener('click', function(e){
     }
 }));
 
-
+// restart icon
 document.querySelector('#restart').addEventListener('click', function(){
     startOver(populateGameBoard, shuffle, photos);
 });
 
-document.querySelector('.replay-button').addEventListener('click', function(){
-    document.querySelector('.modal-background').style.display = 'none';
-    startOver(populateGameBoard, shuffle, photos);
-});
 
-document.querySelector('.quit-button').addEventListener('click', function(){
-    document.querySelector('.modal-inner').classList.add('fade-out');
-});
+// modal buttons to play again or quit
+document.querySelector('.replay-button').addEventListener('click', playAgain);
+
+document.querySelector('.quit-button').addEventListener('click', quitGame);
 
 
 /* ================= GAME INITIALIZATION ================ */
