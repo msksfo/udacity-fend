@@ -135,12 +135,13 @@ function populateGameBoard(shuffleFunction, arr) {
 
  function displayStats(arr, numMoves){
      // find out which star rating the user achieved, according to star color
-     if (arr[0].style.color === 'blue'){
-        console.log(`Congratulations! You achieved a one star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
-     } else if (arr[0].style.color === 'green'){
+     const length = arr.length - 1;
+     if (arr[length].style.color === 'rgba(218, 165, 32, 1)'){
+        console.log(`Congratulations! You achieved a three star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+     } else if (arr[length - 1].style.color === 'rgba(218, 165, 32, 1)'){
         console.log(`Congratulations! You achieved a two star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
      } else {
-        console.log(`Congratulations! You achieved a three star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
+        console.log(`Congratulations! You achieved a one star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
      }
  }
 
@@ -199,7 +200,8 @@ function incrementMoves(){
 
 function decrementStars(){
     // deduct a star when user takes more than a certain number of moves 
-    starIcons[index].style.visibility = 'hidden';
+    //starIcons[index].style.visibility = 'hidden';
+    starIcons[index].style.color = 'rgba(218, 165, 32, 0.2)';
     index --;
 }
 
@@ -207,10 +209,8 @@ function trackStars(mvs){
     // track how many moves have been made, and decrement stars when appropriate
     if (mvs === 30){
         decrementStars();
-        starIcons.forEach(star => star.style.color = 'blue');
     } else if (mvs === 20){
         decrementStars();
-        starIcons.forEach(star => star.style.color = 'green');
     }
 }
 
