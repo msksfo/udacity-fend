@@ -130,16 +130,32 @@ function populateGameBoard(shuffleFunction, arr) {
 
 
  function displayStats(arr, numMoves){
+     
+     const rating = document.querySelector('.rating-span');
+     const moves = document.querySelector('.moves-span');
+     const seconds = document.querySelector('.seconds-span');
+
      // find out which star rating the user achieved, according to star color
      const length = arr.length - 1;
+
+     setTimeout(function(){
+        document.querySelector('.modal-background').style.display = 'block';
+
+        if (arr[length].style.color === 'goldenrod'){
+            rating.innerHTML = 3;
+            moves.innerHTML = numMoves;
+            seconds.innerHTML = totalSeconds;
+         } else if (arr[length - 1].style.color === 'goldenrod' ){
+            rating.innerHTML = 2;
+            moves.innerHTML = numMoves;
+            seconds.innerHTML = totalSeconds;
+         } else {
+            rating.innerHTML = 1;
+            moves.innerHTML = numMoves;
+            seconds.innerHTML = totalSeconds;
+         }
+     }, 1300);
     
-     if (arr[length].style.color === 'goldenrod'){
-        console.log(`Congratulations! You achieved a three star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
-     } else if (arr[length - 1].style.color === 'goldenrod' ){
-        console.log(`Congratulations! You achieved a two star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
-     } else {
-        console.log(`Congratulations! You achieved a one star rating by completing the game in ${numMoves} moves, which took you ${totalSeconds} seconds`);
-     }
  }
 
 
@@ -276,6 +292,15 @@ covers.forEach(value => value.addEventListener('click', function(e){
 
 document.querySelector('#restart').addEventListener('click', function(){
     startOver(populateGameBoard, shuffle, photos);
+});
+
+document.querySelector('.replay-button').addEventListener('click', function(){
+    document.querySelector('.modal-background').style.display = 'none';
+    startOver(populateGameBoard, shuffle, photos);
+});
+
+document.querySelector('.quit-button').addEventListener('click', function(){
+    document.querySelector('.modal-inner').classList.add('fade-out');
 });
 
 

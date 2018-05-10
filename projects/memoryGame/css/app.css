@@ -12,8 +12,9 @@ html {
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+    /* changed height/width to min-height/min-width so that modal will work properly */
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -21,7 +22,7 @@ body {
 
 body {
     background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
-
+    position: relative;
     font-family: 'Coda', cursive;
 }
 
@@ -31,12 +32,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   
     border: 1px solid blue;
 }
 
 header {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 
@@ -60,29 +61,24 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
 
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    
 }
 
 
 .deck .card {
-    background: #2e3d49;
     background: white;
-
-    font-size: 0;
-    color: #ffffff;
     border-radius: 8px;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-
     position: relative;
+
+
+    display none;
 }
 
 
@@ -130,7 +126,8 @@ img {
     width 660px;
 
     width: 90%;
-    margin-bottom: 10px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
 
@@ -162,3 +159,88 @@ img {
 .score-panel .restart {
     cursor: pointer;
 }
+
+/* ============== modal styles ============== */
+ 
+.modal-background {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/sfo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 1rem;
+}
+
+.modal-inner {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 8px;
+    color: white;
+    border: 1px solid white;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 3s linear;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.replay {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+}
+
+.button {
+    padding: 8px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all .2s ease;
+}
+
+.replay-button {
+    border: 1px solid #082787;
+    color: white;
+    background-color: #082787;
+}
+.replay-button:hover {
+    color: #082787;
+    background-color: #e5ebfd;
+}
+
+.quit-button {
+    border: 1px solid #641a06;;
+    background-color: #a42a0a;
+    color: white;
+
+}
+
+.quit-button:hover {
+    background-color: #fde8e2;
+    color: #641a06;
+}
+
+/* ==================== MEDIA QUERUES ======================= */
+
+@media screen and (min-width: 850px){
+    .modal-inner {
+        width: 60%;
+    }
+}
+
