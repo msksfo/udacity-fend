@@ -89,13 +89,6 @@ function populateGameBoard(shuffleFunction, arr) {
     card.classList.add('open-card');
  }
 
- function handleMatch(elem1, elem2){
-    elem1.classList.add('img-match');
-    elem2.classList.add('img-match');
-    elem1.removeEventListener('click', showCard);
-    elem2.removeEventListener('click', showCard);
- }
-
  function checkForMatch(arr){
      /* check the last two cards in the array of open cards. if they do not match, remove them from the array, and reapply the styling to hide the photo */
      let slicedArr;
@@ -109,8 +102,7 @@ function populateGameBoard(shuffleFunction, arr) {
             slicedArr[1].classList.add('img-match');
         } else {
             const cardOne = slicedArr[0];
-            const cardTwo = slicedArr[1];
-            
+            const cardTwo = slicedArr[1];      
             setTimeout(function(){
                 cardOne.previousElementSibling.classList.remove('open-card');
                 cardTwo.previousElementSibling.classList.remove('open-card');
@@ -136,9 +128,10 @@ function populateGameBoard(shuffleFunction, arr) {
  function displayStats(arr, numMoves){
      // find out which star rating the user achieved, according to star color
      const length = arr.length - 1;
-     if (arr[length].style.color === 'rgba(218, 165, 32, 1)'){
+    
+     if (arr[length].style.color === 'goldenrod'){
         console.log(`Congratulations! You achieved a three star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
-     } else if (arr[length - 1].style.color === 'rgba(218, 165, 32, 1)'){
+     } else if (arr[length - 1].style.color === 'goldenrod' ){
         console.log(`Congratulations! You achieved a two star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
      } else {
         console.log(`Congratulations! You achieved a one star rating by completing the game in  ${numMoves} moves, which took you ${totalSeconds} seconds`);
@@ -152,10 +145,7 @@ function populateGameBoard(shuffleFunction, arr) {
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
      index = starIcons.length - 1;
-     starIcons.forEach(function(star){
-       star.style.visibility = 'visible';
-       star.style.color = 'goldenrod';
-     });
+     starIcons.forEach(star => star.style.color = 'goldenrod');
      resetTimer();
  }
    
@@ -200,7 +190,6 @@ function incrementMoves(){
 
 function decrementStars(){
     // deduct a star when user takes more than a certain number of moves 
-    //starIcons[index].style.visibility = 'hidden';
     starIcons[index].style.color = 'rgba(218, 165, 32, 0.2)';
     index --;
 }

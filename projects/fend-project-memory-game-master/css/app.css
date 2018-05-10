@@ -3,12 +3,6 @@ html {
 }
 
 
-:root {
-    --yellow-star-full: rgba(218, 165, 32, 1);
-    --yellow-star-partial: rgba(218, 165, 32, 0.3);
-}
-
-
 *,
 *::before,
 *::after {
@@ -136,7 +130,7 @@ img {
 .score-panel .stars li {
     list-style: none;
     display: inline-block;
-    color: var(--yellow-star-full);
+    color: goldenrod;
 }
 
 .score-panel .restart {
