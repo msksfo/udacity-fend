@@ -257,10 +257,13 @@ img {
     padding: 8px 12px;;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: rgba(255, 255, 255, .8);
     color: white;
     background-color: #b62442;
-    outline: none;
+    border: none;
+}
+
+.expedia {
+    text-decoration: none;
 }
 
 
