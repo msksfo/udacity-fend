@@ -34,6 +34,7 @@ body {
     flex-direction: column;
 }
 
+
 header {
     text-align: center;
     margin-bottom: 10px;
@@ -55,11 +56,9 @@ h1 {
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
@@ -75,9 +74,6 @@ h1 {
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
     position: relative;
-
-
-    display none;
 }
 
 
@@ -88,7 +84,6 @@ h1 {
     left: 0;
     height: 100%;
     width: 100%;
-    
     z-index: 5;
     background: #02b3e4;
     border-radius: 8px;
@@ -111,6 +106,7 @@ img {
 .img-match {
     border: 2px double hsl(253, 55%, 57%);
 }
+
 
 /*
  * Styles for the Score Panel
@@ -159,6 +155,7 @@ img {
     cursor: pointer;
 }
 
+
 /* ============== modal styles ============== */
  
 .modal-background {
@@ -174,8 +171,6 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     padding: 1rem;
-
-    display block;
 }
 
 
@@ -227,7 +222,8 @@ img {
 }
 
 
-.replay-button:hover {
+.replay-button:hover,
+.replay-button:focus {
     color: #082787;
     background-color: #e5ebfd;
 }
@@ -240,10 +236,12 @@ img {
 }
 
 
-.quit-button:hover {
+.quit-button:hover,
+.quit-button:focus {
     background-color: #fde8e2;
     color: #641a06;
 }
+
 
 /* ====== MODAL FOOTER ===== */
 
@@ -260,6 +258,7 @@ img {
     transition: opacity 2s linear;
 }
 
+
 .footer-button {
     padding: 8px 12px;;
     border-radius: 5px;
@@ -267,11 +266,15 @@ img {
     background-color: rgba(255, 255, 255, .8);
     color: white;
     background-color: #b62442;
+    outline: none;
 }
 
-.footer-button:hover {
+
+.footer-button:hover,
+.footer-button:focus {
     background-color: #da4463;
 }
+
 
 .fade-in {
     opacity: 1;
