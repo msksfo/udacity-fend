@@ -113,13 +113,8 @@ img {
  */
 
 .score-panel {
-    border 1px solid purple;
-
     display: flex;
     text-align: center;
-
-    width 660px;
-
     width: 90%;
     max-width: 800px;
     margin: 0 auto 20px auto;
@@ -127,7 +122,6 @@ img {
 
 
 .score-panel > * {
-    border 1px solid orange;
     flex: 1 1 33.333%;
 }
 
