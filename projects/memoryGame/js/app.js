@@ -137,25 +137,55 @@ function populateGameBoard(shuffleFunction, arr) {
 
      // find out which star rating the user achieved, according to star color
      const length = arr.length - 1;
+     let maxStars = arr.length;
 
      setTimeout(function(){
         document.querySelector('.modal-background').style.display = 'block';
 
         if (arr[length].style.color === 'goldenrod'){
-            rating.innerHTML = 3;
+            rating.innerHTML = maxStars;
             moves.innerHTML = numMoves;
             seconds.innerHTML = totalSeconds;
+            displayStars(maxStars);
          } else if (arr[length - 1].style.color === 'goldenrod' ){
-            rating.innerHTML = 2;
+            rating.innerHTML = maxStars - 1;
             moves.innerHTML = numMoves;
             seconds.innerHTML = totalSeconds;
+            displayStars(maxStars - 1);
          } else {
-            rating.innerHTML = 1;
+            rating.innerHTML = maxStars - 2;
             moves.innerHTML = numMoves;
             seconds.innerHTML = totalSeconds;
+            displayStars(maxStars - 2);
          }
-     }, 1300);
-    
+     }, 1700);
+ }
+
+ function displayStars(num){
+     // add the appropriate number of stars to the modal on game completion
+    const resultSpan = document.querySelector('.star-result');
+    for (let i = 0; i < num; i++){
+        let icon = document.createElement('i');
+        icon.classList.add('fa');
+        icon.classList.add('fa-star');
+        resultSpan.appendChild(icon);
+    }
+ }
+
+ function removeStars(){
+     // remove the stars from the modal so user can play again
+    const resultSpan = document.querySelector('.star-result');
+    const numChildren = resultSpan.children.length;
+   
+    /*
+    while(resultSpan.firstChild){
+        resultSpan.removeChild(resultSpan.firstChild);
+    }
+    */
+    for (let i = numChildren; i > 0; i--){
+        resultSpan.removeChild(resultSpan.lastChild);
+    }
+    console.log(resultSpan.children.length);
  }
 
 
@@ -263,12 +293,17 @@ function timer(){
 
 function playAgain(){
     // to play the game again- hide the modal, shuffle cards, populate the board
+    toggleModalStyles();
+    startOver(populateGameBoard, shuffle, photos);
+}
 
+function toggleModalStyles() {
+    // reset the modal styles to their initial values
     document.querySelector('.modal-footer').classList.remove('fade-in');
     document.querySelector('.modal-inner').classList.remove('fade-out');
-
     document.querySelector('.modal-background').style.display = 'none';
-    startOver(populateGameBoard, shuffle, photos);
+
+    removeStars();
 }
 
 function quitGame() {
@@ -315,11 +350,9 @@ document.querySelector('#restart').addEventListener('click', function(){
 
 
 // modal buttons to play again or quit
-document.querySelector('.replay-button').addEventListener('click', playAgain);
-
 document.querySelector('.quit-button').addEventListener('click', quitGame);
 
-document.querySelector('.play-again').addEventListener('click', playAgain);
+document.querySelectorAll('.play-again').forEach(value => value.addEventListener('click', playAgain));
 
 
 /* ================= GAME INITIALIZATION ================ */
