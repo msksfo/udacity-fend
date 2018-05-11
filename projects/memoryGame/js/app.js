@@ -92,6 +92,18 @@ function populateGameBoard(shuffleFunction, arr) {
     card.classList.add('open-card');
  }
 
+ function handleMatchedCards(elem1, elem2){
+     // apply the styling when two cards match
+    elem1.classList.add('img-match');
+    elem2.classList.add('img-match');
+ }
+
+ function handleMismatchedCards(elem1, elem2){
+     // cover the images when the user guesses incorrectly
+     elem1.previousElementSibling.classList.remove('open-card');
+     elem2.previousElementSibling.classList.remove('open-card');
+ }
+
  function checkForMatch(arr){
      /* check the last two cards in the array of open cards. if they do not match, remove them from the array, and reapply the styling to hide the photo */
      let slicedArr;
@@ -100,15 +112,10 @@ function populateGameBoard(shuffleFunction, arr) {
         slicedArr = arr.slice(arr.length - 2);
         if (slicedArr[0].src === slicedArr[1].src){
             matches += 1;
-            
-            slicedArr[0].classList.add('img-match');
-            slicedArr[1].classList.add('img-match');
-        } else {
-            const cardOne = slicedArr[0];
-            const cardTwo = slicedArr[1];      
+            handleMatchedCards(slicedArr[0], slicedArr[1]);
+        } else {   
             setTimeout(function(){
-                cardOne.previousElementSibling.classList.remove('open-card');
-                cardTwo.previousElementSibling.classList.remove('open-card');
+                handleMismatchedCards(slicedArr[0], slicedArr[1]);
             }, 800);
 
             arr.length = arr.length - 2;
@@ -194,6 +201,15 @@ function populateGameBoard(shuffleFunction, arr) {
      starIcons.forEach(star => star.style.color = 'goldenrod');
      resetTimer();
  }
+
+ function removeImages(){
+    // remove the <img> from each .card
+    const lis = document.querySelectorAll('.card');
+   
+    for (let i = 0; i < lis.length; i++){
+        lis[i].removeChild(lis[i].children[1]);
+    }
+ }
    
 
 function startOver(repopulate, reshuffle, arr){
@@ -208,12 +224,8 @@ function startOver(repopulate, reshuffle, arr){
 
    // use a timeout to allow the transition in the hideImages function to complete
    setTimeout(function(){
-    // remove the <img> from each .card
-    const lis = document.querySelectorAll('.card');
-   
-    for (let i = 0; i < lis.length; i++){
-        lis[i].removeChild(lis[i].children[1]);
-    }
+    // remove the old images
+    removeImages()
 
     // shuffle the images and repopulate the board
     repopulate(reshuffle, arr);
@@ -223,7 +235,7 @@ function startOver(repopulate, reshuffle, arr){
 
 
 function hideImages(){
-    // make sure the images are hidden
+    // slide the cover over all images to hide them 
     const cards = document.querySelectorAll('.card');
     cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
 }
