@@ -316,7 +316,6 @@ function quitGame() {
 
 function main(){
     // this is the function that begins the game 
-    //starIcons.forEach(star => star.style.color = 'goldenrod');
     populateGameBoard(shuffle, photos);
 }
 
