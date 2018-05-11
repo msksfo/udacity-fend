@@ -177,15 +177,10 @@ function populateGameBoard(shuffleFunction, arr) {
     const resultSpan = document.querySelector('.star-result');
     const numChildren = resultSpan.children.length;
    
-    /*
-    while(resultSpan.firstChild){
-        resultSpan.removeChild(resultSpan.firstChild);
-    }
-    */
     for (let i = numChildren; i > 0; i--){
         resultSpan.removeChild(resultSpan.lastChild);
     }
-    console.log(resultSpan.children.length);
+ 
  }
 
 
