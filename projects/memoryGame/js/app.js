@@ -142,29 +142,21 @@ function populateGameBoard(shuffleFunction, arr) {
      const moves = document.querySelector('.moves-span');
      const seconds = document.querySelector('.seconds-span');
 
-     // find out which star rating the user achieved, according to star color
+     // find out which star rating the user achieved, according to star color, the index variable
      const length = arr.length - 1;
      let maxStars = arr.length;
 
+     const earnedStars = index + 1;
+
      setTimeout(function(){
         document.querySelector('.modal-background').style.display = 'block';
-
-        if (arr[length].style.color === 'goldenrod'){
-            rating.innerHTML = maxStars;
-            moves.innerHTML = numMoves;
-            seconds.innerHTML = totalSeconds;
-            displayStars(maxStars);
-         } else if (arr[length - 1].style.color === 'goldenrod' ){
-            rating.innerHTML = maxStars - 1;
-            moves.innerHTML = numMoves;
-            seconds.innerHTML = totalSeconds;
-            displayStars(maxStars - 1);
-         } else {
-            rating.innerHTML = maxStars - 2;
-            moves.innerHTML = numMoves;
-            seconds.innerHTML = totalSeconds;
-            displayStars(maxStars - 2);
-         }
+        
+        rating.innerHTML = earnedStars;
+        moves.innerHTML = numMoves;
+        seconds.innerHTML = totalSeconds;
+        
+        displayStars(earnedStars);
+          
      }, 1700);
  }
 
@@ -203,7 +195,7 @@ function populateGameBoard(shuffleFunction, arr) {
  }
 
  function removeImages(){
-    // remove the <img> from each .card
+    // remove the <img> from each .card 
     const lis = document.querySelectorAll('.card');
    
     for (let i = 0; i < lis.length; i++){
@@ -324,7 +316,7 @@ function quitGame() {
 
 function main(){
     // this is the function that begins the game 
-    starIcons.forEach(star => star.style.color = 'goldenrod');
+    //starIcons.forEach(star => star.style.color = 'goldenrod');
     populateGameBoard(shuffle, photos);
 }
 
