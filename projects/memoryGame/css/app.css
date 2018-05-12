@@ -37,7 +37,6 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 10px;
 }
 
 
@@ -45,6 +44,42 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
+
+/* ===== sytles for choosing which version of the game ===== */
+.versions {
+    margin-bottom: 2rem;
+    border 1px solid lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+.highlight-version {
+    border: 2px solid #45a6a6;
+    border-radius: 5px;
+}
+
+.standard {
+    padding: 5px 10px;
+}
+
+.queen {
+    padding: 5px 10px;
+}
+
+
+.standard:hover {
+    background: #a9dbdb;;
+    border-radius: 5px;
+}
+
+
+.queen:hover {
+    background: #a9dbdb;
+    border-radius: 5px;
+}
+
 
 /*
  * Styles for the deck of cards

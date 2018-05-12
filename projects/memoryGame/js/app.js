@@ -26,6 +26,27 @@ const photos = [
     ['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']
 ];
 
+const queen = [
+    ['dl.jpg', 'Delta taking off from SFO'],
+    ['ca.jpg', 'China Airlines taking off from SFO'],
+    ['kalitta.jpg', 'Night shot of Kalitta'],
+    ['nca.jpg', 'Nippon Cargo taking off during sunrise'],
+    ['qf.jpg', 'Quantas lands at SFO with cityscape in background'],
+    ['shuttle.jpg', 'A special 747 carries Endeavor to LA'],
+    ['ua.jpg', 'United Airlines lands at SFO'],
+    ['vs.jpg', 'Night Shot of Virgin Atlantic'],
+    ['dl.jpg', 'Delta taking off from SFO'],
+    ['ca.jpg', 'China Airlines taking off from SFO'],
+    ['kalitta.jpg', 'Night shot of Kalitta'],
+    ['nca.jpg', 'Nippon Cargo taking off during sunrise'],
+    ['qf.jpg', 'Quantas lands at SFO with cityscape in background'],
+    ['shuttle.jpg', 'A special 747 carries Endeavor to LA'],
+    ['ua.jpg', 'United Airlines lands at SFO'],
+    ['vs.jpg', 'Night Shot of Virgin Atlantic']
+];
+
+ let gameOn = false;
+ let version;
  const openCards = [];
  let matches = 0;
  let moves = 0;
@@ -76,14 +97,20 @@ function populateGameBoard(shuffleFunction, arr) {
    
     for (let i = 0; i < lis.length; i++){
         let img = document.createElement('img');
-        img.src = `images/${shuffled[i][0]}`;
+        if (version === 'standard') {
+            img.src = `images/${shuffled[i][0]}`;
+        } else {
+            img.src = `images/747/${shuffled[i][0]}`;
+        }
         img.classList.add('photo'); 
         img.alt = `${shuffled[i][1]}`;
         lis[i].appendChild(img);
     }
 
+    gameOn = true;
     disableRightClick();
 }
+
 
  function showCard(card){
      /* add the open-card class, which transitions the width of the cover to 0, allowing the photo to be seen. add the card to the array of open cards */
@@ -129,6 +156,8 @@ function populateGameBoard(shuffleFunction, arr) {
     if (numMatches === 8){
         // stop the timer
         clearInterval(startTimer);
+        gameOn = false;
+        version = '';
 
         // tell user their stats
         displayStats(starIcons, moves);
@@ -186,11 +215,17 @@ function populateGameBoard(shuffleFunction, arr) {
  function resetGlobals(){
      // reset all the global values, and the timer to zero/initial value
      matches = 0;
+     gameOn = false;
+     
      openCards.length = 0;
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
      index = starIcons.length - 1;
      starIcons.forEach(star => star.style.color = 'goldenrod');
+
+     document.querySelector('.standard').classList.remove('highlight-version');
+     document.querySelector('.queen').classList.remove('highlight-version');
+
      resetTimer();
  }
 
@@ -206,7 +241,7 @@ function populateGameBoard(shuffleFunction, arr) {
 
 function startOver(repopulate, reshuffle, arr){
     // stop the timer
-    clearInterval(startTimer)
+    clearInterval(startTimer);
 
    // hide the images 
    hideImages();
@@ -291,9 +326,21 @@ function timer(){
 }
 
 function playAgain(){
-    // to play the game again- hide the modal, shuffle cards, populate the board
+    // to play the game again- hide the modal
     toggleModalStyles();
-    startOver(populateGameBoard, shuffle, photos);
+
+    // hide the images 
+   hideImages();
+
+   // reset the global game values
+   resetGlobals();
+
+   // use a timeout to allow the transition in the hideImages function to complete
+   setTimeout(function(){
+    // remove the old images
+    removeImages()
+   }, 1000);
+
 }
 
 function toggleModalStyles() {
@@ -315,35 +362,55 @@ function quitGame() {
 
 
 function main(){
-    // this is the function that begins the game 
-    populateGameBoard(shuffle, photos);
+    // this function begins the game, according to which version they selected
+    if (version === 'standard'){
+        document.querySelector('.standard').classList.add('highlight-version');
+        populateGameBoard(shuffle, photos);
+    } else {
+        document.querySelector('.queen').classList.add('highlight-version');
+        populateGameBoard(shuffle, queen);
+    }
+    
 }
 
 
 /* ============================ EVENT LISTENERS ============================== */
 
 covers.forEach(value => value.addEventListener('click', function(e){
-    // get which card specifically was clicked
-    const target = e.target;
+    // force the user to choose a version
+    if (!gameOn){
+        alert('Please choose which version of the game you would like to play');
+    } else {
+        // get which card specifically was clicked
+        const target = e.target;
 
-    incrementMoves();
-    trackStars(moves);
+        incrementMoves();
+        trackStars(moves);
 
-   // start the timer with the first click
-    if (moves === 1){
-       startTimer = setInterval(timer, 1000);
-   }
-   
-    showCard(target);
-    checkForMatch(openCards);
-    if (openCards.length === 16){
-        checkForWin(matches, moves);
+    // start the timer with the first click
+        if (moves === 1){
+        startTimer = setInterval(timer, 1000);
     }
+    
+        showCard(target);
+        checkForMatch(openCards);
+        if (openCards.length === 16){
+            checkForWin(matches, moves);
+        }
+    }   
 }));
 
 // restart icon
 document.querySelector('#restart').addEventListener('click', function(){
-    startOver(populateGameBoard, shuffle, photos);
+    // restart the game. the cards will be shuffled, but it will be the SAME VERSION
+    if (version === 'standard'){
+        startOver(populateGameBoard, shuffle, photos);
+        document.querySelector('.standard').classList.add('highlight-version');
+    } else {
+        startOver(populateGameBoard, shuffle, queen);
+        document.querySelector('.queen').classList.add('highlight-version');
+    }
+    
 });
 
 
@@ -355,4 +422,16 @@ document.querySelectorAll('.play-again').forEach(value => value.addEventListener
 
 /* ================= GAME INITIALIZATION ================ */
 
-main();
+document.querySelector('.versions').addEventListener('click', function(e){
+    if (gameOn){
+        alert('Please finish this game before choosing a different version');
+    } else {
+        if (e.target.classList.contains('standard')){
+            version = 'standard';
+        } else {
+            version = 'queen';
+        }
+        main();
+    }
+
+});
