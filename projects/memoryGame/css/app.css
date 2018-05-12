@@ -67,7 +67,6 @@ h1 {
 
 .deck .card {
     background: white;
-    background-color: pink;;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
