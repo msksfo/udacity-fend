@@ -32,6 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -42,13 +43,15 @@ header {
 
 h1 {
     font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
     font-weight: 300;
 }
 
 /* ===== sytles for choosing which version of the game ===== */
 .versions {
+    font-size: 1.2rem;
+    font-weight: 300;
     margin-bottom: 2rem;
-    border 1px solid lightblue;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
@@ -91,7 +94,7 @@ h1 {
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    width: 90%;
+    width: 95%;
     max-width: 800px;
     margin: 0 auto;
     display: grid;
@@ -166,6 +169,8 @@ img {
  */
 
 .score-panel {
+    font-size: 1.1rem;
+    font-weight: 300;
     display: flex;
     text-align: center;
     width: 90%;
