@@ -93,7 +93,7 @@ function populateGameBoard(shuffleFunction, arr) {
  }
 
  function handleMatchedCards(elem1, elem2){
-     // apply the styling when two cards match
+     // apply the animation/styling when two cards match
     elem1.classList.add('img-match');
     elem2.classList.add('img-match');
  }
@@ -113,11 +113,11 @@ function populateGameBoard(shuffleFunction, arr) {
         if (slicedArr[0].src === slicedArr[1].src){
             matches += 1;
             handleMatchedCards(slicedArr[0], slicedArr[1]);
-        } else {   
+        } else { 
             setTimeout(function(){
                 handleMismatchedCards(slicedArr[0], slicedArr[1]);
             }, 800);
-
+           
             arr.length = arr.length - 2;
         }
      } 

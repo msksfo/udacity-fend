@@ -102,9 +102,27 @@ img {
 }
 
 
-/* put a border on the images when user finds a match */
+/* ====== IMAGE MATCH ========== */
+
+/* apply subtle animation when user matches two cards */
 .img-match {
-    border: 1px solid #3b8e8e;
+    animation: match .7s ease-out 0.6s forwards;
+}
+
+
+@keyframes match {
+    0% {
+        transform: scale(1);
+        border: 1px solid #3b8e8e;
+    }
+    50% {
+        transform: scale(1.07);
+        border: 1px solid #3b8e8e;
+    }
+    100% {
+        transform: scale(1);
+        border: 1px solid #3b8e8e;
+    }
 }
 
 
