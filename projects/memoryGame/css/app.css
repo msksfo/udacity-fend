@@ -52,7 +52,7 @@ h1 {
 
 .deck {
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: #a9dbdb;
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -85,7 +85,7 @@ h1 {
     height: 100%;
     width: 100%;
     z-index: 5;
-    background: #02b3e4;
+    background: #f6ad7b;
     border-radius: 8px;
     transition: width 0.67s ease;
 }
@@ -104,7 +104,7 @@ img {
 
 /* put a border on the images when user finds a match */
 .img-match {
-    border: 2px double hsl(253, 55%, 57%);
+    border: 1px solid #3b8e8e;
 }
 
 
