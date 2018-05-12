@@ -1,0 +1,288 @@
+html {
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+html,
+body {
+    /* changed height/width to min-height/min-width so that modal will work properly */
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
+    position: relative;
+    font-family: 'Coda', cursive;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+
+.deck .card {
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    position: relative;
+}
+
+
+/* hide the image until user clicks */
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background: #02b3e4;
+    border-radius: 8px;
+    transition: width 0.67s ease;
+}
+
+
+.open-card {
+    width: 0;
+}
+
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+/* put a border on the images when user finds a match */
+.img-match {
+    border: 2px double hsl(253, 55%, 57%);
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    display: flex;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+
+.score-panel > * {
+    flex: 1 1 33.333%;
+}
+
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+.fa-star {
+    color: goldenrod;
+}
+
+
+.score-panel .restart {
+    cursor: pointer;
+}
+
+
+/* ============== modal styles ============== */
+ 
+.modal-background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/sfo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+
+
+.modal-inner {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 8px;
+    color: white;
+    border: 1px solid white;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 3s linear;
+}
+
+
+/* fade out the inner modal when the user clicks the quit button */
+.fade-out {
+    opacity: 0;
+}
+
+
+.replay {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 4px;
+}
+
+
+/* ==== MODAL BUTTON STYLES ==== */
+.button {
+    padding: 8px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all .2s ease;
+}
+
+
+.replay-button {
+    border: 1px solid #082787;
+    color: white;
+    background-color: #082787;
+}
+
+
+.replay-button:hover,
+.replay-button:focus {
+    color: #082787;
+    background-color: #e5ebfd;
+}
+
+
+.quit-button {
+    border: 1px solid #641a06;;
+    background-color: #a42a0a;
+    color: white;
+}
+
+
+.quit-button:hover,
+.quit-button:focus {
+    background-color: #fde8e2;
+    color: #641a06;
+}
+
+
+/* ====== MODAL FOOTER ===== */
+
+.modal-footer {
+    position: absolute;
+    width: calc(100% - 1rem);
+    left: 0;
+    right: 0;
+    bottom: .5rem;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+
+.footer-button {
+    padding: 8px 12px;;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: #b62442;
+    border: none;
+}
+
+.expedia {
+    text-decoration: none;
+}
+
+
+.footer-button:hover,
+.footer-button:focus {
+    background-color: #da4463;
+}
+
+
+.fade-in {
+    opacity: 1;
+}
+
+
+/* ==================== MEDIA QUERUES ======================= */
+
+@media screen and (min-width: 850px){
+    .modal-inner {
+        width: 60%;
+    }
+}
+
