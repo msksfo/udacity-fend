@@ -43,13 +43,11 @@ header {
 
 h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
     font-weight: 300;
 }
 
-/* ===== sytles for choosing which version of the game ===== */
+/* ===== styles for choosing which version of the game ===== */
 .versions {
-    font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 2rem;
     display: grid;
@@ -91,7 +89,8 @@ h1 {
 .deck {
     min-height: 680px;
     background: #a9dbdb;
-    padding: 32px;
+    padding: 10px;
+
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     width: 95%;
@@ -169,7 +168,6 @@ img {
  */
 
 .score-panel {
-    font-size: 1.1rem;
     font-weight: 300;
     display: flex;
     text-align: center;
@@ -337,6 +335,12 @@ img {
 
 
 /* ==================== MEDIA QUERUES ======================= */
+@media screen and (min-width: 600px){
+    .deck {
+       padding: 32px;
+    }
+}
+
 
 @media screen and (min-width: 850px){
     .modal-inner {
