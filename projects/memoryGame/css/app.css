@@ -56,14 +56,17 @@ h1 {
     text-align: center;
 }
 
+
 .highlight-version {
     border: 2px solid #45a6a6;
     border-radius: 5px;
 }
 
+
 .standard {
     padding: 5px 10px;
 }
+
 
 .queen {
     padding: 5px 10px;
@@ -170,6 +173,8 @@ img {
 .score-panel {
     font-weight: 300;
     display: flex;
+    align-items: flex-end;
+
     text-align: center;
     width: 90%;
     max-width: 800px;
@@ -203,6 +208,12 @@ img {
 
 .score-panel .restart {
     cursor: pointer;
+}
+
+
+.stars-and-moves {
+    display: grid; 
+    grid-template-columns: 1fr;
 }
 
 
@@ -318,6 +329,7 @@ img {
     border: none;
 }
 
+
 .expedia {
     text-decoration: none;
 }
@@ -335,6 +347,18 @@ img {
 
 
 /* ==================== MEDIA QUERUES ======================= */
+
+@media screen and (min-width: 450px){
+    .score-panel {
+        align-items: stretch;
+    }
+
+    .stars-and-moves {
+       grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 @media screen and (min-width: 600px){
     .deck {
        padding: 32px;
