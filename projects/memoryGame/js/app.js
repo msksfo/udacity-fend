@@ -403,7 +403,9 @@ covers.forEach(value => value.addEventListener('click', function(e){
 // restart icon
 document.querySelector('#restart').addEventListener('click', function(){
     // restart the game. the cards will be shuffled, but it will be the SAME VERSION
-    if (version === 'standard'){
+    if (!gameOn){
+        alert('You must be in the middle of a game before you can restart.')
+    } else if (version === 'standard'){
         startOver(populateGameBoard, shuffle, photos);
         document.querySelector('.standard').classList.add('highlight-version');
     } else {
