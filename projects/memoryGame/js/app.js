@@ -4,18 +4,10 @@
 const covers = document.querySelectorAll('.cover');
 
 /*
-each array in photos holds the img src attribute and the alt text
+each array in noDupPhotos and noDupQueen holds the img src attribute and the alt text
     - BT-13 photo by Owen Leipelt. All others by TouchNGo Aviation Photography
 */
-const photos = [
-    ['bt13.jpg', 'Alex and Tia flying in the BT-13.'],
-    ['as.jpg', 'Alaska Airlines, more to love livery'],
-    ['ek.jpg', 'Emirates A380 taking off at SFO'],
-    ['a2a.jpg', 'Belgian Airforce F-16'],
-    ['as-disney.jpg', 'Alaska Airlines, disney plane'],
-    ['ei.jpg', 'Aer Lingus landing at SFO'],
-    ['p51.jpg', 'P51 Mustang flying in an airshow'],
-    ['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO'],
+const noDupPhotos = [
     ['bt13.jpg', 'Alex and Tia flying in the BT-13.'],
     ['as.jpg', 'Alaska Airlines, more to love livery'],
     ['ek.jpg', 'Emirates A380 taking off at SFO'],
@@ -26,15 +18,7 @@ const photos = [
     ['as-vx.jpg', 'Alaska and Virgin parallel takeoff at SFO']
 ];
 
-const queen = [
-    ['dl.jpg', 'Delta taking off from SFO'],
-    ['ca.jpg', 'China Airlines taking off from SFO'],
-    ['kalitta.jpg', 'Night shot of Kalitta'],
-    ['nca.jpg', 'Nippon Cargo taking off during sunrise'],
-    ['qf.jpg', 'Quantas lands at SFO with cityscape in background'],
-    ['shuttle.jpg', 'A special 747 carries Endeavor to LA'],
-    ['ua.jpg', 'United Airlines lands at SFO'],
-    ['vs.jpg', 'Night Shot of Virgin Atlantic'],
+const noDupQueen = [
     ['dl.jpg', 'Delta taking off from SFO'],
     ['ca.jpg', 'China Airlines taking off from SFO'],
     ['kalitta.jpg', 'Night shot of Kalitta'],
@@ -44,6 +28,10 @@ const queen = [
     ['ua.jpg', 'United Airlines lands at SFO'],
     ['vs.jpg', 'Night Shot of Virgin Atlantic']
 ];
+
+/*  create array of 16 photos for each version with spread operator to reduce code duplication  */
+const photos = [...noDupPhotos, ...noDupPhotos];
+const queen = [...noDupQueen, ...noDupQueen];
 
  let gameOn = false;
  let version;
@@ -392,16 +380,14 @@ covers.forEach(value => value.addEventListener('click', function(e){
         if (moves === 1){
             startTimer = setInterval(timer, 1000);
         }
-        console.log(target.classList.contains('open-card'));
+
+        /* this conditinal should prevent the same exact card from being added to the array of open cards twice */
         if (!target.classList.contains('open-card')){
-
-        showCard(target);
-        checkForMatch(openCards);
-        if (openCards.length === 16){
-            checkForWin(matches, moves);
-        }
-
-
+            showCard(target);
+            checkForMatch(openCards);
+            if (openCards.length === 16){
+                checkForWin(matches, moves);
+            }
         }
     }
 }));
