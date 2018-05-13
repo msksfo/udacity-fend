@@ -137,6 +137,7 @@ function populateGameBoard(shuffleFunction, arr) {
 
      if (arr.length >= 2 && arr.length % 2 === 0){
         slicedArr = arr.slice(arr.length - 2);
+
         if (slicedArr[0].src === slicedArr[1].src){
             matches += 1;
             handleMatchedCards(slicedArr[0], slicedArr[1]);
@@ -387,15 +388,20 @@ covers.forEach(value => value.addEventListener('click', function(e){
         incrementMoves();
         trackStars(moves);
 
-    // start the timer with the first click
+        // start the timer with the first click
         if (moves === 1){
-        startTimer = setInterval(timer, 1000);
-    }
+            startTimer = setInterval(timer, 1000);
+        }
+        console.log(target.classList.contains('open-card'));
+        if (!target.classList.contains('open-card')){
 
         showCard(target);
         checkForMatch(openCards);
         if (openCards.length === 16){
             checkForWin(matches, moves);
+        }
+
+
         }
     }
 }));
