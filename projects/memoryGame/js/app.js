@@ -3,7 +3,7 @@
 // covers is an array of the divs hide the photos
 const covers = document.querySelectorAll('.cover');
 
-/* 
+/*
 each array in photos holds the img src attribute and the alt text
     - BT-13 photo by Owen Leipelt. All others by TouchNGo Aviation Photography
 */
@@ -94,7 +94,7 @@ function populateGameBoard(shuffleFunction, arr) {
     const shuffled = shuffleFunction(arr);
     const gameBoard = document.querySelector('.deck');
     const lis = gameBoard.children;
-   
+
     for (let i = 0; i < lis.length; i++){
         let img = document.createElement('img');
         if (version === 'standard') {
@@ -102,7 +102,7 @@ function populateGameBoard(shuffleFunction, arr) {
         } else {
             img.src = `images/747/${shuffled[i][0]}`;
         }
-        img.classList.add('photo'); 
+        img.classList.add('photo');
         img.alt = `${shuffled[i][1]}`;
         lis[i].appendChild(img);
     }
@@ -140,14 +140,14 @@ function populateGameBoard(shuffleFunction, arr) {
         if (slicedArr[0].src === slicedArr[1].src){
             matches += 1;
             handleMatchedCards(slicedArr[0], slicedArr[1]);
-        } else { 
+        } else {
             setTimeout(function(){
                 handleMismatchedCards(slicedArr[0], slicedArr[1]);
             }, 800);
-           
+
             arr.length = arr.length - 2;
         }
-     } 
+     }
  }
 
 
@@ -161,12 +161,12 @@ function populateGameBoard(shuffleFunction, arr) {
 
         // tell user their stats
         displayStats(starIcons, moves);
-    } 
+    }
  }
 
 
  function displayStats(arr, numMoves){
-     
+
      const rating = document.querySelector('.rating-span');
      const moves = document.querySelector('.moves-span');
      const seconds = document.querySelector('.seconds-span');
@@ -179,13 +179,13 @@ function populateGameBoard(shuffleFunction, arr) {
 
      setTimeout(function(){
         document.querySelector('.modal-background').style.display = 'block';
-        
+
         rating.innerHTML = earnedStars;
         moves.innerHTML = numMoves;
         seconds.innerHTML = totalSeconds;
-        
+
         displayStars(earnedStars);
-          
+
      }, 1700);
  }
 
@@ -204,11 +204,11 @@ function populateGameBoard(shuffleFunction, arr) {
      // remove the stars from the modal so user can play again
     const resultSpan = document.querySelector('.star-result');
     const numChildren = resultSpan.children.length;
-   
+
     for (let i = numChildren; i > 0; i--){
         resultSpan.removeChild(resultSpan.lastChild);
     }
- 
+
  }
 
 
@@ -216,7 +216,7 @@ function populateGameBoard(shuffleFunction, arr) {
      // reset all the global values, and the timer to zero/initial value
      matches = 0;
      gameOn = false;
-     
+
      openCards.length = 0;
      moves = 0;
      document.querySelector('.moves').innerHTML = moves;
@@ -230,20 +230,20 @@ function populateGameBoard(shuffleFunction, arr) {
  }
 
  function removeImages(){
-    // remove the <img> from each .card 
+    // remove the <img> from each .card
     const lis = document.querySelectorAll('.card');
-   
+
     for (let i = 0; i < lis.length; i++){
         lis[i].removeChild(lis[i].children[1]);
     }
  }
-   
+
 
 function startOver(repopulate, reshuffle, arr){
     // stop the timer
     clearInterval(startTimer);
 
-   // hide the images 
+   // hide the images
    hideImages();
 
    // reset the global game values
@@ -262,7 +262,7 @@ function startOver(repopulate, reshuffle, arr){
 
 
 function hideImages(){
-    // slide the cover over all images to hide them 
+    // slide the cover over all images to hide them
     const cards = document.querySelectorAll('.card');
     cards.forEach(value => value.firstElementChild.classList.remove('open-card'));
 }
@@ -276,7 +276,7 @@ function incrementMoves(){
 
 
 function decrementStars(){
-    // deduct a star when user takes more than a certain number of moves 
+    // deduct a star when user takes more than a certain number of moves
     starIcons[index].style.color = 'rgba(218, 165, 32, 0.2)';
     index --;
 }
@@ -322,14 +322,14 @@ function timer(){
         }
    } else {
     seconds.innerHTML = secondsCount;
-   } 
+   }
 }
 
 function playAgain(){
     // to play the game again- hide the modal
     toggleModalStyles();
 
-    // hide the images 
+    // hide the images
    hideImages();
 
    // reset the global game values
@@ -370,7 +370,7 @@ function main(){
         document.querySelector('.queen').classList.add('highlight-version');
         populateGameBoard(shuffle, queen);
     }
-    
+
 }
 
 
@@ -391,13 +391,13 @@ covers.forEach(value => value.addEventListener('click', function(e){
         if (moves === 1){
         startTimer = setInterval(timer, 1000);
     }
-    
+
         showCard(target);
         checkForMatch(openCards);
         if (openCards.length === 16){
             checkForWin(matches, moves);
         }
-    }   
+    }
 }));
 
 // restart icon
@@ -412,7 +412,7 @@ document.querySelector('#restart').addEventListener('click', function(){
         startOver(populateGameBoard, shuffle, queen);
         document.querySelector('.queen').classList.add('highlight-version');
     }
-    
+
 });
 
 
