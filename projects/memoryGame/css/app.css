@@ -29,7 +29,7 @@ body {
 
 .container {
     display: flex;
-    justify-content: center;
+    padding-top: 50px;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
