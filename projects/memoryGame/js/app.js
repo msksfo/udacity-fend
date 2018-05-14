@@ -259,7 +259,8 @@ function hideImages(){
 
 function incrementMoves(card){
     // count the moves, and display number of moves to UI
-
+    
+    /* use conditional to make sure the moves are not incremented if user clicks the same card rapildy in succession */
     if (!card.classList.contains('open-card')){
         moves += 1;
         document.querySelector('.moves').innerHTML = moves;
