@@ -145,8 +145,6 @@ function populateGameBoard(shuffleFunction, arr) {
     if (numMatches === 8){
         // stop the timer
         clearInterval(startTimer);
-        gameOn = false;
-        version = '';
 
         // tell user their stats
         displayStats(starIcons, moves);
@@ -167,6 +165,9 @@ function populateGameBoard(shuffleFunction, arr) {
      const earnedStars = index + 1;
 
      setTimeout(function(){
+        gameOn = false;
+        version = '';
+
         document.querySelector('.modal-background').style.display = 'block';
 
         rating.innerHTML = earnedStars;
@@ -366,11 +367,7 @@ function main(){
 
 }
 
-
-/* ============================ EVENT LISTENERS ============================== */
-
-covers.forEach(value => value.addEventListener('click', function(e){
-    // force the user to choose a version
+function playGame(e) {
     if (!gameOn){
         alert('Please choose which version of the game you would like to play');
     } else {
@@ -394,7 +391,12 @@ covers.forEach(value => value.addEventListener('click', function(e){
             }
         }
     }
-}));
+}
+
+
+/* ============================ EVENT LISTENERS ============================== */
+
+covers.forEach(value => value.addEventListener('click', playGame));
 
 // restart icon
 document.querySelector('#restart').addEventListener('click', function(){
