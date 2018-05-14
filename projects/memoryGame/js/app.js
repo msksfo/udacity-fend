@@ -257,10 +257,13 @@ function hideImages(){
 }
 
 
-function incrementMoves(){
+function incrementMoves(card){
     // count the moves, and display number of moves to UI
-    moves += 1;
-    document.querySelector('.moves').innerHTML = moves;
+
+    if (!card.classList.contains('open-card')){
+        moves += 1;
+        document.querySelector('.moves').innerHTML = moves;
+    }
 }
 
 
@@ -373,7 +376,7 @@ covers.forEach(value => value.addEventListener('click', function(e){
         // get which card specifically was clicked
         const target = e.target;
 
-        incrementMoves();
+        incrementMoves(target);
         trackStars(moves);
 
         // start the timer with the first click
