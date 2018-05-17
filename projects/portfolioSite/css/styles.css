@@ -118,9 +118,8 @@ h2 {
 }
 
 
-q {
+.quote-wrapper {
 	order: 1;
-	display: block;
 	padding: 1rem;
 	justify-self: center;
 	align-self: center;
@@ -261,7 +260,7 @@ figcaption {
 	}
 
 
-	q {
+	.quote-wrapper {
 		order: 0;
 		grid-column: 4 / -1;
 		justify-self: center;
