@@ -237,40 +237,61 @@ figcaption {
 	color: var(--active-link);
 }
 
+/* =============== MODAL STYLES ========= */
+
+
 /* the modal that appears when 'description' is clicked */
 .description-modal {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	background: rgba(0, 0, 0, .9);
 	z-index: 5;
-	display: none;
+	display:flex;
 	flex-direction: column;
 	flex-basis: 100%;
 	color: white;
 	overflow: scroll;
+
+	/* the modal is initially hidden */
+	width: 0;
+	height: 0;
+	transition: all .6s ease;
 }
+
+
+/* the modal will slide in diagonally when user clicks description */
+.show-modal {
+	height: 100%;
+	width: 100%;
+}
+
 
 .close-modal {
 	font-size: 2rem;
 	padding: 0 1rem;
 	margin-left: auto;
 	align-self: flex-start;
-	transition: color 0.2s ease;
+	opacity: 0;
+	/* when the show-modal transition completes, the 'X' will quickly become visible. */
+	transition: opacity .8s ease .45s, color 0.2s ease;
 }
+
 
 .close-modal:hover {
 	color: red;
 	cursor: pointer;
 }
 
+
 .description-text {
 	letter-spacing: 1px;
 	line-height: 1.5;
 	text-align: center;
 	padding: 0.5rem;
+	opacity: 0;
+	/* when the show-modal transition completes, the description text will quickly become visible. */
+	transition: all .8s ease .45s;
 }
 
 
