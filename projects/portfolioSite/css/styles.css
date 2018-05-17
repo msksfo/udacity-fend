@@ -193,7 +193,7 @@ figcaption {
 
 /* the div with with options to view a description of the project, the live link, or the code on github */
 .info {
-	margin-top: 2rem;
+	margin-top: 3rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
