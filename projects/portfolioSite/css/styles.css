@@ -145,6 +145,12 @@ h2 {
 
 /* =============== FEATURED WORK SECTION ================== */
 
+/* the figures in this section need position relative for the modal positioning when 'description' is clicked */
+.modal-parent {
+	position: relative;
+}
+
+
 .featured-work-section {
 	margin: 2.5rem 0;
 	padding-bottom: 1rem;
@@ -216,12 +222,51 @@ figcaption {
 .work-example-link:focus,
 .work-example-link:hover {
 	color: var(--hot-pink);
+	cursor: pointer;
 }
 
 
 .work-example-link:active {
 	color: var(--active-link);
 }
+
+/* the modal that appears when 'description' is clicked */
+.description-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .9);
+	z-index: 5;
+	display: none;
+	flex-direction: column;
+	flex-basis: 100%;
+	color: white;
+	overflow: scroll;
+}
+
+.close-modal {
+	border 1px solid orange;
+	font-size: 2rem;
+	padding: 0 1rem;
+	margin-left: auto;
+	align-self: flex-start;
+	transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+	color: red;
+	cursor: pointer;
+}
+
+.description-text {
+	letter-spacing: 1px;
+	line-height: 1.5;
+	text-align: center;
+	padding: 0.5rem;
+}
+
 
 
 /* ================= MEDIA QUERIES =================== */
