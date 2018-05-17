@@ -171,7 +171,7 @@ h2 {
 .work-examples figure {
 	margin: 0;
 	border: 1px solid rgba(0, 0, 0, .3);
-	padding-bottom: 1rem;
+	padding-bottom: .5rem;
 }
 
 
@@ -182,6 +182,19 @@ h2 {
 
 figcaption {
 	text-align: center;
+}
+
+
+/* the div with with options to view a description of the project, the live link, or the code on github */
+.info {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.right-border {
+	border-right: 1px solid var(--light-gray);
 }
 
 
@@ -198,7 +211,8 @@ figcaption {
 	color: var(--almost-black);
 }
 
-
+.description:hover,
+.description:focus,
 .work-example-link:focus,
 .work-example-link:hover {
 	color: var(--hot-pink);
