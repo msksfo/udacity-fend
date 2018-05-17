@@ -212,10 +212,17 @@ figcaption {
 }
 
 
+/* make all links in the .info div of figcaption (description, website, and github) the almost-black color */
+.description {
+	color: var(--almost-black);
+}
+
+
 .work-example-link {
 	text-decoration: none;
 	color: var(--almost-black);
 }
+
 
 .description:hover,
 .description:focus,
@@ -247,7 +254,6 @@ figcaption {
 }
 
 .close-modal {
-	border 1px solid orange;
 	font-size: 2rem;
 	padding: 0 1rem;
 	margin-left: auto;
