@@ -295,6 +295,40 @@ figcaption {
 }
 
 
+/* ================= FOOTER STYLES ================ */
+
+footer {
+	margin-bottom: 1rem;
+	background-color: #529BAE;
+	color: white;
+	font-weight: 300;
+	letter-spacing: 0.2px;
+	line-height: 1.8;
+}
+
+.copyright {
+	margin-top: 3rem;
+	text-align: center;
+	padding-bottom: 0.7rem;
+}
+
+.contact {
+	padding-top: 1.5rem;
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+
+.social-link {
+	color: white;
+	padding: 0.5rem;
+	transition: color .2s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+	color: var(--hot-pink);
+}
 
 /* ================= MEDIA QUERIES =================== */
 
@@ -324,6 +358,7 @@ figcaption {
 		margin: 90px 0;
 	}
 
+
 }
 
 @media (min-width: 800px){
@@ -352,6 +387,7 @@ figcaption {
 		justify-self: center;
 		align-self: center;
 	}
+
 }
 
 @media (min-width: 1200px){
