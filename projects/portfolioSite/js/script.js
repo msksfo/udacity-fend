@@ -9,7 +9,7 @@
     const descriptionText = document.querySelectorAll('.description-text');
 
 
-    /* =========== Functions ============ */ 
+    /* ================ Functions ============== */ 
 
     function hideModal(xModal, descriptionTxt, modal){
         // hide the modal, the text, and the 'x' that closes the modal
@@ -26,6 +26,8 @@
     }
 
 
+
+
     /* ============== Event Listeners ============ */
 
     // show the modals on click
@@ -34,25 +36,14 @@
         descriptions[i].addEventListener('click', showModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
     }
 
+
     // show the modals if 'enter' is pressed
     for (let i = 0; i < descriptions.length; i++){
         /* use the bind method so the showModal function will not be immediately invoked */
         descriptions[i].addEventListener('keypress', showModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
     }
-/*
-    // show the modals on keypress
-    for (let i = 0; i < descriptions.length; i++){
-        descriptions[i].addEventListener('keypress', function(e){
-            if (e.keyCode === 13){
-                descriptionModals[i].classList.add('show-modal');
 
-                // wait for the show modal transition to complete before showing text
-                closeModals[i].style.opacity = 1;
-                descriptionText[i].style.opacity = 1;
-            }
-        });
-    }
-*/
+
     // hide the modals
     for (let i = 0; i < closeModals.length; i++){
         /* use the bind method so the hideModal function will not be immediately invoked */
