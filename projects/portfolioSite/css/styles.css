@@ -13,6 +13,7 @@ body {
 	--light-gray:  #a0b3c4;
 	--active-link: #5f8c4e;
 	--visited-link: #e974b3;
+	--airplane-blue: #318ba2;
 }
 
 /* =================== HEADER ==================== */
@@ -305,7 +306,7 @@ figcaption {
 
 footer {
 	margin-bottom: 1rem;
-	background-color: #318ba2;
+	background: #2d8095;
 	color: white;
 	font-weight: 300;
 	letter-spacing: 0.2px;
