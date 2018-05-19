@@ -93,8 +93,8 @@
 
         descriptionModals[i].addEventListener('keydown', function(e){
             // close the modal if user pressed enter or esc
+            e.preventDefault();
             if (e.keyCode === 13 || e.keyCode === 27){
-                e.preventDefault();
                 hideModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
             }
         });
