@@ -33,7 +33,7 @@
     }
 
     function showModal(evt, xModal, descriptionTxt, modal){
-        // show the modal, and the project description text
+        // show the modal, the 'x' to close it, and the project description text
         modal.classList.add('show-modal');
         descriptionTxt.style.opacity = 1;
         xModal.style.opacity = 1;
