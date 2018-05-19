@@ -245,7 +245,7 @@ figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, .9);
+	background: rgba(0, 0, 0, 0.9);
 	z-index: 5;
 	display:flex;
 	flex-direction: column;
@@ -268,17 +268,23 @@ figcaption {
 
 
 .close-modal {
-	font-size: 2.3rem;
-	padding: 0 1rem;
-	margin-left: auto;
+	font-size: 1.8rem;
+	border: none;
+	background: rgba(0, 0, 0, 0.01);
+	color: white;
+
+	/* push button all the way right with margin-left set to auto */
+	margin: 5px 5px 0 auto;
 	align-self: flex-start;
 	opacity: 0;
+	
 	/* when the show-modal transition completes, the 'X' will quickly become visible. */
 	transition: opacity .8s ease .45s, color 0.2s ease;
 }
 
 
-.close-modal:hover {
+.close-modal:hover,
+.close-modal:focus {
 	color: red;
 	cursor: pointer;
 }

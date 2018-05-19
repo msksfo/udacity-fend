@@ -44,10 +44,14 @@
 				<h2>Featured Work</h2>
 				<div class="work-examples">
 
-					<figure class="modal-parent">					
-						<div aria-hidden=true class="description-modal">
-							<div class="close-modal">&times;</div>
-							<p class="description-text">This photo gallery project uses HTML5, CSS3, JavaScript and the JavaScript library Lightbox, by Lokesh Dhakar. On devices smaller than 660px, the gallery sections are initially collapsed, so the user is not forced to scroll through content they are not interested in. Clicking the continent icon will toggle the section open/closed.</p>
+					<figure class="modal-parent">
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+							<button tabindex="-1" aria-label="close" class="close-modal">X
+							</button>
+
+							<p id="dialog-description" class="description-text">This photo gallery project uses HTML5, CSS3, JavaScript and the JavaScript library Lightbox, by Lokesh Dhakar. On devices smaller than 660px, the gallery sections are initially collapsed, so the user is not forced to scroll through content they are not interested in. Clicking the continent icon will toggle the section open/closed.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/aroundTheWorld.png" alt="Around The World project">
@@ -55,7 +59,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Around The World</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/AroundTheWorld/" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/AroundTheWorld" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -63,9 +67,13 @@
 					</figure>
 
 					<figure class="modal-parent">
-						<div aria-hidden=true class="description-modal">
-								<div class="close-modal">&times;</div>
-								<p class="description-text">A simple JavaScript calculator, that will add, subtract, multiply, and divide two numbers. Multiple operations may be chained together, but the application will not take into account mathematical order of precedence. Made as part of the free code camp curriculum, with HTML5, CSS3, and JavaScript.</p>
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+							<button tabindex="-1" aria-label="close" class="close-modal">X
+							</button>
+
+							<p id="dialog-description" class="description-text">A simple JavaScript calculator, that will add, subtract, multiply, and divide two numbers. Multiple operations may be chained together, but the application will not take into account mathematical order of precedence. Made as part of the free code camp curriculum, with HTML5, CSS3, and JavaScript.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/calculator.png" alt="Calculator project">
@@ -73,7 +81,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Calculator</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/calculator/" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/calculator" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -81,9 +89,13 @@
 					</figure>
 
 					<figure class="modal-parent">
-						<div aria-hidden=true class="description-modal">
-								<div class="close-modal">&times;</div>
-								<p class="description-text">The classic game of concentration, with an aviation twist. The gameboard is layed out with 16 cards containing 8 matching pairs of images. The user must click the cards to find the matching pairs. Upon completion, the user will see their stats.  Made as part of the Udacity Front End Nanodegree coursework, using HTML5, CSS3, and JavaScript.</p>
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+							<button tabindex="-1" aria-label="close" class="close-modal">X
+							</button>
+
+							<p id="dialog-description" class="description-text">The classic game of concentration, with an aviation twist. The gameboard is layed out with 16 cards containing 8 matching pairs of images. The user must click the cards to find the matching pairs. Upon completion, the user will see their stats.  Made as part of the Udacity Front End Nanodegree coursework, using HTML5, CSS3, and JavaScript.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/concentration.png" alt="Language Translation project">
@@ -91,7 +103,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Concentration</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/udacity-fend/projects/memoryGame/index.html" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/udacity-fend/tree/master/projects/memoryGame" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -99,9 +111,13 @@
 					</figure>
 
 					<figure class="modal-parent">
-						<div aria-hidden=true class="description-modal">
-								<div class="close-modal">&times;</div>
-								<p class="description-text">A language translation app using the Yandex Translate API. I made the application to practice using api's, ajax requests, and css animations. User can enter a word or phrase, choose a language from the select menu, and see their translated text.</p>
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+							<button tabindex="-1" aria-label="close" class="close-modal">X
+							</button>
+
+							<p id="dialog-description" class="description-text">A language translation app using the Yandex Translate API. I made the application to practice using api's, ajax requests, and css animations. User can enter a word or phrase, choose a language from the select menu, and see their translated text.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/translate.png" alt="Language Translation project">
@@ -109,7 +125,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Language Translation</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/HowDoYouSay/" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/HowDoYouSay" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -117,9 +133,13 @@
 					</figure>
 
 					<figure class="modal-parent">
-						<div aria-hidden=true class="description-modal">
-								<div class="close-modal">&times;</div>
-								<p class="description-text">A weather app using the Apixu Weather API, featuring Cirrus the cat. Users in the US can enter their 5 digit zipcode to see their local weather, and a weather appropriate photo of and caption by Cirrus. Made for practice with ajax requests.</p>
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+							<button tabindex="-1" aria-label="close" class="close-modal">X
+							</button>
+
+							<p id="dialog-description" class="description-text">A weather app using the Apixu Weather API, featuring Cirrus the cat. Users in the US can enter their 5 digit zipcode to see their local weather, and a weather appropriate photo of and caption by Cirrus. Made for practice with ajax requests.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/CirrusApp.png" alt="How To Train Your Dragon project">
@@ -127,7 +147,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Weather by Cirrus</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/Cirrus--Weather-App/" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/Cirrus--Weather-App" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -135,9 +155,13 @@
 					</figure>
 
 					<figure class="modal-parent">
-						<div aria-hidden=true class="description-modal">
-								<div class="close-modal">&times;</div>
-								<p class="description-text">A static website using HTML5, CSS3, and JavaScript for practice to develop my skills. The movie theme was given as a prompt from codelegy, in their challenge to build 30 sites in 30 days.</p>
+						<div role="dialog" aria-describedby="dialog-description" aria-hidden="true" class="description-modal">
+
+								<button tabindex="-1" aria-label="close" class="close-modal">X
+								</button>
+
+								<p id="dialog-description" class="description-text">A static website using HTML5, CSS3, and JavaScript for practice to develop my skills. The movie theme was given as a prompt from codelegy, in their challenge to build 30 sites in 30 days.</p>
+
 						</div> <!-- close .description-modal -->
 
 						<img class="work-example" src="images/toothless.png" alt="How To Train Your Dragon project">
@@ -145,7 +169,7 @@
 						<figcaption>
 							<h3 class="work-example-title">Movie Tribute Site</h3>
 							<div class="info">
-								<span tabindex='0' role="link" class="right-border description">Description</span>
+								<span tabindex='0' role="button" class="right-border description">Description</span>
 								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/30days30sites/day-7:movie/index.html" target="_blank" rel="noopener">Website</a></span>
 								<span><a class="work-example-link" href="https://github.com/msksfo/30days30sites/tree/master/day-7:movie" target="_blank" rel="noopener">Github</a></span>
 							</div>
@@ -160,11 +184,11 @@
 			<div class="contact">
 				<p>Get in touch ~
 				<span class="social-links">
-					<a aria-label="Link to Linkedin" class="social-link" href="https://www.linkedin.com/in/tia-esguerra/" target="_blank" rel="noopener"><i aria-hidden=true class="fab fa-lg fa-linkedin"></i></a>
+					<a aria-label="Link to Linkedin" class="social-link" href="https://www.linkedin.com/in/tia-esguerra/" target="_blank" rel="noopener"><i aria-hidden="true" class="fab fa-lg fa-linkedin"></i></a>
 
-					<a  aria-label="Link to Github" href="https://github.com/msksfo" target="_blank" rel="noopener" class="social-link"><i aria-hidden=true class="fab fa-lg fa-github"></i></a>
+					<a  aria-label="Link to Github" href="https://github.com/msksfo" target="_blank" rel="noopener" class="social-link"><i aria-hidden="true" class="fab fa-lg fa-github"></i></a>
 
-					<a aria-label="Link to Twitter" href="https://twitter.com/msSFO" target="_blank" rel="noopener" class="social-link"><i aria-hidden=true class="fab fa-lg fa-twitter-square"></i></a>
+					<a aria-label="Link to Twitter" href="https://twitter.com/msSFO" target="_blank" rel="noopener" class="social-link"><i aria-hidden="true" class="fab fa-lg fa-twitter-square"></i></a>
 				</span>
 				~ msksfo@gmail.com</p>
 			</div>

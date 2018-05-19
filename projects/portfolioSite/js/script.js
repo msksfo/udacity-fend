@@ -3,53 +3,96 @@
 
     /* ========== Global Variables =========== */
 
+    // the word 'description' in each figure caption
     const descriptions = document.querySelectorAll('.description');
+
+    // the actual modal windows
     const descriptionModals = document.querySelectorAll('.description-modal');
+
     const closeModals = document.querySelectorAll('.close-modal');
     const descriptionText = document.querySelectorAll('.description-text');
+    let lastFocusedElement;
 
 
     /* ================ Functions ============== */ 
 
     function hideModal(xModal, descriptionTxt, modal){
         // hide the modal, the text, and the 'x' that closes the modal
-       xModal.style.opacity = 0;
-       descriptionTxt.style.opacity = 0;
-       modal.classList.remove('show-modal');
+        descriptionTxt.style.opacity = 0;
+        xModal.style.opacity = 0;
+        modal.classList.remove('show-modal');
+
+       // make the modal invisible to screen readers
+       modal.setAttribute('aria-hidden', 'true');
+
+        // return the focus to the element that held focus before modal was open
+        lastFocusedElement.focus();
     }
 
-    function showModal(xModal, descriptionTxt, modal){
-        // show the modal, the text, and the 'x' that closes the modal
+    function showModal(evt, xModal, descriptionTxt, modal){
+        // show the modal, and the project description text
         modal.classList.add('show-modal');
-        xModal.style.opacity = 1;
         descriptionTxt.style.opacity = 1;
+        
+        // don't show the 'x' to close the modal if the event was mouseenter
+        if (evt.type === 'mouseenter'){
+            xModal.style.opacity = 0;
+        } else {
+            // keyboard trap to prevent tabbing outside the modal
+            modal.addEventListener('keydown', function(e){
+                if (e.keyCode === 9){
+                    e.preventDefault();
+                }
+            });
+            xModal.style.opacity = 1;
+        }
+
+        // remember which element was focused before opening modal
+        lastFocusedElement = document.activeElement;
+
+        // make the modal visible to screen readers
+        modal.setAttribute('aria-hidden', 'false');
+
+        // set focus on the close button when modal is opened
+        xModal.focus();  
     }
 
-
+    //just for testing purposes
+    document.body.addEventListener('keydown', function(){
+        console.log(document.activeElement);
+    })
+    
 
 
     /* ============== Event Listeners ============ */
 
-    // show the modals on click
+    // show the modals on mouseenter and keydown
     for (let i = 0; i < descriptions.length; i++){
-        /* use the bind method so the showModal function will not be immediately invoked */
-        descriptions[i].addEventListener('click', showModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
+        descriptions[i].addEventListener('mouseenter', function(e){
+           showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
+        });
+
+        descriptions[i].addEventListener('keydown', function(e){
+            // open the modal if user pressed enter or space
+            if (e.keyCode === 13 || e.keyCode === 32){
+                showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
+            }
+        });
     }
+   
 
 
-    // show the modals if 'enter' is pressed
+    // hide the modals on mouseleave, and keydown
     for (let i = 0; i < descriptions.length; i++){
-        /* use the bind method so the showModal function will not be immediately invoked */
-        descriptions[i].addEventListener('keypress', showModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
+        /* use the bind method so the hideModal function will not be immediately invoked  */
+        descriptionModals[i].addEventListener('mouseleave', hideModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
+
+        descriptionModals[i].addEventListener('keydown', function(e){
+            // close the modal if user pressed enter or esc
+            if (e.keyCode === 13 || e.keyCode === 27){
+                hideModal(closeModals[i], descriptionText[i], descriptionModals[i]);
+            }
+        });
     }
 
-
-    // hide the modals
-    for (let i = 0; i < closeModals.length; i++){
-        /* use the bind method so the hideModal function will not be immediately invoked */
-        closeModals[i].addEventListener('click', hideModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
-    }
-
-
-})();
-
+})()
