@@ -13,6 +13,8 @@
     const descriptionText = document.querySelectorAll('.description-text');
     let lastFocusedElement;
 
+    const workExamples = document.querySelector('.work-examples');
+
 
     /* ================ Functions ============== */ 
 
@@ -68,6 +70,7 @@
     /* ============== Event Listeners ============ */
 
     // show the modals on click and keydown
+    /*
     for (let i = 0; i < descriptions.length; i++){
         descriptions[i].addEventListener('click', function(e){
            showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
@@ -80,9 +83,52 @@
             }
         });
     }
+    */
+
+    
+  workExamples.addEventListener('click', function(e){
+      // turn nodelists into arrays so i can use array methods on them
+      const descriptionsArr = Array.from(descriptions);
+      const closeModalsArr = Array.from(closeModals);
+      
+
+      // find specifically which element was clicked
+      const index = descriptionsArr.indexOf(e.target);
+      const modalIndex = closeModalsArr.indexOf(e.target);
+     
+      if (e.target.classList.contains('description')){
+        showModal(e, closeModals[index], descriptionText[index], descriptionModals[index]);
+      } else if (e.target.classList.contains('close-modal')){
+       hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
+      }
+     
+  });
+
+  workExamples.addEventListener('keydown', function(e){
+    // turn nodelists into arrays so i can use array methods on them
+    const descriptionsArr = Array.from(descriptions);
+    const closeModalsArr = Array.from(closeModals);
+    
+
+    // find specifically which key was pressed
+    const index = descriptionsArr.indexOf(e.target);
+    const modalIndex = closeModalsArr.indexOf(e.target);
+
+    if (e.keyCode === 13 || e.keyCode === 32){
+        if (e.target.classList.contains('description')){
+            showModal(e, closeModals[index], descriptionText[index], descriptionModals[index]);
+          } else if (e.target.classList.contains('close-modal')){
+           hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
+          }
+    }
+
    
+});
 
 
+
+
+  /*
     // hide the modals on click, and keydown
     for (let i = 0; i < descriptions.length; i++){
 
@@ -97,5 +143,6 @@
             }
         });
     }
+    */
 
 })()
