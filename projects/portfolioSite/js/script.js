@@ -34,27 +34,30 @@
         modal.classList.add('show-modal');
         descriptionTxt.style.opacity = 1;
         
-        // don't show the 'x' to close the modal if the event was mouseenter
-        if (evt.type === 'mouseenter'){
-            xModal.style.opacity = 0;
+        // for mouse users
+        if (evt.type === 'click'){
+            xModal.style.opacity = 1;
         } else {
+            // for keyboard users
+            
+            xModal.style.opacity = 1;
+            // remember which element was focused before opening modal
+            lastFocusedElement = document.activeElement;
+
+            // make the modal visible to screen readers
+            modal.setAttribute('aria-hidden', 'false');
+
+            // set focus on the close button when modal is opened
+            xModal.focus();  
+
             // keyboard trap to prevent tabbing outside the modal
             modal.addEventListener('keydown', function(e){
                 if (e.keyCode === 9){
                     e.preventDefault();
                 }
             });
-            xModal.style.opacity = 1;
         }
 
-        // remember which element was focused before opening modal
-        lastFocusedElement = document.activeElement;
-
-        // make the modal visible to screen readers
-        modal.setAttribute('aria-hidden', 'false');
-
-        // set focus on the close button when modal is opened
-        xModal.focus();  
     }
 
     //just for testing purposes
@@ -66,9 +69,9 @@
 
     /* ============== Event Listeners ============ */
 
-    // show the modals on mouseenter and keydown
+    // show the modals on click and keydown
     for (let i = 0; i < descriptions.length; i++){
-        descriptions[i].addEventListener('mouseenter', function(e){
+        descriptions[i].addEventListener('click', function(e){
            showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
         });
 
@@ -82,11 +85,14 @@
    
 
 
-    // hide the modals on mouseleave, and keydown
+    // hide the modals on click, and keydown
     for (let i = 0; i < descriptions.length; i++){
         /* use the bind method so the hideModal function will not be immediately invoked  */
-        descriptionModals[i].addEventListener('mouseleave', hideModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
 
+        // hide the modal if they leave modal window
+        descriptionModals[i].addEventListener('click', hideModal.bind(this, closeModals[i], descriptionText[i], descriptionModals[i]));
+
+      
         descriptionModals[i].addEventListener('keydown', function(e){
             // close the modal if user pressed enter or esc
             if (e.keyCode === 13 || e.keyCode === 27){
