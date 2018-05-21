@@ -31,7 +31,7 @@
             // return the focus to the element that held focus before modal was open
             lastFocusedElement.focus();
        }
-        
+       
     }
 
     function showModal(evt, xModal, descriptionTxt, modal){
@@ -84,11 +84,9 @@
 
 
     workExamples.addEventListener('keydown', function(e){
-        e.preventDefault();
         // turn nodelists into arrays so i can use array methods on them
         const descriptionsArr = Array.from(descriptions);
-        const closeModalsArr = Array.from(closeModals);
-        
+        const closeModalsArr = Array.from(closeModals);  
 
         // find specifically which key was pressed
         const index = descriptionsArr.indexOf(e.target);
@@ -96,11 +94,18 @@
 
         /* if the user presses enter or space while the word 'description' is in focus, determine which one and show the corresponding modal. if the modal is open and they press enter or escape while 'x' is in focus, close the modal that is open. also prevent the default behavior of the space and enter keys */
         if ((e.keyCode === 13 || e.keyCode === 32) && (e.target.classList.contains('description'))){
+            // when modal is closed, prevent default behavior of enter and space
+            e.preventDefault();
             showModal(e, closeModals[index], descriptionText[index], descriptionModals[index]);
-        } else if ((e.keyCode === 13 || e.keyCode === 27) && (e.target.classList.contains('close-modal'))){
-            hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
-            }
-
+        } else {
+            if ((e.keyCode === 32) && (e.target.classList.contains('close-modal'))){
+                // if modal is open, prevent default behavior of the space key
+                e.preventDefault();
+            } else if ((e.keyCode === 13 || e.keyCode === 27) && (e.target.classList.contains('close-modal'))){
+                hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
+            } 
+            
+        }
     });
 
 })()
