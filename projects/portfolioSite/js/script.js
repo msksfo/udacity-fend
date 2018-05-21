@@ -13,6 +13,8 @@
     const descriptionText = document.querySelectorAll('.description-text');
     let lastFocusedElement;
 
+    const workExamples = document.querySelector('.work-examples');
+
 
     /* ================ Functions ============== */ 
 
@@ -29,7 +31,7 @@
             // return the focus to the element that held focus before modal was open
             lastFocusedElement.focus();
        }
-        
+       
     }
 
     function showModal(evt, xModal, descriptionTxt, modal){
@@ -57,47 +59,53 @@
         modal.setAttribute('aria-hidden', 'false');
     }
 
-    //just for testing purposes
-    document.body.addEventListener('keydown', function(e){
-        console.log(document.activeElement);
-        console.log(e.keyCode);
-    })
+    /* ================== Event Listeners =============== */
+
+    /* these two event listeners have the same funcionality, to open/close the modal. one is for mouse users(click), the other for keyboard users(keydown) */
     
+    workExamples.addEventListener('click', function(e){
+        // turn nodelists into arrays so i can use array methods on them
+        const descriptionsArr = Array.from(descriptions);
+        const closeModalsArr = Array.from(closeModals);
+        
+
+        // find specifically which element was clicked
+        const index = descriptionsArr.indexOf(e.target);
+        const modalIndex = closeModalsArr.indexOf(e.target);
+
+        /* if the user clicks the word 'description', determine which one and show the corresponding modal. if the modal is open and they click the 'x', close the modal that is open */
+        if (e.target.classList.contains('description')){
+            showModal(e, closeModals[index], descriptionText[index], descriptionModals[index]);
+        } else if (e.target.classList.contains('close-modal')){
+        hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
+        }
+        
+    });
 
 
-    /* ============== Event Listeners ============ */
+    workExamples.addEventListener('keydown', function(e){
+        // turn nodelists into arrays so i can use array methods on them
+        const descriptionsArr = Array.from(descriptions);
+        const closeModalsArr = Array.from(closeModals);  
 
-    // show the modals on click and keydown
-    for (let i = 0; i < descriptions.length; i++){
-        descriptions[i].addEventListener('click', function(e){
-           showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
-        });
+        // find specifically which key was pressed
+        const index = descriptionsArr.indexOf(e.target);
+        const modalIndex = closeModalsArr.indexOf(e.target);
 
-        descriptions[i].addEventListener('keydown', function(e){
-            // open the modal if user pressed enter or space
-            if (e.keyCode === 13 || e.keyCode === 32){
-                e.preventDefault();
-                showModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
-            }
-        });
-    }
-   
-
-
-    // hide the modals on click, and keydown
-    for (let i = 0; i < descriptions.length; i++){
-
-        descriptionModals[i].addEventListener('click', function(e){
-            hideModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
-        });
-
-        descriptionModals[i].addEventListener('keydown', function(e){
-            // close the modal if user pressed enter or esc
+        /* if the user presses enter or space while the word 'description' is in focus, determine which one and show the corresponding modal. if the modal is open and they press enter or escape while 'x' is in focus, close the modal that is open. also prevent the default behavior of the space and enter keys */
+        if ((e.keyCode === 13 || e.keyCode === 32) && (e.target.classList.contains('description'))){
+            // when modal is closed, prevent default behavior of enter and space
             e.preventDefault();
-            if (e.keyCode === 13 || e.keyCode === 27){
-                hideModal(e, closeModals[i], descriptionText[i], descriptionModals[i]);
-            }
-        });
-    }
+            showModal(e, closeModals[index], descriptionText[index], descriptionModals[index]);
+        } else {
+            if ((e.keyCode === 32) && (e.target.classList.contains('close-modal'))){
+                // if modal is open, prevent default behavior of the space key
+                e.preventDefault();
+            } else if ((e.keyCode === 13 || e.keyCode === 27) && (e.target.classList.contains('close-modal'))){
+                hideModal(e, closeModals[modalIndex], descriptionText[modalIndex], descriptionModals[modalIndex]);
+            } 
+            
+        }
+    });
 
 })()
