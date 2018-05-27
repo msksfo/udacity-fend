@@ -6,3 +6,5 @@ https://msksfo.github.io/udacity-fend/projects/portfolioSite/index.html
 
 https://msksfo.github.io/udacity-fend/projects/memoryGame/index.html
 
+https://msksfo.github.io/udacity-fend/projects/arcadeGame/index.html
+
