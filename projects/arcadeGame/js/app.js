@@ -39,7 +39,6 @@ Enemy.prototype.update = function(dt) {
     
     // if any part of the two sprites is overlapping, they have crashed.
     if ( (this.x + this.width >= player.x) && (this.y + this.height >= player.y) && (player.x + player.width >= this.x) && (player.y + player.height >= this.y) ) {
-        win.cancelAnimationFrame('main');
         // reset player coordinates when sprites crash. reset points to 0
         setTimeout(function(){
             player.y = 430;
