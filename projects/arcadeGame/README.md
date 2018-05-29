@@ -1,8 +1,11 @@
-frontend-nanodegree-arcade-game
-===============================
+##Arcade Game Clone
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+##About The Project
+This project is a an HTML canvas game in the style of the arcade game frogger. There are no extra dependencies. Download the files and you are all set to play. 
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-https://msksfo.github.io/udacity-fend/projects/arcadeGame/index.html<a href="https://www.freevector.com/free-cartoon-airplane-vector-18720">FreeVector.com</a>
 
+##Directions
+Use the arrow keys to maneuver the rocket ship to space. Each time you reach space you will receive 50 points. However, if you collide with an alien your points will be reset to 0, and you will return your starting position on the gameboard. When you have accummulated 150 points, you advance to the next level, where your points will be reset to zero. If you reach 150 points on level three, you win the game. 
+
+
+https://msksfo.github.io/udacity-fend/projects/arcadeGame/index.html
