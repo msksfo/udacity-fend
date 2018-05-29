@@ -39,12 +39,13 @@ Enemy.prototype.update = function(dt) {
     
     // if any part of the two sprites is overlapping, they have crashed.
     if ( (this.x + this.width >= player.x) && (this.y + this.height >= player.y) && (player.x + player.width >= this.x) && (player.y + player.height >= this.y) ) {
+        win.cancelAnimationFrame('main');
         // reset player coordinates when sprites crash. reset points to 0
         setTimeout(function(){
-            player.y = 402;;
+            player.y = 430;
             player.x = 200;
             points.innerHTML = 0;
-        }, 150);
+        }, 250);
     } 
 };
 
@@ -60,7 +61,7 @@ var Player = function(x, y){
     this.x = x;
     this.y = y;  
     this.sprite = 'images/rocket.png'
-    this.height = 35;
+    this.height = 50;
     this.width = 50;
 }
 
@@ -77,34 +78,38 @@ Player.prototype.update = function(dt){}
 /* these four methods control player up/down/left/right movement. -created for easier readability inside the handleInput method */
 
 Player.prototype.keyUp = function (){
-    const upperLimit = -13;
-    if (this.y -83 < upperLimit){
+    // if player reaches space, put player back at start. 
+    const upperLimit = -40;
+
+    if (this.y - 94 < upperLimit){
         this.y = upperLimit;
-    } else if (this.y - 83 === upperLimit){
-        this.y -= 83;
+    } else if (this.y - 94 === upperLimit){
+        this.y -= 94;
         updatePoints();
+        // if points are under 150, increment points. otherwise increment the level
         if (points.innerHTML < 150){
             setTimeout(function(){
-                this.y = 402; 
+                this.y = 430; 
                 this.x = this.getRandomX();
                }.bind(player), 800);
         } else {
             winLevel();
         } 
     } else {
-        this.y -= 83;
+        this.y -= 94;
     }
 }
 
 
 Player.prototype.keyDown = function(){
     const lowerLimit = 430;
-    if ((this.y + 83) > lowerLimit){
+    if ((this.y + 101) > lowerLimit){
         this.y = lowerLimit;
     } else {
-        this.y += 83;
+        this.y += 101;
     }
 }
+
 
 Player.prototype.keyLeft = function(){
     const leftLimit = -6;
@@ -115,6 +120,7 @@ Player.prototype.keyLeft = function(){
     }
 }
 
+
 Player.prototype.keyRight = function(){
     const rightLimit = 410;
     if ((this.x + 101) > rightLimit){
@@ -123,6 +129,7 @@ Player.prototype.keyRight = function(){
         this.x += 101;
     }
 }
+
 
 Player.prototype.handleInput = function(key){
     // if direction is up/down, adjust the y value by row height.
@@ -138,6 +145,7 @@ Player.prototype.handleInput = function(key){
    }
 }   
 
+
 Player.prototype.render = function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
@@ -148,16 +156,19 @@ let points = document.querySelector('.points-value');
 let gameLevel = 1;
 
 // instantiate player and enemy objects
-const enemy1 = new Enemy(-90, 153, 'images/alien1.png', 65, 70, 'lr');
-const enemy2= new Enemy(-95, 70, 'images/alien4.png', 60, 50, 'lr');
-const enemy3 = new Enemy(-100, 236, 'images/alien2.png', 65,  70, 'lr');
-const enemy4 = new Enemy(510, 319, 'images/alien3.png', 60, 50, 'rl');
-const enemy5 = new Enemy(500, 100, 'images/tiefighter.png', 65, 70, 'rl');
-const enemy6 = new Enemy(-90, 259, 'images/tiefighter.png', 65, 70, 'lr');
-const enemy7 = new Enemy(510, 319, 'images/alien4.png', 60, 50, 'rl');
+const enemy1 = new Enemy(-90, 148, 'images/alien1.png', 65, 70, 'lr');
+const enemy2 = new Enemy(-95, 54, 'images/alien4.png', 50, 65, 'lr');
+const enemy3 = new Enemy(-100, 242, 'images/alien2.png', 65,  50, 'lr');
+const enemy4 = new Enemy(510, 336, 'images/alien3.png', 50, 50, 'rl');
+
+const enemy5 = new Enemy(500, 101, 'images/tiefighter.png', 50, 50, 'rl');
+const enemy6 = new Enemy(-90, 289, 'images/tiefighter.png', 50, 50, 'lr');
+const enemy7 = new Enemy(510, 336, 'images/alien4.png', 50, 65, 'rl');
 
 let allEnemies = [enemy1];
-const player = new Player(200, 402);
+//const player = new Player(200, 402);
+
+const player = new Player(200, 430);
 
 
 /* ================ Functions ================ */
@@ -170,7 +181,9 @@ function updatePoints(){
     }   
 }
 
+
 function levelOne(){
+    // make level 1 super easy. add one enemy at each 50 points
     if (points.innerHTML == 50){
         setTimeout(function(){
             allEnemies.push(enemy2);
@@ -182,6 +195,7 @@ function levelOne(){
     } 
 }
 
+
 function increaseLevelUi(){
     let level = document.querySelector('.level-value');
     /* set the level to the global gameLevel variable. NOTE: updateModal function increments this variable */
@@ -192,7 +206,9 @@ function increaseLevelUi(){
     
 }
 
+
 function increaseDifficulty(){
+    // make each level slightly harder
     setTimeout(function(){
         if (gameLevel === 2){
             allEnemies = [enemy1, enemy2, enemy3, enemy4];
@@ -209,12 +225,12 @@ function increaseDifficulty(){
     }, 700);  
 }
 
+
 function winGame(){
     // congratulate user for winning. ask if they want to play again
     setTimeout(function(){
         if (gameLevel === 4){
-            let winningModal = document.querySelector('.winning-modal');
-            winningModal.classList.add('show-winning-modal');
+            document.querySelector('.winning-modal').classList.toggle('show-winning-modal');
 
             let replay = document.querySelector('.replay');
             let quit = document.querySelector('.quit');
@@ -225,28 +241,53 @@ function winGame(){
     }, 1500);
 }
 
+
 function quitGame(){
     document.querySelector('.congratulations-text').style.display = 'none';
 }
 
-function replayGame(){
-    // hide the modal. restart the game at level 1
-    setTimeout(function(){
-        winningModal.classList.toggle('show-winning-modal');
-    }, 1000);
 
-    setTimeout(() => window.location.reload(), 1000);
+function resetGameValues(){
+    // hide the modal. reset all values to level 1
+    document.querySelector('.winning-modal').classList.toggle('show-winning-modal');
+    gameLevel = 1;
+    points.innerHTML = 0;
+    document.querySelector('.level-value').innerHTML = 1;
 }
+
+
+function resetPlayerValues(){
+    // set player and enemy coordinates to level 1
+    player.x = 200;
+    player.y = 430; 
+    allEnemies.length = 0;
+    allEnemies.push(enemy1); 
+}
+
+
+function replayGame(){
+    // call the functions that reset everything to level 1 state
+    setTimeout(function(){
+        resetPlayerValues();
+     }, 200);
+
+    setTimeout(function(){
+       resetGameValues();
+    }, 700);
+
+}
+
 
 function updateModal(){
     // increment the global gameLevel variable, and set the level in the modal to that value
     gameLevel += 1;
-    let modalLevel = document.querySelector('.modal-level-value');
+    let modalLevel = document.querySelector('.new-level-value');
     // only increment up to level 3 because player wins the game if they pass level 3
     if (gameLevel <= 3){
         modalLevel.innerHTML = gameLevel;
     }
 }
+
 
 function winLevel(){ 
     // update the level in the modal before showing the modal  
@@ -256,13 +297,13 @@ function winLevel(){
     if (gameLevel === 4){
         winGame();
     } else {
-        const congratulations = document.querySelector('.congratulations');
+        const newLevel = document.querySelector('.new-level-modal');
         player.x = player.x;
     
        // show the modal. hide the enemies
         setTimeout(function(){
             allEnemies.length = 0;
-            congratulations.classList.toggle('show-congratulations');
+            newLevel.classList.toggle('show-new-level');
         }, 1000);
 
         // while the modal is hiding the score panel, update those score pane UI values
@@ -270,9 +311,9 @@ function winLevel(){
 
         // move player to starting position. inrease game difficulty
         setTimeout(function(){
-            congratulations.classList.toggle('show-congratulations');
+            newLevel.classList.toggle('show-new-level');
             player.x = 200;
-            player.y = 402;  
+            player.y = 430;  
             increaseDifficulty();
         }, 3000);
     }

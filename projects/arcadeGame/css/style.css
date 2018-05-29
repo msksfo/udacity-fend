@@ -12,8 +12,9 @@ body {
     position: relative;
 }
 
-/* this will slide down each time the user passes a level */
-.congratulations {
+
+/* this will slide down each time the user passes a level, and announce the new level number */
+.new-level-modal {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,10 +28,12 @@ body {
 }
 
 
-.show-congratulations {
+/* toggle this in javascript to make the above modal appear/disappear */
+.show-new-level {
     height: 100%;
     opacity: 1;
 }
+
 
 /* this slides down as a congratulatory banner when the user wins the game */
 .winning-modal {
@@ -50,7 +53,7 @@ body {
     align-items: flex-start;
 }
 
-
+/* toggle this in javascript to make the above modal appear/disappear */
 .show-winning-modal {
     height: 100%;
     opacity: 1;
@@ -63,11 +66,14 @@ body {
     color: #293B8F;
 }
 
+
 .replay-quit {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4px;
 }
+
+/* ============= buttons for replay/quit =============== */
 
 .button {
     padding: 10px;
