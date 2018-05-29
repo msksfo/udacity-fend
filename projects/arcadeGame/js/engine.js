@@ -92,6 +92,7 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+           
         });
         player.update();
     }
@@ -107,7 +108,7 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
+                'images/space2.jpg',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
                 'images/stone-block.png',   // Row 2 of 3 of stone
                 'images/stone-block.png',   // Row 3 of 3 of stone
@@ -169,12 +170,16 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
         'images/water-block.png',
+        'images/stone-block.png', 
         'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png',
-        'images/char-pink-girl.png' 
+        'images/rocket.png',
+        'images/alien1.png',
+        'images/space2.jpg',
+        'images/alien2.png',
+        'images/alien4.png',
+        'images/tiefighter.png',
+        'images/alien3.png'
     ]);
     Resources.onReady(init);
 
