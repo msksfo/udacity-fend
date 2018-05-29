@@ -2,16 +2,17 @@ body {
     text-align: center;
 }
 
+
 .scoreboard {
     max-width: 505px;
     margin: 0 auto;
-    border: 1px solid pink;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     position: relative;
 }
 
+/* this will slide down each time the user passes a level */
 .congratulations {
     position: absolute;
     top: 0;
@@ -19,25 +20,80 @@ body {
     width: 100%;
     opacity: 0;
     height: 0;
-    background-color: lightblue;
-    color: darkblue;
+    background-color: #07203D;
+    color: white;
     transition: all 0.5s ease;
     z-index: 1;
 }
+
 
 .show-congratulations {
     height: 100%;
     opacity: 1;
 }
 
-.level {
-    
+/* this slides down as a congratulatory banner when the user wins the game */
+.winning-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    background-image: url('../images/youwon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
 }
 
-.points {
 
+.show-winning-modal {
+    height: 100%;
+    opacity: 1;
 }
 
-.hide {
-    display: none;
+
+.congratulations-text {
+    padding: 0 10px 10px 10px;
+    font-size: 1.5rem;
+    color: #293B8F;
+}
+
+.replay-quit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: color .3s ease;
+}
+
+.replay {
+    background-color: #30ABDF;
+    color: white;
+    border: 1px solid #1A77BA;
+}
+
+.replay:hover,
+.replay:focus {
+    background: #293B8F;
+}
+
+.quit {
+    border: 1px solid #BD2132;
+    background-color: #EC423D;
+    color: white;
+}
+
+.quit:hover,
+.quit:focus {
+    background-color: #BD2132;
 }
