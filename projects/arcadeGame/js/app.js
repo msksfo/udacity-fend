@@ -230,6 +230,7 @@ function winGame(){
     setTimeout(function(){
         if (gameLevel === 4){
             document.querySelector('.winning-modal').classList.toggle('show-winning-modal');
+            document.querySelector('.congratulations-text').style.display = 'block';
 
             let replay = document.querySelector('.replay');
             let quit = document.querySelector('.quit');
@@ -266,6 +267,7 @@ function resetPlayerValues(){
 
 function replayGame(){
     // call the functions that reset everything to level 1 state
+    document.querySelector('.congratulations-text').style.display = 'none';
     setTimeout(function(){
         resetPlayerValues();
      }, 200);
