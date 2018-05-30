@@ -2,6 +2,12 @@ body {
     text-align: center;
 }
 
+.wrapper {
+    max-width: 1280px;
+    border: 1px solid pink;
+    margin: 0 auto;
+}
+
 
 .scoreboard {
     max-width: 505px;

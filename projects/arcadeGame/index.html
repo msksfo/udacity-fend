@@ -7,28 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- congratulations banner viewable only if/when user wins game -->
-    <div class="winning-modal">
-        <div class="congratulations-text">
-            <p>YOU WON!</p>
-            <div class="replay-quit">
-                <button class="replay button">Play Again</button>
-                <button class="quit button">Quit</button>
+    <div class="wrapper">
+        <!-- congratulations banner viewable only if/when user wins game -->
+        <div class="winning-modal">
+            <div class="congratulations-text">
+                <p>YOU WON!</p>
+                <div class="replay-quit">
+                    <button class="replay button">Play Again</button>
+                    <button class="quit button">Quit</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="scoreboard">
-        <!-- modal that will slide down to announce user moving to next level -->
-        <div class="new-level-modal">
-            <p>LEVEL <span class="new-level-value"></span></p>
+        <div class="scoreboard">
+            <!-- modal that will slide down to announce user moving to next level -->
+            <div class="new-level-modal">
+                <p>LEVEL <span class="new-level-value"></span></p>
+            </div>
+
+            <!-- keep track of the current level and points for that level -->
+            <p class="level">Level: <span class="level-value">1</span></p>
+            <p class="points"><span>points:</span> <span class="points-value">0</span></p>
         </div>
-
-        <!-- keep track of the current level and points for that level -->
-        <p class="level">Level: <span class="level-value">1</span></p>
-        <p class="points"><span>points:</span> <span class="points-value">0</span></p>
-    </div>
-
+    </div> <!-- close .wrapper -->
 
     <script src="js/resources.js"></script>
     <script src="js/engine.js"></script>
