@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid lightblue;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+ p {
+    text-align: center;
+    margin: .5rem 0 1.5rem 0;
+}
+
+figure {
+    border: 1px solid purple;
+    padding: 10px;
+}
+
+figcaption {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.likes {
+    padding-top: 8px;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
