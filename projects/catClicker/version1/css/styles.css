@@ -29,11 +29,16 @@ figcaption {
     letter-spacing: 2px;
 }
 
+img {
+    max-width: 100%;
+}
+
+
 .likes {
     padding-top: 8px;
     font-size: 1.3rem;
 }
 
-img {
-    max-width: 100%;
+.red-heart {
+    color: red;
 }
