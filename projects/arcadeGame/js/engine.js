@@ -24,8 +24,15 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
+    //canvas.width = 505;
+    //canvas.height = 606;
+    
+    // make the canvas take up the full width/height of the device, and center it horizontally
+    canvas.width = Math.floor(window.innerWidth / 101) * 101;
+    canvas.height = Math.floor(window.innerHeight / 101) * 101;
+    canvas.style.marginLeft = 'auto';
+    canvas.style.marginRight = 'auto';
+
     doc.querySelector('.wrapper').appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -107,6 +114,7 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+       
         var rowImages = [
                 'images/space2.jpg',   // Top row is space
                 'images/gradient100.png',   // darkest sky
@@ -115,8 +123,10 @@ var Engine = (function(global) {
                 'images/gradient25.png',   // lightest sky
                 'images/grass.jpg' // ground
             ],
-            numRows = 6,
-            numCols = 5,
+            //numRows = 6,
+            //numCols = 5,
+            numRows = Math.floor(window.innerHeight / 101),
+            numCols = Math.floor(window.innerWidth / 101),
             row, col;
         
         // Before drawing, clear existing canvas
