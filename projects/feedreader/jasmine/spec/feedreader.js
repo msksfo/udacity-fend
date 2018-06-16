@@ -8,7 +8,7 @@
  * before the tests are run
  */
 $(function() {
-
+    // test ensures allFeeds is defined, and has at least one feed
     describe('RSS Feeds', function() {
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
@@ -20,11 +20,9 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+        
          it('have defined urls', function(){
-            for (let i = 0; i < allFeeds.length; i++){
-                expect(allFeeds[i].url).toBeTruthy();
-            }
+           allFeeds.forEach(feed => expect(feed.url).toBeTruthy());
          });
 
 
@@ -34,9 +32,7 @@ $(function() {
          */
 
         it('have defined names', function(){
-            for (let i = 0; i < allFeeds.length; i++){
-                expect(allFeeds[i].name).toBeTruthy();
-            }
+            allFeeds.forEach(feed => expect(feed.name).toBeTruthy());
          });
     });
 
@@ -71,9 +67,7 @@ $(function() {
        
          
          beforeEach(function(done){
-           loadFeed(0, function(){
-               done();
-           });
+           loadFeed(0, done);
          });
 
         
@@ -100,9 +94,7 @@ $(function() {
                 firstEntry = document.querySelector('.feed').children[0].innerText;
                 
                 // load the second feed
-                loadFeed(1, function(){
-                    done();
-                });
+                loadFeed(1, done);
             });           
          });
 
