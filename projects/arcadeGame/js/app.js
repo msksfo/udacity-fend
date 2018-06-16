@@ -111,7 +111,7 @@ Player.prototype.keyDown = function(){
 
 
 Player.prototype.keyLeft = function(){
-    const leftLimit = -6;
+    const leftLimit = -1;
     if ((this.x - 101) < leftLimit){
         this.x = leftLimit;
     } else {
@@ -121,7 +121,7 @@ Player.prototype.keyLeft = function(){
 
 
 Player.prototype.keyRight = function(){
-    const rightLimit = 410;
+    const rightLimit = 404;
     if ((this.x + 101) > rightLimit){
         this.x = rightLimit;
     } else {
@@ -165,8 +165,6 @@ const enemy6 = new Enemy(-90, 289, 'images/tiefighter.png', 50, 50, 'lr');
 const enemy7 = new Enemy(510, 336, 'images/alien4.png', 50, 65, 'rl');
 
 let allEnemies = [enemy1];
-//const player = new Player(200, 402);
-
 const player = new Player(200, 430);
 
 
