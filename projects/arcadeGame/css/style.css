@@ -2,6 +2,7 @@ body {
     text-align: center;
 }
 
+
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
@@ -9,7 +10,9 @@ body {
 
 
 .scoreboard {
-    max-width: 505px;
+    /* this should be 100% width of the canvas. how do i calculate this??? */
+    width: 100%; 
+    
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;

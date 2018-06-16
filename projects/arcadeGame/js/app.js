@@ -24,14 +24,14 @@ Enemy.prototype.update = function(dt) {
     /* if the enemy's x position is off the board, reset the position to the starting position */
 
     if (this.direction === 'rl'){
-        if (this.x <= -100){
-            this.x = 500;
+        if (this.x <= -101){
+            this.x = gameWidth + 51;
         } else {
             (this.x -= this.randomSpeed) * dt;
         }
     } else {
-        if (this.x >= 500){
-            this.x = -100;
+        if (this.x >= gameWidth + 51){
+            this.x = -101;
          } else {
              (this.x += this.randomSpeed) * dt;
          }
@@ -42,7 +42,7 @@ Enemy.prototype.update = function(dt) {
         // reset player coordinates when sprites crash. reset points to 0
         setTimeout(function(){
             player.y = 430;
-            player.x = 200;
+            player.x = (gameWidth / 2) - 50.5;
             points.innerHTML = 0;
         }, 250);
     } 
@@ -67,10 +67,12 @@ var Player = function(x, y){
 Player.prototype.getRandomX = function(){
      /*  get a random number between 0 and (board width - sprite width)
     this random number will be the x coordinate anytime the sprite is reset  */
-    return Math.floor(Math.random() * 404 + 1);
+    return Math.floor(Math.random() * (gameWidth - 50.5) + 1);
 }
 
-Player.prototype.update = function(dt){}
+Player.prototype.update = function(dt){
+    // what am i supposed to put in here???? 
+}
 
 /* ====== control player movement ===== */
 
@@ -111,7 +113,7 @@ Player.prototype.keyDown = function(){
 
 
 Player.prototype.keyLeft = function(){
-    const leftLimit = -6;
+    const leftLimit = -1;
     if ((this.x - 101) < leftLimit){
         this.x = leftLimit;
     } else {
@@ -121,7 +123,7 @@ Player.prototype.keyLeft = function(){
 
 
 Player.prototype.keyRight = function(){
-    const rightLimit = 410;
+    const rightLimit = gameWidth - 101;
     if ((this.x + 101) > rightLimit){
         this.x = rightLimit;
     } else {
@@ -153,21 +155,22 @@ Player.prototype.render = function(){
 
 let points = document.querySelector('.points-value');
 let gameLevel = 1;
+let gameWidth = Math.floor(window.innerWidth / 101) * 101;
+let gameHeight = Math.floor(window.innerHeight / 101) * 101;
+
 
 // instantiate player and enemy objects
 const enemy1 = new Enemy(-90, 148, 'images/alien1.png', 65, 70, 'lr');
 const enemy2 = new Enemy(-95, 54, 'images/alien4.png', 50, 65, 'lr');
 const enemy3 = new Enemy(-100, 242, 'images/alien2.png', 65,  50, 'lr');
-const enemy4 = new Enemy(510, 336, 'images/alien3.png', 50, 50, 'rl');
+const enemy4 = new Enemy(gameWidth + 51, 336, 'images/alien3.png', 50, 50, 'rl');
 
-const enemy5 = new Enemy(500, 101, 'images/tiefighter.png', 50, 50, 'rl');
+const enemy5 = new Enemy(gameWidth + 55, 101, 'images/tiefighter.png', 50, 50, 'rl');
 const enemy6 = new Enemy(-90, 289, 'images/tiefighter.png', 50, 50, 'lr');
-const enemy7 = new Enemy(510, 336, 'images/alien4.png', 50, 65, 'rl');
+const enemy7 = new Enemy(gameWidth + 53, 336, 'images/alien4.png', 50, 65, 'rl');
 
 let allEnemies = [enemy1];
-//const player = new Player(200, 402);
-
-const player = new Player(200, 430);
+const player = new Player((gameWidth / 2) - 50.5, 430);
 
 
 /* ================ Functions ================ */
@@ -258,7 +261,7 @@ function resetGameValues(){
 
 function resetPlayerValues(){
     // set player and enemy coordinates to level 1
-    player.x = 200;
+    player.x = (gameWidth / 2) - 50.5;
     player.y = 430; 
     allEnemies.length = 0;
     allEnemies.push(enemy1); 
@@ -313,7 +316,7 @@ function winLevel(){
         // move player to starting position. inrease game difficulty
         setTimeout(function(){
             newLevel.classList.toggle('show-new-level');
-            player.x = 200;
+            player.x = (gameWidth / 2) - 50.5;
             player.y = 430;  
             increaseDifficulty();
         }, 3000);

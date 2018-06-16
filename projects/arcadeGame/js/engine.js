@@ -24,8 +24,6 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    //canvas.width = 505;
-    //canvas.height = 606;
     
     // make the canvas take up the full width/height of the device, and center it horizontally
     canvas.width = Math.floor(window.innerWidth / 101) * 101;
