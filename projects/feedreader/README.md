@@ -8,7 +8,7 @@ I was given a web-based application that reads RSS feeds. My job was to write te
 Download or clone the repository. Click index.html and scroll to the bottom of the page to see the jasmine tests. Passing tests will be green. Failing tests will be red. 
 
 
-# Included tests
+## Included tests
 The following are the included tests: 
 
 1. Test ensures `allFeeds` is defined and has a length greater than 0
