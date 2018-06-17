@@ -9,6 +9,13 @@ Use the arrow keys to maneuver the rocket ship to space. Each time you reach spa
 ## Credits
 * Graphics by https://sweetclipart.com and https://pngtree.com
 
+## Code Navigation
+* resources.js is an image loading utility. It eases the process of loading image files so that     they can be used within the game. It also includes a simple "caching" layer to reuse cached       images if you attempt to load the same image multiple times.
+
+* engine.js provides the game loop functionality (update entities and render), draws the initial    game board on the screen, and then calls the update and render methods on the player and enemy    objects (defined in app.js). This engine makes the canvas' context (ctx) object globally          available to make writing app.js a little simpler to work with.
+
+* app.js contains the logic that allows the game to be played, including logic for collision        detection, scoring, increased levels of difficulty, resetting all values so the game can be      replayed, etc. It also contains the enemy/player classes and instantiation.
+ 
 
 ## Game Link
 https://msksfo.github.io/udacity-fend/projects/arcadeGame/index.html
