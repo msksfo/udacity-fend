@@ -18,7 +18,7 @@ var Enemy = function(x, y, sprite, height, width, direction) {
     }
 };
 
-// Update the enemy's position, required method for game
+// Update the enemy's position
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
     /* if the enemy's x position is off the board, reset the position to the starting position */
@@ -48,7 +48,7 @@ Enemy.prototype.update = function(dt) {
     } 
 };
 
-// Draw the enemy on the screen, required method for game
+// Draw the enemy on the screen
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
@@ -70,7 +70,6 @@ Player.prototype.getRandomX = function(){
     return Math.floor(Math.random() * 404 + 1);
 }
 
-Player.prototype.update = function(dt){}
 
 /* ====== control player movement ===== */
 
