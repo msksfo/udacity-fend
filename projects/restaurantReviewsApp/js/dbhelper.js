@@ -3,6 +3,8 @@
  */
 class DBHelper {
 
+  
+
   /**
    * Database URL.
    * Change this to restaurants.json file location on your server.
@@ -153,6 +155,11 @@ class DBHelper {
     return (`/img/${restaurant.photograph}`);
   }
 
+  // Restaurant image alt text
+  static imageAltForRestaurant(restaurant) {
+    return (`${restaurant.alt}`);
+  }
+
   /**
    * Map marker for a restaurant.
    */
@@ -166,6 +173,8 @@ class DBHelper {
       marker.addTo(newMap);
     return marker;
   } 
+
+
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
