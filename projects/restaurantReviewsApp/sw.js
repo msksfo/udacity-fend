@@ -2,24 +2,24 @@
 
 let cacheName = 'cache-v1';
 let cachedFiles = [
-    '/',
-    '/data/restaurants.json',
-    '/css/styles.css',
-    'index.html',
-    'js/index.js',
-    'js/main.js',
-    'js/dbhelper.js',
-    'js/restaurant_info.js',
-    'img/1.jpg',
-    'img/2.jpg',
-    'img/3.jpg',
-    'img/4.jpg',
-    'img/5.jpg',
-    'img/6.jpg',
-    'img/7.jpg',
-    'img/8.jpg',
-    'img/9.jpg',
-    'img/10.jpg',
+    '/udacity-fend/projects/restaurantReviewsApp/',
+    '/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json',
+    '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
+    'udacity-fend/projects/restaurantReviewsApp/index.html',
+    'udacity-fend/projects/restaurantReviewsApp/js/index.js',
+    'udacity-fend/projects/restaurantReviewsApp/js/main.js',
+    'udacity-fend/projects/restaurantReviewsApp/js/dbhelper.js',
+    'udacity-fend/projects/restaurantReviewsApp/js/restaurant_info.js',
+    'udacity-fend/projects/restaurantReviewsApp/img/1.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/2.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/3.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/4.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/5.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/6.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/7.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/8.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/9.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/10.jpg',
 ]
 
 
@@ -77,7 +77,6 @@ self.addEventListener('fetch', function(event) {
 
 
 self.addEventListener('activate', function(event) {
-    console.log('[ServiceWorker] Activated');
 
     event.waitUntil(
         // loop through the cache and remove anything that corresponds to a cache name that is not this cache name
