@@ -1,24 +1,24 @@
 {
   "restaurants": [{
     "id": 1,
-    "name": "Mission Chinese Food",
-    "neighborhood": "Manhattan",
+    "name": "Abundant Air Cafe",
+    "neighborhood": "PAO",
     "photograph": "1.jpg",
-    "alt": "Mission Chinese Food",
-    "address": "171 E Broadway, New York, NY 10002",
+    "alt": "Abundant Air Cafe",
+    "address": "1901 Embarcadero Rd #103, Palo Alto, CA 94303",
     "latlng": {
-      "lat": 40.713829,
-      "lng": -73.989667
+      "lat": 37.454439,
+      "lng": -122.115162
     },
-    "cuisine_type": "Asian",
+    "cuisine_type": "American",
     "operating_hours": {
-      "Monday": "5:30 pm - 11:00 pm",
-      "Tuesday": "5:30 pm - 12:00 am",
-      "Wednesday": "5:30 pm - 12:00 am",
-      "Thursday": "5:30 pm - 12:00 am",
-      "Friday": "5:30 pm - 12:00 am",
-      "Saturday": "12:00 pm - 4:00 pm, 5:30 pm - 12:00 am",
-      "Sunday": "12:00 pm - 4:00 pm, 5:30 pm - 11:00 pm"
+      "Monday": "08:00 - 15:00",
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "Closed",
+      "Sunday": "Closed"
     },
     "reviews": [{
         "name": "Steve",
