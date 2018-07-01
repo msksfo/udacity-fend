@@ -3,14 +3,37 @@
 let cacheName = 'cache-v1';
 /*
 let cachedFiles = [
+    '/',
+    'css/styles.css',
+    'index.html',
+    'js/index.js',
+    'js/main.js',
+    'img/apc.jpg',
+    'img/haf.jpg',
+    'img/haf2.jpg',
+    'img/haf3.jpg',
+    'img/harrisRanchSatelliteView.jpg',
+    'img/hwd.jpg',
+    'img/lvk.jpg',
+    'img/paloalto.jpg',
+    'img/petaluma.jpg',
+    'img/pasoRobles.jpg',
+    'img/salinas.jpg',
+    'img/sql.jpg',
+    'img/shelterCove.jpg',
+    'img/sts.jpg',
+    'img/watsonville.jpg'
+];
+*/
+
+
+
+let cachedFiles = [
     '/udacity-fend/projects/restaurantReviewsApp/',
-    '/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json',
     '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
     'udacity-fend/projects/restaurantReviewsApp/index.html',
     'udacity-fend/projects/restaurantReviewsApp/js/index.js',
     'udacity-fend/projects/restaurantReviewsApp/js/main.js',
-    'udacity-fend/projects/restaurantReviewsApp/js/dbhelper.js',
-    'udacity-fend/projects/restaurantReviewsApp/js/restaurant_info.js',
     'udacity-fend/projects/restaurantReviewsApp/img/apc.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/haf.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/haf2.jpg',
@@ -27,36 +50,10 @@ let cachedFiles = [
     'udacity-fend/projects/restaurantReviewsApp/img/sts.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/watsonville.jpg'
 ];
-*/
+
 
 /* service worker install event */
 self.addEventListener('install', function(event){
-    // use the install event to cache everything needed to load the page
-    let cachedFiles = [
-        '/udacity-fend/projects/restaurantReviewsApp/',
-        '/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json',
-        '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
-        'udacity-fend/projects/restaurantReviewsApp/index.html',
-        'udacity-fend/projects/restaurantReviewsApp/js/index.js',
-        'udacity-fend/projects/restaurantReviewsApp/js/main.js',
-        'udacity-fend/projects/restaurantReviewsApp/js/dbhelper.js',
-        'udacity-fend/projects/restaurantReviewsApp/js/restaurant_info.js',
-        'udacity-fend/projects/restaurantReviewsApp/img/apc.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/haf.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/haf2.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/haf3.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/harrisRanchSatelliteView.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/hwd.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/lvk.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/paloalto.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/petaluma.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/pasoRobles.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/salinas.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/sql.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/shelterCove.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/sts.jpg',
-        'udacity-fend/projects/restaurantReviewsApp/img/watsonville.jpg'
-    ];
     // use the install event to cache everything needed to load the page
 
    //make the install event wait until this promise is resolved
@@ -65,7 +62,7 @@ self.addEventListener('install', function(event){
        caches.open(cacheName).then(function(cache) {
 
            // add all files needed for offline viewing of the app
-           return cache.addAll(cachedFiles);
+           return cache.addAll();
 
        }).catch(function(err) {
            console.log('Error: ', err);
@@ -110,6 +107,7 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
+/*   do i need this???????????????
 
 self.addEventListener('activate', function(event) {
 
@@ -121,7 +119,6 @@ self.addEventListener('activate', function(event) {
                 // loop through everything in the cache. get this specific cache
 
                 if (thisCacheName !== cacheName) {
-                    console.log('[ServiceWorker] Removing Cached Files from this cache name');
 
                     return caches.delete(thisCacheName);
                 }
@@ -130,3 +127,5 @@ self.addEventListener('activate', function(event) {
         })
     )
 })
+
+*/
