@@ -62,7 +62,7 @@ self.addEventListener('install', function(event){
        caches.open(cacheName).then(function(cache) {
 
            // add all files needed for offline viewing of the app
-           return cache.addAll();
+           return cache.addAll(cachedFiles);
 
        }).catch(function(err) {
            console.log('Error: ', err);
