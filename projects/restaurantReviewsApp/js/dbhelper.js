@@ -11,8 +11,9 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    //return `http://localhost:${port}/data/restaurants.json`;
-    return 'https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json';
+    return `http://localhost:${port}/data/restaurants.json`;
+
+    //return 'https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json';
   }
 
   /**
@@ -149,16 +150,29 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
-  /**
-   * Restaurant image URL.
-   */
+  
+  /* =========== Restaurant & Airport image URLs =============== */
+   
+  //airport photo
   static imageUrlForRestaurant(restaurant) {
     return (`./img/${restaurant.photograph}`);
   }
 
-  // Restaurant image alt text
+  // restaurant photo
+  static imageUrlForRestaurant2(restaurant) {
+    return (`./img/${restaurant.photograph2}`);
+  }
+
+  /* =========== Restaurant & Airport image alt text ============= */
+
+  // airport photo alt text
   static imageAltForRestaurant(restaurant) {
     return (`${restaurant.alt}`);
+  }
+
+  // restaurant photo alt text
+  static imageAltForRestaurant2(restaurant) {
+    return (`${restaurant.alt2}`);
   }
 
   /**
@@ -174,18 +188,6 @@ class DBHelper {
       marker.addTo(newMap);
     return marker;
   } 
-
-
-  /* static mapMarkerForRestaurant(restaurant, map) {
-    const marker = new google.maps.Marker({
-      position: restaurant.latlng,
-      title: restaurant.name,
-      url: DBHelper.urlForRestaurant(restaurant),
-      map: map,
-      animation: google.maps.Animation.DROP}
-    );
-    return marker;
-  } */
 
 }
 

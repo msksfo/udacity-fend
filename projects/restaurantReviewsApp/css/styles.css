@@ -19,13 +19,21 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+  color: var(--accessible-orange);
 	text-decoration: none;
 }
+
 a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+
+/* ============================== DO I LIKE THIS??? ===============
+a:hover .flying {
+  color: var(--filter-blue);
+}
+*/
+
 a img{
 	border: none 0px #fff;
 }
@@ -71,6 +79,8 @@ nav h1 {
   margin: 0;
   text-align: center;
 }
+
+
 nav h1 a {
   color: #fff;
   font-size: 1.5rem;
@@ -78,6 +88,17 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+
+
+.flying {
+  font-family: 'Marck Script', cursive;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: lowercase;
+}
+
+
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -127,6 +148,7 @@ nav h1 a {
   display flex;
   justify-content center;
 }
+
 
 
 .filter-options h2 {

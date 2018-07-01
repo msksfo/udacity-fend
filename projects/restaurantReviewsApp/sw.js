@@ -1,4 +1,4 @@
-/* GLobal Variables */
+// Global Variables 
 
 let cacheName = 'cache-v1';
 let cachedFiles = [
@@ -10,17 +10,22 @@ let cachedFiles = [
     'udacity-fend/projects/restaurantReviewsApp/js/main.js',
     'udacity-fend/projects/restaurantReviewsApp/js/dbhelper.js',
     'udacity-fend/projects/restaurantReviewsApp/js/restaurant_info.js',
-    'udacity-fend/projects/restaurantReviewsApp/img/1.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/2.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/3.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/4.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/5.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/6.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/7.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/8.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/9.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/10.jpg',
-]
+    'udacity-fend/projects/restaurantReviewsApp/img/apc.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/haf.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/haf2.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/haf3.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/harrisRanchSatelliteView.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/hwd.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/lvk.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/paloalto.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/petaluma.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/pasoRobles.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/salinas.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/sql.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/shelterCove.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/sts.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/watsonville.jpg'
+];
 
 
 /* service worker install event */
@@ -30,10 +35,13 @@ self.addEventListener('install', function(event){
    //make the install event wait until this promise is resolved
    event.waitUntil(
        // open the cache 
-       caches.open('cache-v1').then(function(cache) {
+       caches.open(cacheName).then(function(cache) {
 
            // add all files needed for offline viewing of the app
            return cache.addAll(cachedFiles);
+
+       }).catch(function(err) {
+           console.log('Error: ', err);
        })
    );
 });

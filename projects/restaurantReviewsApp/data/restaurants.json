@@ -3,8 +3,10 @@
     "id": 1,
     "name": "Abundant Air Cafe",
     "neighborhood": "PAO",
-    "photograph": "1.jpg",
-    "alt": "Abundant Air Cafe",
+    "photograph": "paloalto.jpg",
+    "alt": "Aerial view of Palo Alto Airport",
+    "photograph2": "abundantAirCafe.jpg",
+    "alt2": "Abundant Air Cafe",
     "address": "1901 Embarcadero Rd #103, Palo Alto, CA 94303",
     "latlng": {
       "lat": 37.454439,
@@ -22,381 +24,621 @@
     },
     "reviews": [{
         "name": "Steve",
-        "date": "October 26, 2016",
+        "date": "May 26, 2018",
         "rating": 4,
-        "comments": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank."
+        "comments": "This place is located at the airport, so you can also do some plane spotting, if you have the interest. Customer service is really good and the place is super clean."
       },
       {
         "name": "Morgan",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "This place is a blast. Must orders: GREEN TEA NOODS, sounds gross (to me at least) but these were incredible!, Kung pao pastrami (but you already knew that), beef tartare was a fun appetizer that we decided to try, the spicy ma po tofu SUPER spicy but delicous, egg rolls and scallion pancake i could have passed on... I wish we would have gone with a larger group, so much more I would have liked to try!"
+        "date": "January 8, 2018",
+        "rating": 3,
+        "comments": "Located next to the golf course. Great paninis and salads! Prompt friendly service. Plenty of parking. Indoor seating is limited but outdoor pet friendly seating is also available. I wouldn't drive across the Bay for it, but if in the area, it's a great spot for a quick lunch."
       },
       {
         "name": "Jason",
-        "date": "October 26, 2016",
-        "rating": 3,
-        "comments": "I was VERY excited to come here after seeing and hearing so many good things about this place. Having read much, I knew going into it that it was not going to be authentic Chinese. The place was edgy, had a punk rock throwback attitude, and generally delivered the desired atmosphere. Things went downhill from there though. The food was okay at best and the best qualities were easily overshadowed by what I believe to be poor decisions by the kitchen staff."
+        "date": "October 12, 2017",
+        "rating": 4,
+        "comments": "Food is fresh and consistent. Delicious soups, salads, and paninis, all reasonably priced. I love to grab a bite to eat after my lesson at the nearby flight school."
       }
     ]
   }, {
     "id": 2,
-    "name": "Emily",
-    "neighborhood": "Brooklyn",
-    "photograph": "2.jpg",
-    "alt": "Emily",
-    "address": "919 Fulton St, Brooklyn, NY 11238",
+    "name": "Barbara's Fishtrap",
+    "neighborhood": "HAF",
+    "photograph": "haf2.jpg",
+    "alt": "Aerial view of Half Moon Bay Airport",
+    "photograph2": "barbarasFishtrap.jpg",
+    "alt2": "Barbara's Fishtrap",
+    "address": "281 Capistrano Rd, Half Moon Bay, CA 94019",
     "latlng": {
-      "lat": 40.683555,
-      "lng": -73.966393
+      "lat": 37.503453,
+      "lng": -122.485072
     },
-    "cuisine_type": "Pizza",
+    "cuisine_type": "Seafood",
     "operating_hours": {
-      "Monday": "5:30 pm - 11:00 pm",
-      "Tuesday": "5:30 pm - 11:00 pm",
-      "Wednesday": "5:30 pm - 11:00 pm",
-      "Thursday": "5:30 pm - 11:00 pm",
-      "Friday": "5:30 pm - 11:00 pm",
-      "Saturday": "5:00 pm - 11:30 pm",
-      "Sunday": "12:00 pm - 3:00 pm, 5:00 pm - 11:00 pm"
+      "Monday": "11:00 - 20:00",
+      "Tuesday": "11:00 - 20:00",
+      "Wednesday": "11:00 - 20:00",
+      "Thursday": "11:00 - 20:00",
+      "Friday": "11:00 - 21:00",
+      "Saturday": "11:00 - 21:00",
+      "Sunday": "11:00 - 20:00"
     },
     "reviews": [{
-        "name": "Steph",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long."
-      },
-      {
-        "name": "Steve",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "This cozy Clinton Hill restaurant excels at both straightforward and unusual wood-fired pizzas. If you want a taste of the latter, consider ordering the Emily, which is topped with mozzarella, pistachios, truffled sottocenere cheese, and honey. The menu includes salads and a handful of starters, as well as a burger that some meat connoisseurs consider to be among the best in the city."
-      },
-      {
-        "name": "Sam",
-        "date": "October 26, 2016",
+        "name": "Harry",
+        "date": "June 24, 2018",
         "rating": 5,
-        "comments": "5 star atmosphere as it is very cozy with great staff. 5 star food as their Emmy burger is outrageously good. and its on a pretzel bun.. Too juicy for its own good and downright addicting. Also try the Colony pizza. Many others looked like worth competitors, but the Colony really found its way to my heart. when you start with a great crust, top it with top notch cheese and sauce, you've got a winner. But, if you go a step further and add the salty from the pepperoni, the sweet from the honey, and the spicy from the chili oil.... your mouth is confused and happy at the same time."
+        "comments": "Great service and food. Come early, as it gets very busy."
+      },
+      {
+        "name": "Amanda",
+        "date": "June 18, 2018",
+        "rating": 5,
+        "comments": "Been coming here for years, and have never had a bad experience. Friendly service, great view, delicious food. If the line is too long for you, just go to the take out window and get the same food in half the time."
+      },
+      {
+        "name": "Charles",
+        "date": "June 12, 2018",
+        "rating": 5,
+        "comments": "Quintessential coastal restaurant filled with ocean tchotchke. Absolutely delicious seafood with great service in a clean establishment. The calamari is the best I've ever had. The chowder flavorful and full of clams. Food came out fairly quickly. Line up before it opens, or expect to wait."
+      },
+      {
+        "name": "Alex",
+        "date": "June 12, 2018",
+        "rating": 5,
+        "comments": "Cream of the crop fish shop on the coast. Some of the freshest seafood you'll ever have. Shrimp tasted like it was plucked out of the ocian 5 min beforehand! Plenty of tables outside where you can enjoy your meal and the view. Friendly service. An easy enjoyable walk from HAF, if you're flying in. Park at the south end of the field. There is a path that will take you to the main road. From there, maybe a ten minute walk."
       }
     ]
   }, {
     "id": 3,
-    "name": "Kang Ho Dong Baekjeong",
-    "neighborhood": "Manhattan",
-    "photograph": "3.jpg",
-    "alt": "Kang Ho Dong Baekjeong",
-    "address": "1 E 32nd St, New York, NY 10016",
+    "name": "Izzy's",
+    "neighborhood": "SQL",
+    "photograph": "sql.jpg",
+    "alt": "Night shot of a Cirrus in front of SQL tower",
+    "photograph2": "izzys.jpg",
+    "alt2": "Steak dinner",
+    "address": "525 Skyway Rd, San Carlos, CA 94070",
     "latlng": {
-      "lat": 40.747143,
-      "lng": -73.985414
+      "lat": 37.515199,
+      "lng": -122.254452
     },
-    "cuisine_type": "Asian",
+    "cuisine_type": "Steakhouse",
     "operating_hours": {
-      "Monday": "11:30 am - 2:00 am",
-      "Tuesday": "11:30 am - 2:00 am",
-      "Wednesday": "11:30 am - 2:00 am",
-      "Thursday": "11:30 am - 2:00 am",
-      "Friday": "11:30 am - 6:00 am",
-      "Saturday": "11:30 am - 6:00 am",
-      "Sunday": "11:30 am - 2:00 am"
+      "Monday": "16:00 - 22:00",
+      "Tuesday": "16:00 - 22:00",
+      "Wednesday": "16:00 - 22:00",
+      "Thursday": "16:00 - 22:00",
+      "Friday": "16:00 - 22:00",
+      "Saturday": "16:00 - 22:00",
+      "Sunday": "16:00 - 21:00"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
+        "name": "Joshua",
+        "date": "June 7, 2018",
         "rating": 4,
-        "comments": "The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties."
+        "comments": "Service was good. Portions are huge, so try to save room for dessert, which is delicious. I deducted one star because they were slightly unorganized in dealing with our large group. Overall I still recommend it. If you have the time, there is a fantastic air museum nearby- Hiller Aviation Museum. It is an easy walk from the restaurant."
       },
       {
-        "name": "ZS",
-        "date": "October 26, 2016",
-        "rating": 5,
-        "comments": "I've been to Korea before and many other Korean BBQ places. We had the regular pork belly and a beef (forgot which cut) and a seafood tofu soup. Two meat and a soup was just prefect for the two of us. We could have done one meat and one soup. The portions of the meat are great! The beef was juicy, tender and so good. The sides were excellent. "
+        "name": "Cameron",
+        "date": "May 20, 2018",
+        "rating": 4,
+        "comments": "Doesn't look like much from the outside, but give it a try. You'll be pleasantly surprised. They frequently offer Groupon deals, which are a great value. Service was timely and helpful. The atmosphere was lovely. They brought out a decadent chocolate cake for my girlfriend's birthday. If coming from the airport, park your aircraft in the Northwest overrun lot."
       },
       {
-        "name": "Emily",
-        "date": "October 26, 2016",
-        "rating": 2,
-        "comments": "MEH. I've tried their Jersey location as well but Kang Ho Dong meat quality is severely decreasing. A Korean bbq place with whatever meat? I think NOT!"
+        "name": "Sally",
+        "date": "April 26, 2018",
+        "rating": 3,
+        "comments": "We had a groupon for their dinner- appetizer, 2 entrees, and dessert for $71. The meat very tender and flavorful. The creamed spinach and potatoes were only ok, a little oily in my opinion. The server was friendly and attentive. And our food came out quickly."
       }
     ]
   }, {
     "id": 4,
-    "name": "Katz's Delicatessen",
-    "neighborhood": "Manhattan",
-    "photograph": "4.jpg",
-    "alt": "Katz's Delicatessen",
-    "address": "205 E Houston St, New York, NY 10002",
+    "name": "The Runway By Patrick",
+    "neighborhood": "APC",
+    "photograph": "apc.jpg",
+    "alt": "Aerial view of Napa Airport",
+    "photograph2": "theRunway.jpg",
+    "alt2": "The Runway By Patrick",
+    "address": "2030 Airport Rd, Napa, CA 94558",
     "latlng": {
-      "lat": 40.722216,
-      "lng": -73.987501
-    },
-    "cuisine_type": "American",
-    "operating_hours": {
-      "Monday": "8:00 am - 10:30 pm",
-      "Tuesday": "8:00 am - 10:30 pm",
-      "Wednesday": "8:00 am - 10:30 pm",
-      "Thursday": "8:00 am - 2:30 am",
-      "Friday": "8:00 am - Sat",
-      "Saturday": "Open 24 hours",
-      "Sunday": "Sat - 10:30 pm"
-    },
-    "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
-        "rating": 5,
-        "comments": "In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it."
-      },
-      {
-        "name": "Allen",
-        "date": "October 26, 2016",
-        "rating": 5,
-        "comments": "If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!"
-      },
-      {
-        "name": "David",
-        "date": "October 26, 2016",
-        "rating": 2,
-        "comments": "Ok so four of us came. One more later who didn't order becauase it's so expensive and simple. Seriously, a bunch of meat albeit you can sample beforehand on rye/white/wheat bread. Cheese extra. Pickles free, you can just ask them at the pickup counter. But seriously 20 bucks gone for an non-flavored half sandwich. And a line that is long, especially if you want seating. I'm down to just take a quick look where Sally and Harry sat and leave to the other delis all around NYC. Oh and they accept Samsung pay."
-      }
-    ]
-  }, {
-    "id": 5,
-    "name": "Roberta's Pizza",
-    "neighborhood": "Brooklyn",
-    "photograph": "5.jpg",
-    "alt": "Roberta's Pizza",
-    "address": "261 Moore St, Brooklyn, NY 11206",
-    "latlng": {
-      "lat": 40.705089,
-      "lng": -73.933585
-    },
-    "cuisine_type": "Pizza",
-    "operating_hours": {
-      "Monday": "11:00 am - 12:00 am",
-      "Tuesday": "11:00 am - 12:00 am",
-      "Wednesday": "11:00 am - 12:00 am",
-      "Thursday": "11:00 am - 12:00 am",
-      "Friday": "11:00 am - 12:00 am",
-      "Saturday": "10:00 am - 12:00 am",
-      "Sunday": "10:00 am - 12:00 am"
-    },
-    "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."
-      },
-      {
-        "name": "Raymond",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "Roberta's, one of the better pizzas I have had in my life. Very trendy and hipsterish spot. Came here for lunch on a random weekday afternoon and when we arrived, there was a line forming already. The space is a bit cramped. You'll get to know your neighbors soon enough. The pizza is just delightful and delicious. It's a ncie plus that you get to see them firing up the pizzas in the corner. The major issue with Roberta's is the trek out to the Williamsburg/Bushwick."
-      },
-      {
-        "name": "Laurel",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "The pizza is fantastic, not THE best I've ever had, but would definitely go back since it has great food and great ambiance. Definitely worth going to. It has A LOT of hype in the New York food scene, and I question if it deserves all of it, but it's still a totally great spot to hit up when in the area!!"
-      }
-    ]
-  }, {
-    "id": 6,
-    "name": "Hometown BBQ",
-    "neighborhood": "Brooklyn",
-    "photograph": "6.jpg",
-    "alt": "Hometown BBQ",
-    "address": "454 Van Brunt St, Brooklyn, NY 11231",
-    "latlng": {
-      "lat": 40.674925,
-      "lng": -74.016162
+      "lat": 38.2172,
+      "lng": -122.272951
     },
     "cuisine_type": "American",
     "operating_hours": {
       "Monday": "Closed",
-      "Tuesday": "12:00 pm - 10:00 pm",
-      "Wednesday": "12:00 pm - 10:00 pm",
-      "Thursday": "12:00 pm - 10:00 pm",
-      "Friday": "12:00 pm - 11:00 pm",
-      "Saturday": "12:00 pm - 11:00 pm",
-      "Sunday": "12:00 pm - 9:00 pm"
+      "Tuesday": "11:30 - 20:00",
+      "Wednesday": "11:30 - 20:00",
+      "Thursday": "11:30 - 20:00",
+      "Friday": "11:30 - 20:00",
+      "Saturday": "11:30 - 20:00",
+      "Sunday": "Closed"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
+        "name": "Kevin",
+        "date": "June 10, 2018",
+        "rating": 5,
+        "comments": "This place used to be called Jonesys'. My dad is a pilot, and we used to go there all the time when I was a kid. Anyway, now it is owned by Patrick. Food is still great. Beer is still great. Staff is really attentive. This is a great spot for lunch or drinks while plane spotting."
+      },
+      {
+        "name": "Jackie",
+        "date": "April 2, 2018",
+        "rating": 3,
+        "comments": "There are almost no restaurants in this business park area, so this is a welcome new addition. The food however, is pretty run of the mill, in my opinion. Simple appetizers. They really dropped the ball on my burger order. The staff was quick to offer help though. And the desserts are to die for! I will return just for the chocolate cake."
+      },
+      {
+        "name": "Marylin",
+        "date": "December 27, 2017",
         "rating": 4,
-        "comments": "Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."
+        "comments": "Flew in with my husband to try the restaurant that took the place of Jonesys'. The food, service, and overall atmosphere were excellent. We both enjoyed it and will perhaps become regulars as we used to be. It's a really fun place. I recommend it."
+      }
+    ]
+  }, {
+    "id": 5,
+    "name": "Beebs's Sports Bar & Grill",
+    "neighborhood": "LVK",
+    "photograph": "lvk.jpg",
+    "alt": "T6 Texan in front of Livermore tower",
+    "photograph2": "beebs.jpg",
+    "alt2": "Bar full of alcohol",
+    "address": "680 Terminal Circle, Livermore, CA 94551",
+    "latlng": {
+      "lat": 37.696097,
+      "lng": -121.819654
+    },
+    "cuisine_type": "Sports Bar",
+    "operating_hours": {
+      "Monday": "06:00 - 21:00",
+      "Tuesday": "06:00 - 21:00",
+      "Wednesday": "06:00 - 21:00",
+      "Thursday": "06:00 - 21:00",
+      "Friday": "06:00 - 21:00",
+      "Saturday": "06:00 - 21:00",
+      "Sunday": "06:00 - 21:00"
+    },
+    "reviews": [{
+        "name": "Terry",
+        "date": "June 20, 2018",
+        "rating": 4,
+        "comments": "We just love this place. The food is amazing. They have a great happy hour and are always switching up their specials. Great spot to grab a drink, sit outside and enjoy the view."
+      },
+      {
+        "name": "Raymond",
+        "date": "January 17, 2018",
+        "rating": 4,
+        "comments": "We always have a great experience when we come here. We fly in quite often, so they know us by name. It's located right at the golf course. The back patio offers a great view of the course. They are family friendly. There are tv's all over, and they have tons of local beer options."
+      },
+      {
+        "name": "Laurel",
+        "date": "November 26, 2017",
+        "rating": 4,
+        "comments": "Awesome sports bar at the LVK airport. Great food and drinks. Even better wait staff and bartenders. Will definitely return. "
+      }
+    ]
+  }, {
+    "id": 6,
+    "name": "Mezzaluna",
+    "neighborhood": "HAF",
+    "photograph": "haf.jpg",
+    "alt": "Mezzaluna",
+    "photograph2": "pasta.jpg",
+    "alt2": "Big bowl of pasta",
+    "address": "459 Prospect Way, Half Moon Bay, CA 94109",
+    "latlng": {
+      "lat": 37.5051,
+      "lng": -122.486836
+    },
+    "cuisine_type": "Italian",
+    "operating_hours": {
+      "Monday": "11:30 - 14:30, 17:00 - 21:30",
+      "Tuesday": "11:30 - 14:30, 17:00 - 21:30",
+      "Wednesday": "11:30 - 14:30, 17:00 - 21:30",
+      "Thursday": "11:30 - 14:30, 17:00 - 21:30",
+      "Friday": "11:30 - 14:30, 17:00 - 22:00",
+      "Saturday": "11:30 - 22:00",
+      "Sunday": "11:30 - 21:30"
+    },
+    "reviews": [{
+        "name": "Wanda",
+        "date": "June 26, 2018",
+        "rating": 5,
+        "comments": "We come here about once a week. The food and service are so consistently excellent. They have nice oceanview tables. Tiramisu is amazing. Easy walk over from Half Moon Bay Airport, if you are flying in."
       },
       {
         "name": "Michelle",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "Overall, a great try of New York BBQ. The restaurant décor is rustic with a good amount of seats to sit and enjoy the meal. I definitely would love to come back and try that monster of a beef rib!"
+        "date": "May 29, 2018",
+        "rating": 5,
+        "comments": "Overall, a great Italian restaurant right near the Half Moon Bay Airport. Servers are friendly. Food comes out quickly, and is so fresh and tasty. Make a reservation because it can be quite busy. The house Pinot is smooth and not too sweet. Highly recommended. This is my favorite place to fly into in the Bay Area."
       },
       {
-        "name": "Ai-Mei",
-        "date": "October 26, 2016",
+        "name": "Don",
+        "date": "May 13, 2018",
         "rating": 4,
-        "comments": "mmmmmm, what a gem this is in bklyn! I loveeee how soft their brisket is here. Their pork tacos are to die for, their different variety of ribs and lastly, their lamb is not gamey at all. Super wallet friendly for the amount they give you. I highly recommend this spot- after eating here, you can definitely walk over for Steve's key lime pies."
+        "comments": "A delicious family run Italian restaurant located in Half Moon Bay along the ocean. Great food at reasonable prices. Park your plane on the south side of the field and walk over in about five minutes. Totally recommend this place."
       }
     ]
   }, {
     "id": 7,
-    "name": "Superiority Burger",
-    "neighborhood": "Manhattan",
-    "photograph": "7.jpg",
-    "alt": "Superiority Burger",
-    "address": "430 E 9th St, New York, NY 10009",
+    "name": "Harris Ranch",
+    "neighborhood": "3O8",
+    "photograph": "harrisRanchSatelliteView.jpg",
+    "alt": "Satellite View of Harris Ranch",
+    "photograph2": "harrisRanch.jpg",
+    "alt2": "Harris Ranch",
+    "address": "24505 W Dorris Ave, Coalinga, CA 93210",
     "latlng": {
-      "lat": 40.727397,
-      "lng": -73.983645
+      "lat": 36.253719,
+      "lng": -120.237355
     },
-    "cuisine_type": "American",
+    "cuisine_type": "Steakhouse",
     "operating_hours": {
-      "Monday": "11:30 am - 10:00 pm",
-      "Tuesday": "Closed",
-      "Wednesday": "11:30 am - 10:00 pm",
-      "Thursday": "11:30 am - 10:00 pm",
-      "Friday": "11:30 am - 10:00 pm",
-      "Saturday": "11:30 am - 10:00 pm",
-      "Sunday": "11:30 am - 10:00 pm"
+      "Monday": "06:00 - 22:00",
+      "Tuesday": "06:00 - 22:00",
+      "Wednesday": "06:00 - 22:00",
+      "Thursday": "06:00 - 22:00",
+      "Friday": "06:00 - 22:00",
+      "Saturday": "06:00 - 22:00",
+      "Sunday": "06:00 - 22:00"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
+        "name": "Nicole",
+        "date": "June 28, 2018",
         "rating": 4,
-        "comments": "Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."
+        "comments": "Fantastic! This place is in the middle of nowhere, but we were flying back to socal after spending a week up north, and thought we'd give it a try. We ordered the rib eye and New York steak both with the house rub. The steaks were perfectly seasoned and cooked. So flavorful. I really enjoyed it and would definitely return if in the area."
       },
       {
         "name": "Gabriel",
-        "date": "October 26, 2016",
+        "date": "June 26, 2018",
         "rating": 5,
-        "comments": "I was turned on to this place following the glowing NYT review. Its near my area of the city so I figured why not go? Man they weren't kidding, Superiority Burger is probably the best vegetarian experience I've ever had!"
+        "comments": "The best steak I've ever had. You could cut it with a butter knife! Perfectly seasoned, and cooked perfectly. There is a charming little country store with some delicious treats and other fun stuff. Great place to eat in the central valley."
       },
       {
-        "name": "Shivi",
-        "date": "October 26, 2016",
+        "name": "Steve",
+        "date": "March 2, 2018",
         "rating": 4,
-        "comments": "Great flavors and very satisfying. Craving a sandwich, I stopped by on a Friday night with a vegetarian friend. Super small location with just a few seats inside. Ambiance is a bit industrial, good is definitely much more sophisticated than the look of the place! Ordered the superiority burger anda side of potato salad. The potato salad was very light and tasted clean ( less mayo, lots of dill and some cucumber) -- refreshing for a humid summer night! Sandwich was surprisingly delicious - it is very small ( funny allusion to a White Castle burger) but it packs a punch! Not only are there layers of flavors ( amazing sauces) but the party itself had a great texture Ahmed flavor-- well done and so wonderful! Will definitely stop by again for an overall amazing burger/sandwich. Staff was super nice and accommodating but not out of the way friendly."
+        "comments": "Friendly service, amazing food. Nice ambiance. The runway is super narrow, and rather short as well. A fun dinner date spot about 90 min flight (in a cessna) from the Bay Area."
       }
     ]
   }, {
     "id": 8,
-    "name": "The Dutch",
-    "neighborhood": "Manhattan",
-    "photograph": "8.jpg",
-    "alt": "The Dutch",
-    "address": "131 Sullivan St, New York, NY 10012",
+    "name": "Delgada Pizza And Bakery",
+    "neighborhood": "OQ5",
+    "photograph": "shelterCove.jpg",
+    "alt": "Delgada Pizza And Bakery",
+    "photograph2": "bakery.jpg",
+    "alt2": "Delicious looking baked goods",
+    "address": "205 Wave Dr, Whitehorn, CA 95589",
     "latlng": {
-      "lat": 40.726584,
-      "lng": -74.002082
+      "lat": 40.034627,
+      "lng": -124.078429
     },
-    "cuisine_type": "American",
+    "cuisine_type": "Pizza / Bakery",
     "operating_hours": {
-      "Monday": "11:30 am - 3:00 pm, 5:30 pm - 11:00 pm",
-      "Tuesday": "11:30 am - 3:00 pm, 5:30 pm - 11:00 pm",
-      "Wednesday": "11:30 am - 3:00 pm, 5:30 pm - 11:00 pm",
-      "Thursday": "11:30 am - 3:00 pm, 5:30 pm - 11:00 pm",
-      "Friday": "11:30 am - 3:00 pm, 5:30 pm - 11:30 pm",
-      "Saturday": "10:00 am - 3:00 pm, 5:30 pm - 11:30 pm",
-      "Sunday": "10:00 am - 3:00 pm, 5:30 pm - 11:00 pm"
+      "Monday": "16:00 - 21:00",
+      "Tuesday": "16:00 - 21:00",
+      "Wednesday": "16:00 - 21:00",
+      "Thursday": "16:00 - 21:00",
+      "Friday": "16:00 - 21:00",
+      "Saturday": "16:00 - 21:00",
+      "Sunday": "16:00 - 21:00"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape."
+        "name": "Ava",
+        "date": "May 13, 2018",
+        "rating": 5,
+        "comments": "Delgada has excellent pizza, ice cream, and beer/whine. Be aware the airport does not offer fuel, nor does it offer instrument proceedures. Alternates in the area (within 60 nm) would be KEKA, KFOT, KAVC. Gorgeous fly in!!! Just be prepared in case you have to wait out the fog."
       },
       {
         "name": "Loren",
-        "date": "October 26, 2016",
+        "date": "April 6, 2018",
         "rating": 4,
-        "comments": "I randomly came here on a Saturday night. I was pleasantly surprised with the food and the service. We had the calamari and the ceviche with avocado, and then the catfish. Oh! Then we had the banana soufflé for dessert with ice cream. It was all delicious and well put together. Would love to eat here again."
+        "comments": "The pizza is ok. The bakery items are delicious! Fly in, go for a hike. Enjoy the view. Grab something to eat in this tiny, charming cafe."
       },
       {
-        "name": "Lori",
-        "date": "October 26, 2016",
+        "name": "John",
+        "date": "October 26, 2017",
         "rating": 4,
-        "comments": "Aside from the slightly claustrophobic dining area and the fact that you may have difficulty hearing your dining companion, I'd return to The Dutch without hesitation. The food is surprisingly well-executed and conceived, and our dinner service flowed smoothly without a hitch. Just make sure to get a reservation in advance, as I'm sure more than just a few other people will have the same idea."
+        "comments": "We've wanted to come to Shelter Cove for ages. It's a bit challenging with the fog, as this airport is not ifr equipped. But we finally made it! Just the most beautiful setting you could imagine. We had the pizza here at Delgada's. Tons of options. Bountiful toppings, perfect crust. Hope the weather cooperates for a return visit."
       }
     ]
   }, {
     "id": 9,
-    "name": "Mu Ramen",
-    "neighborhood": "Queens",
-    "photograph": "9.jpg",
-    "alt": "Mu Ramen",
-    "address": "1209 Jackson Ave, Queens, NY 11101",
+    "name": "Ella's At The Airport",
+    "neighborhood": "WVI",
+    "photograph": "watsonville.jpg",
+    "alt": "Fog cover in Watsonville Airport",
+    "photograph2": "ellas.jpg",
+    "alt2": "Cafe Ella",
+    "address": "100 Aviation Way, Watsonville, CA 95076",
     "latlng": {
-      "lat": 40.743797,
-      "lng": -73.950652
+      "lat": 36.934189,
+      "lng": -121.788025
     },
-    "cuisine_type": "Asian",
+    "cuisine_type": "Italian",
     "operating_hours": {
-      "Monday": "5:00 pm - 10:00 pm",
-      "Tuesday": "5:00 pm - 10:00 pm",
-      "Wednesday": "5:00 pm - 10:00 pm",
-      "Thursday": "5:00 pm - 10:00 pm",
-      "Friday": "5:00 pm - 11:00 pm",
-      "Saturday": "5:00 pm - 11:00 pm",
-      "Sunday": "5:00 pm - 10:00 pm"
+      "Monday": "Closed",
+      "Tuesday": "11:00 - 21:00",
+      "Wednesday": "11:00 - 21:00",
+      "Thursday": "11:00 - 21:00",
+      "Friday": "11:00 - 22:00",
+      "Saturday": "11:00 - 22:00",
+      "Sunday": "11:00 - 21:00"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
+        "name": "Kyle",
+        "date": "June 16, 2018",
         "rating": 4,
-        "comments": "Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train."
+        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
       },
       {
         "name": "Brittany",
-        "date": "October 26, 2016",
+        "date": "June 1, 2018",
         "rating": 4,
-        "comments": "Overall, I would definitely recommend this place if you enjoy thick curly noodles with a thick, intense broth.  If you don't there are still other options but I can't vouch for those."
+        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
       },
       {
-        "name": "Sally",
-        "date": "October 26, 2016",
-        "rating": 4,
-        "comments": "One of the tastiest and most unique ramen places I've been to in NYC, but also the priciest. I think overall its worth the try. Not an everyday casual ramen shop though."
+        "name": "Kenneth",
+        "date": "May 26, 2018",
+        "rating": 3,
+        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
       }
     ]
   }, {
     "id": 10,
-    "name": "Casa Enrique",
-    "neighborhood": "Queens",
-    "photograph": "10.jpg",
-    "alt": "Casa Enrique",
-    "address": "5-48 49th Ave, Queens, NY 11101",
+    "name": "Sky Lounge",
+    "neighborhood": "STS",
+    "photograph": "sts.jpg",
+    "alt": "Santa Rosa Airport",
+    "photograph2": "stsSushi.jpg",
+    "alt2": "Sushi",
+    "address": "2200 Airport Blvd, Santa Rosa, CA 95403",
     "latlng": {
-      "lat": 40.743394,
-      "lng": -73.954235
+      "lat": 38.510346,
+      "lng": -122.805648
     },
-    "cuisine_type": "Mexican",
+    "cuisine_type": "Steakhouse / Sushi Bar",
     "operating_hours": {
-      "Monday": "5:00 pm - 12:00 am",
-      "Tuesday": "5:00 pm - 12:00 am",
-      "Wednesday": "5:00 pm - 12:00 am",
-      "Thursday": "5:00 pm - 12:00 am",
-      "Friday": "5:00 pm - 12:00 am",
-      "Saturday": "11:00 am - 12:00 am",
-      "Sunday": "11:00 am - 12:00 am"
+      "Monday": "08:00 - 21:00",
+      "Tuesday": "08:00 - 21:00",
+      "Wednesday": "08:00 - 21:00",
+      "Thursday": "08:00 - 21:00",
+      "Friday": "08:00 - 21:00",
+      "Saturday": "08:00 - 21:00",
+      "Sunday": "08:00 - 21:00"
     },
     "reviews": [{
-        "name": "Steve",
-        "date": "October 26, 2016",
+        "name": "Mike",
+        "date": "June 25, 2018",
         "rating": 5,
-        "comments": "Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars."
+        "comments": "Sushi at the airport? Delicious, and so fresh! The staff was great, asking if we were flying out and would need our food quickly. Very accommodating. Being smack in the middle of wine country, they also have some fine wines to choose from. Go, relax, and enjoy your meal before flying out."
       },
       {
         "name": "Rob",
-        "date": "October 26, 2016",
-        "rating": 5,
-        "comments": "The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome"
+        "date": "May 21, 2018",
+        "rating": 4,
+        "comments": "We flew in for the sushi, which I highly recommend! We love to fly in, order some food and sit out on the patio and do some plane spotting. Service is always great."
       },
       {
-        "name": "Jason",
-        "date": "October 26, 2016",
+        "name": "Kelly",
+        "date": "May 4, 2018",
+        "rating": 3,
+        "comments": "Hubby loves the sushi here. I'm not really a seafood person, so I wouldn't know, but the meatball sandwhich was delicious! Service is prompt and friendly. Would come again."
+      }
+    ]
+  }, {
+    "id": 11,
+    "name": "3-Zero Cafe",
+    "neighborhood": "HAF",
+    "photograph": "haf3.jpg",
+    "alt": "3-Zero Cafe",
+    "photograph2": "abundantAirCafe.jpg",
+    "alt2": "Abundant Air Cafe",
+    "address": "9850 Cabrillo Hwy, Half Moon Bay, CA 94019",
+    "latlng": {
+      "lat": 37.514107,
+      "lng": -122.495126
+    },
+    "cuisine_type": "American",
+    "operating_hours": {
+      "Monday": "08:00 - 14:00",
+      "Tuesday": "08:00 - 14:00",
+      "Wednesday": "08:00 - 14:00",
+      "Thursday": "08:00 - 14:00",
+      "Friday": "08:00 - 14:00",
+      "Saturday": "07:00 - 14:00",
+      "Sunday": "07:00 - 14:00"
+    },
+    "reviews": [{
+        "name": "Kyle",
+        "date": "June 16, 2018",
         "rating": 4,
-        "comments": "For a Michelin star restaurant, it's fairly priced and the food is fairly good. Started with a strawberry margarita which was good in flavor but not much alcohol. Had the chicken enchiladas with salsa verde and it was really good. Great balance in flavor and a good portion. Extra tasty with their hot sauces. My wife had the lamb but it was a bit too salty for our taste. Although, it was cooked very well and fell off the bone. The highlight of the night was the tres leches cake. Probably the best I've ever had to be honest. Not too sweet and very milky. Overall, one of my top 3 favorite Mexican in NY."
+        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+      },
+      {
+        "name": "Brittany",
+        "date": "June 1, 2018",
+        "rating": 4,
+        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+      },
+      {
+        "name": "Kenneth",
+        "date": "May 26, 2018",
+        "rating": 3,
+        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+      }
+    ]
+  }, {
+    "id": 12,
+    "name": "Joe's One-Niner Diner",
+    "neighborhood": "PRB",
+    "photograph": "pasoRobles.jpg",
+    "alt": "Aerial view of Paso Robles Airport",
+    "photograph2": "pasoRoblesPancakes.jpg",
+    "alt2": "Stack of pancakes",
+    "address": "4912 Wing Way, Paso Robles, CA 93446",
+    "latlng": {
+      "lat": 35.672001,
+      "lng": -120.637921
+    },
+    "cuisine_type": "Diner",
+    "operating_hours": {
+      "Monday": "06:00 - 14:00",
+      "Tuesday": "06:00 - 14:00",
+      "Wednesday": "06:00 - 14:00",
+      "Thursday": "06:00 - 14:00",
+      "Friday": "06:00 - 14:00",
+      "Saturday": "06:00 - 14:00",
+      "Sunday": "07:00 - 14:00"
+    },
+    "reviews": [{
+        "name": "Harry",
+        "date": "June 24, 2018",
+        "rating": 5,
+        "comments": "Great service and food. Come early, as it gets very busy."
+      },
+      {
+        "name": "Amanda",
+        "date": "June 18, 2018",
+        "rating": 5,
+        "comments": "Been coming here for years, and have never had a bad experience. Friendly service, great view, delicious food. If the line is too long for you, just go to the take out window and get the same food in half the time."
+      },
+      {
+        "name": "Charles",
+        "date": "June 12, 2018",
+        "rating": 5,
+        "comments": "Quintessential coastal restaurant filled with ocean tchotchke. Absolutely delicious seafood with great service in a clean establishment. The calamari is the best I've ever had. The chowder flavorful and full of clams. Food came out fairly quickly. Line up before it opens, or expect to wait."
+      },
+      {
+        "name": "Alex",
+        "date": "June 12, 2018",
+        "rating": 5,
+        "comments": "Cream of the crop fish shop on the coast. Some of the freshest seafood you'll ever have. Shrimp tasted like it was plucked out of the ocian 5 min beforehand! Plenty of tables outside where you can enjoy your meal and the view. Friendly service. An easy enjoyable walk from HAF, if you're flying in. Park at the south end of the field. There is a path that will take you to the main road. From there, maybe a ten minute walk."
+      }
+    ]
+  }, {
+    "id": 13,
+    "name": "Raja Indian Cuisine",
+    "neighborhood": "HWD",
+    "photograph": "hwd.jpg",
+    "alt": "Nice plane in front of Hayward tower",
+    "photograph2": "hwdIndian.jpg",
+    "alt2": "Indian food",
+    "address": "1275 West Winton Ave, Hayward, CA 94545",
+    "latlng": {
+      "lat": 37.653456,
+      "lng": -122.115179
+    },
+    "cuisine_type": "Indian",
+    "operating_hours": {
+      "Monday": "Closed",
+      "Tuesday": "10:30 - 21:00",
+      "Wednesday": "10:30 - 21:00",
+      "Thursday": "10:30 - 21:00",
+      "Friday": "10:30 - 21:00",
+      "Saturday": "10:30 - 21:00",
+      "Sunday": "10:30 - 21:00"
+    },
+    "reviews": [{
+        "name": "Kyle",
+        "date": "June 16, 2018",
+        "rating": 4,
+        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+      },
+      {
+        "name": "Brittany",
+        "date": "June 1, 2018",
+        "rating": 4,
+        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+      },
+      {
+        "name": "Kenneth",
+        "date": "May 26, 2018",
+        "rating": 3,
+        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+      }
+    ]
+  }, {
+    "id": 14,
+    "name": "Flying Artichoke",
+    "neighborhood": "SNS",
+    "photograph": "salinas.jpg",
+    "alt": "Aerial view of Salinas Airport",
+    "photograph2": "salinasBurger.jpg",
+    "alt2": "Hamburger and Fries",
+    "address": "40 Mortensen Ave, Salinas, CA 93905",
+    "latlng": {
+      "lat": 36.665479,
+      "lng": -121.612643
+    },
+    "cuisine_type": "American",
+    "operating_hours": {
+      "Monday": "08:00 - 15:00",
+      "Tuesday": "08:00 - 15:00",
+      "Wednesday": "08:00 - 15:00",
+      "Thursday": "08:00 - 15:00",
+      "Friday": "08:00 - 15:00",
+      "Saturday": "08:00 - 15:00",
+      "Sunday": "Closed"
+    },
+    "reviews": [{
+        "name": "Kyle",
+        "date": "June 16, 2018",
+        "rating": 4,
+        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+      },
+      {
+        "name": "Brittany",
+        "date": "June 1, 2018",
+        "rating": 4,
+        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+      },
+      {
+        "name": "Kenneth",
+        "date": "May 26, 2018",
+        "rating": 3,
+        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+      }
+    ]
+  }, {
+    "id": 15,
+    "name": "Two Niner Diner",
+    "neighborhood": "O69",
+    "photograph": "petaluma.jpg",
+    "alt": "Cute dog in front of nice plane Petaluma Airport",
+    "photograph2": "petalumaRestaurant.jpg",
+    "alt2": "Two Niner Diner Interior",
+    "address": "561 Sky Ranch Dr. #A, Petaluma, CA 94954",
+    "latlng": {
+      "lat": 38.259301,
+      "lng": -122.614113
+    },
+    "cuisine_type": "Diner",
+    "operating_hours": {
+      "Monday": "Closed",
+      "Tuesday": "Closed",
+      "Wednesday": "08:30 - 15:00",
+      "Thursday": "08:30 - 15:00",
+      "Friday": "08:30 - 15:00",
+      "Saturday": "08:30 - 15:00",
+      "Sunday": "08:30 - 15:00"
+    },
+    "reviews": [{
+        "name": "Kyle",
+        "date": "June 16, 2018",
+        "rating": 4,
+        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+      },
+      {
+        "name": "Brittany",
+        "date": "June 1, 2018",
+        "rating": 4,
+        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+      },
+      {
+        "name": "Kenneth",
+        "date": "May 26, 2018",
+        "rating": 3,
+        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
       }
     ]
   }]
