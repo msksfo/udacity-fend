@@ -1,8 +1,11 @@
-# FEND project 5- Restaurant Reveiws App
+# FEND project 5- The Flying Foodie
 
 ## Project Overview
 
-I was given starter code of a static design that lacked accessibility. I converted the design to be responsive on different sized displays and accessible for screen reader use. I also added a service worker to begin the process of creating a seamless offline experience for the users.
+This is a restaurant reviews app in the spirit of the $100 hamburger. I was given starter code by Udacity of a static design that lacked accessibility. I converted the design to be responsive on different sized displays and accessible for screen reader use. I also added a service worker to begin the process of creating a seamless offline experience for the users.
+
+Although certainly usable by anyone, the app is geared toward pilots. The list of restaurants can be filtered by airport, or by cuisine type. The detail view of each restaurant lists the hours of service, as well as the most recent reviews of that restaurant. 
+
 
 ## Dependencies 
 
@@ -17,6 +20,15 @@ I was given starter code of a static design that lacked accessibility. I convert
 
 * With the server running, visit the site: `http://localhost:8000` to see the application.
 
+## Code Navigation 
+
+* index.js is where the service worker is registered
+* sw.js holds the initial cached files and the service worker install, fetch, and activate events
+* dbhelper.js contains common database helper functions
+* main.js contains the code to fetch airports and cuisines as soon as the page is loaded
+* restaurants.json contains all restaurant info/review/map coords
+* restaurant_info.js creates the restaurant and reveiw html and adds it to the page, and centers the map on the restaurant
+
 
 ## Photo credits:
 
@@ -27,6 +39,10 @@ I was given starter code of a static design that lacked accessibility. I convert
 * WVI - Kurt Thams
 * 3O8 - Google Earth Satellite Image
 * all others taken by me or downloaded from unsplash
+
+## Application link 
+
+https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/
 
 
 
