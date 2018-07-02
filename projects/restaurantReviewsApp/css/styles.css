@@ -200,7 +200,6 @@ nav h1 a {
 #restaurants-list li {
   background-color: #fff;
   border: 3px double var(--light-orange);
-
   font-family: Arial,sans-serif;
   padding: 15px;
   text-align: center;
