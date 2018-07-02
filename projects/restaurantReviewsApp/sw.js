@@ -10,6 +10,7 @@ let cachedFiles = [
     'index.html',
     'restaurant.html',
     'js/restaurant_info.js',
+    'data/restaurants.json',
     'js/dbhelper.js',
     'js/index.js',
     'js/main.js',
@@ -33,6 +34,7 @@ let cachedFiles = [
 
 
 // file path for the github pages live link
+
 let cachedFiles = [
     '/udacity-fend/projects/restaurantReviewsApp/',
     '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
