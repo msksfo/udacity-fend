@@ -1,6 +1,8 @@
 // Global Variables 
 
 let cacheName = 'cache-v1';
+
+//  file path for working with localhost
 /*
 let cachedFiles = [
     '/',
@@ -30,7 +32,7 @@ let cachedFiles = [
 */
 
 
-
+// file path for the github pages live link
 let cachedFiles = [
     '/udacity-fend/projects/restaurantReviewsApp/',
     '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
@@ -114,7 +116,7 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
-/*   do i need this???????????????
+
 
 self.addEventListener('activate', function(event) {
 
@@ -133,6 +135,5 @@ self.addEventListener('activate', function(event) {
 
         })
     )
-})
+});
 
-*/
