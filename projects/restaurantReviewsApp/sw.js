@@ -3,7 +3,7 @@
 let cacheName = 'cache-v1';
 
 //  file path for working with localhost
-/*
+
 let cachedFiles = [
     '/',
     'css/styles.css',
@@ -30,11 +30,11 @@ let cachedFiles = [
     'img/sts.jpg',
     'img/watsonville.jpg'
 ];
-*/
+
 
 
 // file path for the github pages live link
-
+/*
 let cachedFiles = [
     '/udacity-fend/projects/restaurantReviewsApp/',
     '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
@@ -61,6 +61,7 @@ let cachedFiles = [
     'udacity-fend/projects/restaurantReviewsApp/img/sts.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/watsonville.jpg'
 ];
+*/
 
 
 /* service worker install event */
