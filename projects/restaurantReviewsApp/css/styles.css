@@ -31,13 +31,13 @@ ul, li {
 
 
 a {
-  color: #e08283;
+  color: #409fdd;
 	text-decoration: none;
 }
 
 
 a:hover, a:focus {
-	color: var(--filter-blue);
+	color: #e08283;;
 	text-decoration: none;
 }
 
@@ -104,6 +104,11 @@ nav h1 a {
 }
 
 
+nav h1 a:hover {
+  color: #409fdd;
+}
+
+
 .flying {
   font-family: 'Marck Script', cursive;
   color: #fff;
@@ -143,7 +148,7 @@ nav h1 a {
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
+    color: var(--accessible-orange);
     text-decoration: underline;
 }
 
