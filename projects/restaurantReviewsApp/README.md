@@ -26,7 +26,7 @@ Although certainly usable by anyone, the app is geared toward pilots. The list o
 * sw.js holds the initial cached files and the service worker install, fetch, and activate events
 * dbhelper.js contains common database helper functions
 * main.js contains the code to fetch airports and cuisines as soon as the page is loaded
-* restaurants.json contains all restaurant info/review/map coords
+* restaurants.json contains all data for the restaurant info/reviews/map coords
 * restaurant_info.js creates the restaurant and reveiw html and adds it to the page, and centers the map on the restaurant
 
 
