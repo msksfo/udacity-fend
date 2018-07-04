@@ -3,7 +3,7 @@
 let cacheName = 'cache-v1';
 
 //  file path for working with localhost
-/*
+
 let cachedFiles = [
     '/',
     'css/styles.css',
@@ -18,7 +18,7 @@ let cachedFiles = [
     'img/haf.jpg',
     'img/haf2.jpg',
     'img/haf3.jpg',
-    'img/harrisRanchSatelliteView.jpg',
+    'img/harrisRanchAirport.jpg',
     'img/hwd.jpg',
     'img/lvk.jpg',
     'img/paloalto.jpg',
@@ -30,11 +30,11 @@ let cachedFiles = [
     'img/sts.jpg',
     'img/watsonville.jpg'
 ];
-*/
+
 
 
 // file path for the github pages live link
-
+/*
 let cachedFiles = [
     '/udacity-fend/projects/restaurantReviewsApp/',
     '/udacity-fend/projects/restaurantReviewsApp/css/styles.css',
@@ -49,7 +49,7 @@ let cachedFiles = [
     'udacity-fend/projects/restaurantReviewsApp/img/haf.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/haf2.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/haf3.jpg',
-    'udacity-fend/projects/restaurantReviewsApp/img/harrisRanchSatelliteView.jpg',
+    'udacity-fend/projects/restaurantReviewsApp/img/harrisRanchAirport.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/hwd.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/lvk.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/paloalto.jpg',
@@ -61,8 +61,7 @@ let cachedFiles = [
     'udacity-fend/projects/restaurantReviewsApp/img/sts.jpg',
     'udacity-fend/projects/restaurantReviewsApp/img/watsonville.jpg'
 ];
-
-
+*/
 
 /* service worker install event */
 self.addEventListener('install', function(event){

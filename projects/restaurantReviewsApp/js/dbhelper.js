@@ -13,7 +13,9 @@ class DBHelper {
     const port = 8000 // Change this to your server port
     //return `http://localhost:${port}/data/restaurants.json`;
 
-    return 'https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json';
+    return './data/restaurants.json';
+
+    //return 'https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json';
   }
 
   /**
