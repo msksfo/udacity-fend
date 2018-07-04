@@ -3,7 +3,6 @@
  */
 class DBHelper {
 
-  
 
   /**
    * Database URL.
@@ -14,8 +13,6 @@ class DBHelper {
     //return `http://localhost:${port}/data/restaurants.json`;
 
     return './data/restaurants.json';
-
-    //return 'https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/data/restaurants.json';
   }
 
   /**
