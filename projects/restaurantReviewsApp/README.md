@@ -33,11 +33,12 @@ Although certainly usable by anyone, the app is geared toward pilots. The list o
 ## Photo credits:
 
 * APC - Bruno Mendonca
+* HAF - (haf2.jpg) Andre Taube
 * HWD, SQL, O69, Two Niner Diner - Alex Esguerra
 * PRB, SNS - Mary Medeiros McEnroe
 * STS - Angelica-Lorraine Lee
 * WVI - Kurt Thams
-* 3O8 - Google Earth Satellite Image
+* 3O8 - Liezel Taube
 * all others taken by me or downloaded from unsplash
 
 ## Application link 
