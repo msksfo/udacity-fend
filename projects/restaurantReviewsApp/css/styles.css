@@ -147,7 +147,7 @@ nav h1 a:hover {
 
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
+#breadcrumb li a:hover, #breadcrumb li a:focus {
     color: var(--accessible-orange);
     text-decoration: underline;
 }
