@@ -264,7 +264,7 @@
     "photograph": "harrisRanchAirport.jpg",
     "alt": "Aerial View of Harris Ranch",
     "photograph2": "harrisRanch.jpg",
-    "alt2": "Harris Ranch",
+    "alt2": "Harris Ranch Restaurant",
     "address": "24505 W Dorris Ave, Coalinga, CA 93210",
     "latlng": {
       "lat": 36.253719,
@@ -304,7 +304,7 @@
     "name": "Delgada Pizza And Bakery",
     "neighborhood": "OQ5",
     "photograph": "shelterCove.jpg",
-    "alt": "Delgada Pizza And Bakery",
+    "alt": "Aerial view of Shelter Cove Airport",
     "photograph2": "bakery.jpg",
     "alt2": "Delicious looking baked goods",
     "address": "205 Wave Dr, Whitehorn, CA 95589",
@@ -430,7 +430,7 @@
     "name": "3-Zero Cafe",
     "neighborhood": "HAF",
     "photograph": "haf3.jpg",
-    "alt": "3-Zero Cafe",
+    "alt": "Collage of Half Moon Bay Images",
     "photograph2": "abundantAirCafe.jpg",
     "alt2": "Abundant Air Cafe",
     "address": "9850 Cabrillo Hwy, Half Moon Bay, CA 94019",
@@ -449,22 +449,22 @@
       "Sunday": "07:00 - 14:00"
     },
     "reviews": [{
-        "name": "Kyle",
-        "date": "June 16, 2018",
+        "name": "Christopher",
+        "date": "July 1, 2018",
         "rating": 4,
-        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+        "comments": "Solid place for breakfast. Great scenery. Many pilots fly in to eat here, and they park their plane just feet away from the entrance to the restaurant. So sit outside on a sunny day, and enjoy the view."
       },
       {
-        "name": "Brittany",
-        "date": "June 1, 2018",
+        "name": "Sean",
+        "date": "June 19, 2018",
         "rating": 4,
-        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+        "comments": "Pretty good food. Friendly staff. Nice place to fly in for breakfast or lunch."
       },
       {
-        "name": "Kenneth",
+        "name": "Andrea",
         "date": "May 26, 2018",
         "rating": 3,
-        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+        "comments": "Great place for breakfast, good coffee. Fun decor- aviation and local history memorabilia. It is attached to the airport, so you might see planes taking off/landing just outside."
       }
     ]
   }, {
@@ -491,28 +491,22 @@
       "Sunday": "07:00 - 14:00"
     },
     "reviews": [{
-        "name": "Harry",
-        "date": "June 24, 2018",
-        "rating": 5,
-        "comments": "Great service and food. Come early, as it gets very busy."
+        "name": "Cynthia",
+        "date": "July 2, 2018",
+        "rating": 4,
+        "comments": "Menu is standard diner fare. Come hungry- portions are huge. Food came out quickly. Service is always friendly."
       },
       {
-        "name": "Amanda",
-        "date": "June 18, 2018",
-        "rating": 5,
-        "comments": "Been coming here for years, and have never had a bad experience. Friendly service, great view, delicious food. If the line is too long for you, just go to the take out window and get the same food in half the time."
+        "name": "Zuil",
+        "date": "July 3, 2018",
+        "rating": 4,
+        "comments": "We've been regulars here for years. They never disappoint. Awesome Reuben sandwhich!  Cute aviation theme, which is to be expected. Reasonable prices"
       },
       {
         "name": "Charles",
-        "date": "June 12, 2018",
-        "rating": 5,
-        "comments": "Quintessential coastal restaurant filled with ocean tchotchke. Absolutely delicious seafood with great service in a clean establishment. The calamari is the best I've ever had. The chowder flavorful and full of clams. Food came out fairly quickly. Line up before it opens, or expect to wait."
-      },
-      {
-        "name": "Alex",
-        "date": "June 12, 2018",
-        "rating": 5,
-        "comments": "Cream of the crop fish shop on the coast. Some of the freshest seafood you'll ever have. Shrimp tasted like it was plucked out of the ocian 5 min beforehand! Plenty of tables outside where you can enjoy your meal and the view. Friendly service. An easy enjoyable walk from HAF, if you're flying in. Park at the south end of the field. There is a path that will take you to the main road. From there, maybe a ten minute walk."
+        "date": "June 32, 2018",
+        "rating": 3,
+        "comments": "Awesome place! A+ service, not loud, food is AWESOME. Eat here before you hit the wineries. We'll be back for sure."
       }
     ]
   }, {
@@ -539,22 +533,22 @@
       "Sunday": "10:30 - 21:00"
     },
     "reviews": [{
-        "name": "Kyle",
-        "date": "June 16, 2018",
-        "rating": 4,
-        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+        "name": "Matt",
+        "date": "July 2, 2018",
+        "rating": 5,
+        "comments": "Wow, the food is amazing! Best Indian restaurant in the bay area! I found out they cater, and host a lot of events, just fyi. I definitely recommend them! Just outstanding food."
       },
       {
-        "name": "Brittany",
-        "date": "June 1, 2018",
-        "rating": 4,
-        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+        "name": "Preethi",
+        "date": "June 8, 2018",
+        "rating": 5,
+        "comments": "Flew into HWD and came here for an engagement party. The decor was very pretty. Staff was attentive and friendly. The food though! Just amazing! Will definitely return."
       },
       {
-        "name": "Kenneth",
-        "date": "May 26, 2018",
-        "rating": 3,
-        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+        "name": "Erica",
+        "date": "June 20, 2018",
+        "rating": 5,
+        "comments": "Great Indian food and impeccable service. Even the chef came out and greated us. We accidentally discovered this place after flying in, and I'm so glad we gave it a shot. Will definitely recommend to those in the general aviation community to eat here when flying into HWD."
       }
     ]
   }, {
