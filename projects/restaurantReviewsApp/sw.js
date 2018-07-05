@@ -25,7 +25,7 @@ let cachedFiles = [
     'img/salinas.jpg',
     'img/sql.jpg',
     'img/shelterCove.jpg',
-    'img/sts.jpg',
+    'img/sts2.jpg',
     'img/watsonville.jpg'
 ];
 
