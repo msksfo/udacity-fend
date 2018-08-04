@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
+import * as Quotes from './quotes.json'
 import './App.css'
 
 import SearchPage from './components/SearchPage';
@@ -16,7 +17,8 @@ class BooksApp extends Component {
     this.state = {
         books: [],
         query: '',
-        searchResults: []
+        searchResults: [],
+        quote: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.updateQuery = this.updateQuery.bind(this)
@@ -25,9 +27,15 @@ class BooksApp extends Component {
 
   // render the initial books to the bookshelves
   componentDidMount(){
+      const firstQuote = this.getNewQuote();
+
       BooksAPI.getAll().then(books => {
-          this.setState({books})
+          this.setState({
+            books: books,
+            quote: firstQuote
+          });
       })
+
   }
 
   /* Clear the query text and the array of search result books when the user navigates away from the search page */
@@ -38,9 +46,12 @@ class BooksApp extends Component {
     let clearedArr = this.state.searchResults.slice();
     clearedArr = []
 
+    const newQuote = Object.assign({}, this.getNewQuote())
+
     this.setState({
       query: clearedQuery,
-      searchResults: clearedArr
+      searchResults: clearedArr,
+      quote: newQuote
     })
   }
 
@@ -141,6 +152,12 @@ class BooksApp extends Component {
     })
   }
 
+  getNewQuote(){
+    let quotes = Quotes;
+    let randomQuote = Quotes[Math.floor(Math.random() * quotes.length)]
+    return randomQuote;
+  }
+
 
   render() {
 
@@ -160,7 +177,7 @@ class BooksApp extends Component {
         <Route exact path="/"  render={() => (
 
           <div className="list-books">
-            <Header />
+            <Header quote={this.state.quote}/>
             <Main onChange={this.handleChange}  books={this.state.books}/>
             <OpenSearch />
           </div>

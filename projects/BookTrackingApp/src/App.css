@@ -11,14 +11,34 @@ body, .app {
 /* main page */
 
 .list-books-title {
-  padding: 10px 0;
-  background: #2e7c31;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 3rem 0;
+
+  background-image: url('./images/header-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*
+  background-color: #7c2e54;
+  */
 }
+
+.content-wrapper {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.85);
+  /*
+  border: 1px solid #7c2e54;
+  */
+  border-radius: 5px;
+  text-align: center;
+  padding: 1.2rem;
+}
+
 .list-books-title h1 {
   font-weight: 400;
   margin: 0;
-  color: white;
+  color: #222;
 }
 
 .list-books-content {
@@ -30,6 +50,21 @@ body, .app {
   padding: 0 10px 20px;
 }
 
+.quote-container {
+  color: #333;
+}
+
+.quote {
+  font-family: cursive;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+}
+
+.quote-author {
+  margin-top: 0.15rem;
+  letter-spacing: 1px;
+}
+
 @media (min-width: 600px) {
   .bookshelf {
     padding: 0 20px 40px;
@@ -37,7 +72,8 @@ body, .app {
 }
 
 .bookshelf-title {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #cdcdcd;
+  font-weight: 500;
 }
 .bookshelf-books { /* I deleted this div-> it wraps the ol- className='books-grid' */
   text-align: center;
@@ -116,7 +152,7 @@ body, .app {
   justify-content: center;
   flex-wrap: wrap;
 
-  border: 1px solid pink;
+  border: 1px solid #dedede;
 }
 .books-grid li {
   padding: 10px 15px;
