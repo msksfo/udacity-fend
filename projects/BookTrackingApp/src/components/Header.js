@@ -1,6 +1,7 @@
 import React from 'react';
 import Quote from './Quote';
 import '../App.css';
+import PropTypes from 'prop-types'
 
 function Header(props) {
 
@@ -13,6 +14,10 @@ function Header(props) {
         </div>
     )
 
+}
+
+Header.propTypes = {
+    quote: PropTypes.object.isRequired
 }
 
 export default Header;

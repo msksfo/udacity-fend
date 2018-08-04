@@ -1,96 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom'
-import Book from './Book'
+import SearchInput from './SearchInput'
+import SearchResultGrid from './SearchResultGrid'
+import PropTypes from 'prop-types'
 
+function SearchPage(props) {
 
-class SearchPage extends Component {
-    constructor(props){
-        super(props)
-        this.filterSearch = this.filterSearch.bind(this)
-    }
+    if (props.filteredBooks.length > 0){
+        return (
+            <div className='search-books'>
 
-    filterSearch(e) {
-        this.props.onTextChange(e.target.value);
-    }
+                <SearchInput query={props.query}
+                                handleClick={props.handleClick}
+                                onTextChange={props.onTextChange}
+                />
 
-    render(){
-        const filteredBooks = this.props.filteredBooks;
+                <SearchResultGrid handleChange={props.handleChange}
+                                    filteredBooks={props.filteredBooks}
+                />
 
-        if (filteredBooks.length > 0){
-            return (
-                <div className='search-books'>
-                    <div className="search-books-bar">
-                        <Link to="/" className="close-search" onClick={this.props.handleClick}>Close</Link>
-                        <div className="search-books-input-wrapper">
+            </div>
+        )
+    } else {
+        return (
+            <div className='search-books'>
 
-                            <input value={this.props.query}
-                                onChange={this.filterSearch}
-                                type="text"
-                                placeholder="Search by title or author"/>
-
-                        </div>
-                    </div>
-
-                    <div className="search-books-results">
-                        <ol className="books-grid">
-
-                        {/* Conditional check for author property. If property does not exist, make the author 'anonymous' */}
-                        {filteredBooks.map(book => {
-                            if (book.authors){
-                                return <li key={book.id}>
-                                            <Book bookTitle={book.title}
-                                                authors={book.authors.join(', ')}
-                                                bookCover={book.imageLinks}
-                                                onChange={this.props.handleChange}
-                                                id={book.id}
-                                                selected={book.shelf}
-                                            />
-                                        </li>
-
-                            } else {
-                                return <li key={book.id}>
-                                            <Book bookTitle={book.title}
-                                                authors={`Anonymous`}
-                                                bookCover={book.imageLinks}
-                                                onChange={this.props.handleChange}
-                                                id={book.id}
-                                                selected={book.shelf}
-                                            />
-                                        </li>
-                            }
-
-                        })}
-
-                        </ol>
-                    </div>
+                <SearchInput query={props.query}
+                                handleClick={props.handleClick}
+                                onTextChange={props.onTextChange}
+                />
+                <div className="search-books-results">
+                    <ol className="books-grid">
+                    </ol>
                 </div>
-            )
-        } else {
-            return (
-                <div className='search-books'>
-                    <div className="search-books-bar">
-                        <Link to="/" className="close-search">Close</Link>
-                        <div className="search-books-input-wrapper">
 
-                            <input value={this.props.query}
-                                onChange={this.filterSearch}
-                                type="text"
-                                placeholder="Search by title or author"/>
-
-                        </div>
-                    </div>
-
-                    <div className="search-books-results">
-                        <ol className="books-grid">
-                        </ol>
-                    </div>
-                </div>
-            )
-        }
-
+            </div>
+        )
     }
 
+
+}
+
+SearchPage.propTypes = {
+    handleClick: PropTypes.func.isRequired,
+    query: PropTypes.string,
+    handleChange: PropTypes.func.isRequired,
+    filteredBooks: PropTypes.array.isRequired,
+    onTextChange: PropTypes.func.isRequired
 }
 
 export default SearchPage;

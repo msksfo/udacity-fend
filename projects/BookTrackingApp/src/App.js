@@ -25,7 +25,7 @@ class BooksApp extends Component {
     this.clearSearchFields = this.clearSearchFields.bind(this)
   }
 
-  // render the initial books to the bookshelves
+  // render the initial books to the bookshelves, and quote to the header
   componentDidMount(){
       const firstQuote = this.getNewQuote();
 
@@ -46,6 +46,7 @@ class BooksApp extends Component {
     let clearedArr = this.state.searchResults.slice();
     clearedArr = []
 
+    // put a new quote in the header each time the user returns to the main page
     const newQuote = Object.assign({}, this.getNewQuote())
 
     this.setState({
@@ -67,7 +68,6 @@ class BooksApp extends Component {
 
     BooksAPI.update(book, chosenShelf)
       .then( (data) => {
-        console.log(data);
 
         // check if the targeted book is already on a bookshelf. If it is- get the index
         let bookMatch = false;
@@ -140,9 +140,11 @@ class BooksApp extends Component {
                 filteredBook.shelf = 'none'
               }
             })
+            this.setState( {searchResults: filteredBooks} )
+          }else {
+            filteredBooks = [];
+            this.setState( {searchResults: filteredBooks} )
           }
-          this.setState( {searchResults: filteredBooks} )
-
         }).catch((err) => console.log('Error: ', err))
       }else {
         // necessary in order for search results to go away as user deletes search text
@@ -152,6 +154,8 @@ class BooksApp extends Component {
     })
   }
 
+
+  // get a random quote from the quotes json file
   getNewQuote(){
     let quotes = Quotes;
     let randomQuote = Quotes[Math.floor(Math.random() * quotes.length)]
@@ -166,7 +170,7 @@ class BooksApp extends Component {
         <Route path="/search" render={() => (
 
           <SearchPage filteredBooks={this.state.searchResults}
-                      value={this.state.query}
+                      query={this.state.query}
                       handleClick={this.clearSearchFields}
                       onTextChange={this.updateQuery}
                       handleChange={this.handleChange}
