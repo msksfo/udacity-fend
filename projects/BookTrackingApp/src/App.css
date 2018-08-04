@@ -1,58 +1,46 @@
 html, body, .root {
   height: 100%;
 }
+
+
 body {
   line-height: 1.5;
 }
+
+
 body, .app {
   background: white;
 }
 
-/* main page */
+/***************** main page ******************/
 
+
+/* header with background image of library  */
 .list-books-title {
   display: flex;
   justify-content: center;
-  padding: 3rem 0 3rem 0;
-
+  padding: 3rem 3rem;
   background-image: url('./images/header-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /*
-  background-color: #7c2e54;
-  */
 }
 
+
+/* wrapper for the quote and h1 */
 .content-wrapper {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.85);
-  /*
-  border: 1px solid #7c2e54;
-  */
   border-radius: 5px;
   text-align: center;
   padding: 1.2rem;
 }
 
-.list-books-title h1 {
-  font-weight: 400;
-  margin: 0;
-  color: #222;
-}
-
-.list-books-content {
-  padding: 0 0 80px;
-  flex: 1;
-}
-
-.bookshelf {
-  padding: 0 10px 20px;
-}
 
 .quote-container {
   color: #333;
 }
+
 
 .quote {
   font-family: cursive;
@@ -60,32 +48,49 @@ body, .app {
   letter-spacing: 1.4px;
 }
 
+
 .quote-author {
   margin-top: 0.15rem;
   letter-spacing: 1px;
 }
 
-@media (min-width: 600px) {
-  .bookshelf {
-    padding: 0 20px 40px;
-  }
+
+.list-books-title h1 {
+  font-weight: 400;
+  margin: 0;
+  color: #222;
+  color: #7c2e54;
+  font-weight: 600;
+  letter-spacing: 1.4px;
 }
+
+
+.list-books-content {
+  padding: 0 0 80px;
+  flex: 1;
+}
+
+
+/************ bookshelf ***********/
+.bookshelf {
+  padding: 0 10px 20px;
+}
+
 
 .bookshelf-title {
   border-bottom: 1px solid #cdcdcd;
   font-weight: 500;
 }
-.bookshelf-books { /* I deleted this div-> it wraps the ol- className='books-grid' */
-  text-align: center;
 
-  border: 1px solid blue;
-}
 
+/******** search page *******/
 .open-search {
   position: fixed;
   right: 25px;
   bottom: 25px;
 }
+
+
 .open-search a {
   display: block;
   width: 50px;
@@ -100,7 +105,6 @@ body, .app {
   font-size: 0;
 }
 
-/* search page */
 
 .search-books-bar {
   position: fixed;
@@ -111,10 +115,14 @@ body, .app {
   display: flex;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
 }
+
+
 .search-books-input-wrapper {
   flex: 1;
   background: #e9e;
 }
+
+
 .search-books-bar input {
   width: 100%;
   padding: 15px 10px;
@@ -122,6 +130,7 @@ body, .app {
   border: none;
   outline: none;
 }
+
 
 .close-search {
   display: block;
@@ -137,41 +146,50 @@ body, .app {
   font-size: 0;
 }
 
+
 .search-books-results {
   padding: 80px 10px 20px;
 }
 
-/* books grid */
 
+/********** bookshelf grid *********/
 .books-grid {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   border: 1px solid #dedede;
 }
+
+
 .books-grid li {
   padding: 10px 15px;
   text-align: left;
 }
 
+
 .book {
   width: 140px;
 }
+
+
 .book-title,
 .book-authors {
   font-size: 0.8em;
 }
+
+
 .book-title {
   margin-top: 10px;
 }
+
+
 .book-authors {
   color: #999;
 }
+
 
 .book-top {
   position: relative;
@@ -179,6 +197,7 @@ body, .app {
   display: flex;
   align-items: flex-end;
 }
+
 
 .book-shelf-changer {
   position: absolute;
@@ -194,6 +213,8 @@ body, .app {
   background-size: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+
 .book-shelf-changer select {
   width: 100%;
   height: 100%;
@@ -201,14 +222,25 @@ body, .app {
   cursor: pointer;
 }
 
-/* book cover */
 
+/* book cover */
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
 }
+
+
 .book-cover-title {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+
+/*********** media queries ************ */
+@media (min-width: 600px) {
+  .bookshelf {
+    padding: 0 20px 40px;
+  }
+
 }
