@@ -8,8 +8,10 @@ body {
 }
 
 
-body, .app {
-  background: white;
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #e6e6e6;
 }
 
 /***************** main page ******************/
@@ -69,6 +71,7 @@ body, .app {
 .list-books-content {
   padding: 0 0 80px;
   flex: 1;
+  background-color: white;
 }
 
 
@@ -81,6 +84,8 @@ body, .app {
 .bookshelf-title {
   border-bottom: 1px solid #cdcdcd;
   font-weight: 500;
+  margin-top: 0;
+  padding-top: 19.920px;
 }
 
 
@@ -107,12 +112,22 @@ body, .app {
 }
 
 
+.search-books {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+}
+
+
 .search-books-bar {
+  /*
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 5;
+  */
   display: flex;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
 }
@@ -245,15 +260,8 @@ body, .app {
   }
 }
 
-
 @media (min-width: 800px) {
   .content-wrapper{
     max-width: 65%;
   }
 }
-
-
-
-
-
-

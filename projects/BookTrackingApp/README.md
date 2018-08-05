@@ -16,6 +16,9 @@ This project was built as part of the Udacity FrontEnd Nanodegree curriculum. I 
 * install all project dependencies with `npm install`
 * run `npm start` in the project root directory to start the development server and launch the   app in the browser window
 
+## Live link
+Don't feel like bothering with installation? Click here https://msksfo.github.io/UdacityFEND-myReads/
+
 ## Use the app
 The main page has three bookshelves: currently reading, want to read, and read. Each book shelved there has a control on the bottom right hand corner that allows you to move the book to another shelf or remove it from the page altogether (shelf 'none').
 

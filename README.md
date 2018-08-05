@@ -12,5 +12,7 @@ https://msksfo.github.io/udacity-fend/projects/catClicker/version1/index.html
 
 https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/
 
+https://msksfo.github.io/UdacityFEND-myReads/
+
 
 

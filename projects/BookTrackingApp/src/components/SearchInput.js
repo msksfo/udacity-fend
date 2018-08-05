@@ -7,10 +7,9 @@ class SearchInput extends Component {
 
     constructor(props){
         super(props)
-        this.filterSearch = this.filterSearch.bind(this)
     }
 
-    filterSearch(e) {
+    filterSearch = (e) =>  {
         this.props.onTextChange(e.target.value);
     }
 
