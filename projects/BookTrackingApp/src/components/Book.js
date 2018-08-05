@@ -17,7 +17,7 @@ function Book(props) {
                 }
 
                 <div className="book-shelf-changer">
-                    <select  defaultValue={props.selected} onChange={props.onChange}>
+                    <select  aria-label="Bookshelves" defaultValue={props.selected} onChange={props.onChange}>
                         <option value="move" disabled>Move to...</option>
                         <option value="currentlyReading">Currently Reading</option>
                         <option value="wantToRead">Want to Read</option>

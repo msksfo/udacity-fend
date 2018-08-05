@@ -7,11 +7,23 @@ function Main(props) {
 
     return (
         <div className="list-books-content">
-            <Bookshelf  bookshelfTitle='Currently Reading' onChange={props.onChange} books={props.books.filter(value => value.shelf === 'currentlyReading')}/>
+            <Bookshelf  
+                bookshelfTitle='Currently Reading' 
+                onChange={props.onChange} 
+                books={props.books.filter(value => value.shelf === 'currentlyReading')}
+            />
 
-            <Bookshelf bookshelfTitle='Want To Read' onChange={props.onChange} books={props.books.filter(value => value.shelf === 'wantToRead')}/>
+            <Bookshelf 
+                bookshelfTitle='Want To Read' 
+                onChange={props.onChange} 
+                books={props.books.filter(value => value.shelf === 'wantToRead')}
+            />
 
-            <Bookshelf bookshelfTitle='Read' onChange={props.onChange} books={props.books.filter(value => value.shelf === 'read')}/>
+            <Bookshelf 
+            bookshelfTitle='Read' 
+            onChange={props.onChange} 
+            books={props.books.filter(value => value.shelf === 'read')}
+            />
 
         </div>
     )
