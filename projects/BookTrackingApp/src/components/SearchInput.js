@@ -1,33 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../App.css';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-class SearchInput extends Component {
+const SearchInput = (props) => {
 
-    constructor(props){
-        super(props)
+    const filterSearch = (e) =>  {
+        props.onTextChange(e.target.value);
     }
 
-    filterSearch = (e) =>  {
-        this.props.onTextChange(e.target.value);
-    }
+    return (
+        <div className="search-books-bar">
 
-    render() {
-        return (
-            <div className="search-books-bar">
-                <Link to="/" className="close-search" onClick={this.props.handleClick}>Close</Link>
-                <div className="search-books-input-wrapper">
+            <Link to="/"
+                className="close-search"
+                onClick={props.handleClick}>Close
+            </Link>
 
-                    <input value={this.props.query}
-                        onChange={this.filterSearch}
-                        type="text"
-                        placeholder="Search by title or author"/>
-
-                </div>
+            <div className="search-books-input-wrapper">
+                <input value={props.query}
+                    onChange={filterSearch}
+                    type="text"
+                    placeholder="Search by title or author"
+                />
             </div>
-        )
-    }
+
+        </div>
+    )
 }
 
 SearchInput.propTypes = {

@@ -147,7 +147,7 @@ class BooksApp extends Component {
   // get a random quote from the quotes json file
   getNewQuote(){
     let quotes = Quotes;
-    let randomQuote = Quotes[Math.floor(Math.random() * quotes.length)]
+    let randomQuote = Quotes[Math.floor(Math.random() * quotes.length - 1)]
     return randomQuote;
   }
 
