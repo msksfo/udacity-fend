@@ -7,7 +7,7 @@ function Quote(props){
     return (
         <div className="quote-container">
             <q className="quote">{quote ? quote.quote : "We lose ourselves in books. We find ourselves there too"}</q>
-            <p className="quote-author">~ {? quote.author : "Anonymous"}</p>
+            <p className="quote-author">~ {quote ? quote.author : "Anonymous"}</p>
         </div>
     )
 }
