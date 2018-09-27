@@ -1,203 +1,241 @@
 <!DOCTYPE html>
 <html lang='en'>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Portfolio Site</title>
 
-		<!-- font awesome icons -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/styles.css">
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio Site</title>
 
-	<body>
-		<header>
-			<figure class='logo-figure'>
-				<img class="logo" src="images/logo.png" alt="TanogEcho Design">
-			</figure>
+	<!-- font awesome icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
 
-			<div class="title">
-				<h1>Tia Esguerra</h1>
-				<h2>Web Developer</h2>
-			</div>
-		</header>
-
-		<figure class="hero">
-			<img class="hero-img" src="images/code.png" alt="Html code of this page">
+<body>
+	<header>
+		<figure class='logo-figure'>
+			<img class="logo" src="images/logo.png" alt="TanogEcho Design">
 		</figure>
 
-		<main>
-			<section class="about-section">
-				<h2>About Me</h2>
-				<div class="about-grid">
-					<div class="about-text">
-						<p>I'm Tia, a web developer interested in learning more about both react and angular. I began this journey because I was looking for an intellectual challenge with a creative twist. I really enjoy taking an idea and nurturing it, working through the problems, creating the solutions while trying new things, and eventually developing it into a really cool application that people can use. I strive to write clean, modular code, that is also responsive and accessible. I thrive when being part of a team that values diversity and creativity.</p>
-						<p>Aside from programming, I also enjoy travelling, music, photography, baking, reading, and so many more things.</p>
-					</div> <!-- close .about-text -->
-					<p class="quote-wrapper">
-						<span><q>Be fearless in the pursuit of what sets your soul on fire.</q></span> <span>~ Jennifer Lee</span>
-					</p>
-				</div> <!-- close .about-grid -->
-			</section> <!-- close .about-section -->
+		<div class="title">
+			<h1>Tia Esguerra</h1>
+			<h2>Web Developer</h2>
+		</div>
+	</header>
 
-			<section class="featured-work-section">
-				<h2>Featured Work</h2>
-				<div class="work-examples">
+	<figure class="hero">
+		<img class="hero-img" src="images/code.png" alt="Html code of this page">
+	</figure>
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description1" aria-hidden="true" class="description-modal">
+	<main>
+		<section class="about-section">
+			<h2>About Me</h2>
+			<div class="about-grid">
+				<div class="about-text">
+					<p>I'm Tia, a web developer interested in learning more about both react and angular. I began this journey because
+						I was looking for an intellectual challenge with a creative twist. I really enjoy taking an idea and nurturing
+						it, working through the problems, creating the solutions while trying new things, and eventually developing it
+						into a really cool application that people can use. I strive to write clean, modular code, that is also
+						responsive and accessible. I thrive when being part of a team that values diversity and creativity.</p>
+					<p>Aside from programming, I also enjoy travelling, music, photography, baking, reading, and so many more things.</p>
+				</div> <!-- close .about-text -->
+				<p class="quote-wrapper">
+					<span><q>Be fearless in the pursuit of what sets your soul on fire.</q></span> <span>~ Jennifer Lee</span>
+				</p>
+			</div> <!-- close .about-grid -->
+		</section> <!-- close .about-section -->
 
-							<button tabindex="-1" aria-label="close" class="close-modal">X
-							</button>
+		<section class="featured-work-section">
+			<h2>Featured Work</h2>
+			<div class="work-examples">
 
-							<p id="dialog-description1" class="description-text">This photo gallery project uses HTML5, CSS3, JavaScript and the JavaScript library Lightbox, by Lokesh Dhakar. On devices smaller than 660px, the gallery sections are initially collapsed, so the user is not forced to scroll through content they are not interested in. Clicking the continent icon will toggle the section open/closed.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description1" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/aroundTheWorld.png" alt="Around The World project">
+						<p id="dialog-description1" class="description-text">This photo gallery project uses HTML5, CSS3, JavaScript and
+							the JavaScript library Lightbox, by Lokesh Dhakar. On devices smaller than 660px, the gallery sections are
+							initially collapsed, so the user is not forced to scroll through content they are not interested in. Clicking
+							the continent icon will toggle the section open/closed.</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Around The World</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/AroundTheWorld/" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/AroundTheWorld" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description2" aria-hidden="true" class="description-modal">
+					<img class="work-example" src="images/aroundTheWorld.png" alt="Around The World project">
 
-							<button tabindex="-1" aria-label="close" class="close-modal">X
-							</button>
+					<figcaption>
+						<h3 class="work-example-title">Around The World</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/AroundTheWorld/" target="_blank"
+								 rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/AroundTheWorld" target="_blank" rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
 
-							<p id="dialog-description2" class="description-text">A simple JavaScript calculator, that will add, subtract, multiply, and divide two numbers. Multiple operations may be chained together, but the application will not take into account mathematical order of precedence. Made as part of the free code camp curriculum, with HTML5, CSS3, and JavaScript.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description2" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/calculator.png" alt="Calculator project">
+						<p id="dialog-description2" class="description-text">A simple JavaScript calculator, that will add, subtract,
+							multiply, and divide two numbers. Multiple operations may be chained together, but the application will not take
+							into account mathematical order of precedence. Made as part of the free code camp curriculum, with HTML5, CSS3,
+							and JavaScript.</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Calculator</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/calculator/" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/calculator" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description3" aria-hidden="true" class="description-modal">
+					<img class="work-example" src="images/calculator.png" alt="Calculator project">
 
-							<button tabindex="-1" aria-label="close" class="close-modal">X
-							</button>
+					<figcaption>
+						<h3 class="work-example-title">Calculator</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/calculator/" target="_blank"
+								 rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/calculator" target="_blank" rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
 
-							<p id="dialog-description3" class="description-text">The classic game of concentration, with an aviation twist. The gameboard is layed out with 16 cards containing 8 matching pairs of images. The user must click the cards to find the matching pairs. Upon completion, the user will see their stats.  Made as part of the Udacity Front End Nanodegree coursework, using HTML5, CSS3, and JavaScript.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description6" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/concentration.png" alt="Language Translation project">
+						<p id="dialog-description6" class="description-text">A static website using HTML5, CSS3, and JavaScript for
+							practice to develop my skills. The movie theme was given as a prompt from codelegy, in their challenge to build
+							30 sites in 30 days.</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Concentration</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/udacity-fend/projects/memoryGame/index.html" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/udacity-fend/tree/master/projects/memoryGame" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description4" aria-hidden="true" class="description-modal">
+					<img class="work-example" src="images/toothless.png" alt="How To Train Your Dragon project">
 
-							<button tabindex="-1" aria-label="close" class="close-modal">X
-							</button>
+					<figcaption>
+						<h3 class="work-example-title">Movie Tribute Site</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/30days30sites/day-7:movie/index.html"
+								 target="_blank" rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/30days30sites/tree/master/day-7:movie" target="_blank"
+								 rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
 
-							<p id="dialog-description4" class="description-text">A language translation app using the Yandex Translate API. I made the application to practice using api's, ajax requests, and css animations. User can enter a word or phrase, choose a language from the select menu, and see their translated text.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description3" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/translate.png" alt="Language Translation project">
+						<p id="dialog-description3" class="description-text">The classic game of concentration, with an aviation twist.
+							The gameboard is layed out with 16 cards containing 8 matching pairs of images. The user must click the cards to
+							find the matching pairs. Upon completion, the user will see their stats. Made as part of the Udacity Front End
+							Nanodegree coursework, using HTML5, CSS3, and JavaScript.</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Language Translation</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/HowDoYouSay/" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/HowDoYouSay" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description5" aria-hidden="true" class="description-modal">
+					<img class="work-example" src="images/concentration.png" alt="Language Translation project">
 
-							<button tabindex="-1" aria-label="close" class="close-modal">X
-							</button>
+					<figcaption>
+						<h3 class="work-example-title">Concentration</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/udacity-fend/projects/memoryGame/index.html"
+								 target="_blank" rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/udacity-fend/tree/master/projects/memoryGame"
+								 target="_blank" rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
 
-							<p id="dialog-description5" class="description-text">A weather app using the Apixu Weather API, featuring Cirrus the cat. Users in the US can enter their 5 digit zipcode to see their local weather, and a weather appropriate photo of and caption by Cirrus. Made for practice with ajax requests.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description4" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/CirrusApp.png" alt="How To Train Your Dragon project">
+						<p id="dialog-description4" class="description-text">I built this single page application using Create React App,
+							Google Maps JavaScript API, and the Flickr API. When a map marker or site in the list view is clicked, an info
+							window pops up displaying a photo of the site, along with some additional site related information. This was the
+							final project of my Udacity Front-End Nanodegree coursework.
+						</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Weather by Cirrus</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/Cirrus--Weather-App/" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/Cirrus--Weather-App" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-					<figure class="modal-parent">
-						<div role="dialog" aria-describedby="dialog-description6" aria-hidden="true" class="description-modal">
+					<img class="work-example" src="images/neighborhoodMap.png" alt="Neighborhood Map project">
 
-								<button tabindex="-1" aria-label="close" class="close-modal">X
-								</button>
+					<figcaption>
+						<h3 class="work-example-title">Neighborhood Map</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/udacityFEND-neighborhoodMap/"
+								 target="_blank" rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/udacity-fend/tree/master/projects/neighborhoodMap"
+								 target="_blank" rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
 
-								<p id="dialog-description6" class="description-text">A static website using HTML5, CSS3, and JavaScript for practice to develop my skills. The movie theme was given as a prompt from codelegy, in their challenge to build 30 sites in 30 days.</p>
+				<figure class="modal-parent">
+					<div role="dialog" aria-describedby="dialog-description5" aria-hidden="true" class="description-modal">
 
-						</div> <!-- close .description-modal -->
+						<button tabindex="-1" aria-label="close" class="close-modal">X
+						</button>
 
-						<img class="work-example" src="images/toothless.png" alt="How To Train Your Dragon project">
+						<p id="dialog-description5" class="description-text">I was given some poorly written starter code of a static
+							design that lacked accessibility. I converted the design to be responsive and accessible. I also added a service
+							worker to create a seamless offline experience for the user. This project was built as part of the Udacity
+							Front-End Nanodegree coursework.</p>
 
-						<figcaption>
-							<h3 class="work-example-title">Movie Tribute Site</h3>
-							<div class="info">
-								<span tabindex='0' role="button" class="right-border description">Description</span>
-								<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/30days30sites/day-7:movie/index.html" target="_blank" rel="noopener">Website</a></span>
-								<span><a class="work-example-link" href="https://github.com/msksfo/30days30sites/tree/master/day-7:movie" target="_blank" rel="noopener">Github</a></span>
-							</div>
-						</figcaption>
-					</figure>
+					</div> <!-- close .description-modal -->
 
-				</div> <!-- close .work-examples -->
-			</section> <!-- close .featured-work-section -->
-		</main>
+					<img class="work-example" src="images/flyingFoodie.png" alt="Restaurant Reviews App">
 
-		<footer>
-			<div class="contact">
-				<p>Get in touch ~
+					<figcaption>
+						<h3 class="work-example-title">Restaurant Reviews APp</h3>
+						<div class="info">
+							<span tabindex='0' role="button" class="right-border description">Description</span>
+							<span class="right-border"><a class="work-example-link" href="https://msksfo.github.io/udacity-fend/projects/restaurantReviewsApp/"
+								 target="_blank" rel="noopener">Website</a></span>
+							<span><a class="work-example-link" href="https://github.com/msksfo/udacity-fend/tree/master/projects/restaurantReviewsApp"
+								 target="_blank" rel="noopener">Github</a></span>
+						</div>
+					</figcaption>
+				</figure>
+
+			</div> <!-- close .work-examples -->
+		</section> <!-- close .featured-work-section -->
+	</main>
+
+	<footer>
+		<div class="contact">
+			<p>Get in touch ~
 				<span class="social-links">
-					<a aria-label="Link to Linkedin" class="social-link" href="https://www.linkedin.com/in/tia-esguerra/" target="_blank" rel="noopener"><i aria-hidden="true" class="fab fa-lg fa-linkedin"></i></a>
+					<a aria-label="Link to Linkedin" class="social-link" href="https://www.linkedin.com/in/tia-esguerra/" target="_blank"
+					 rel="noopener"><i aria-hidden="true" class="fab fa-lg fa-linkedin"></i></a>
 
-					<a  aria-label="Link to Github" href="https://github.com/msksfo" target="_blank" rel="noopener" class="social-link"><i aria-hidden="true" class="fab fa-lg fa-github"></i></a>
+					<a aria-label="Link to Github" href="https://github.com/msksfo" target="_blank" rel="noopener" class="social-link"><i
+						 aria-hidden="true" class="fab fa-lg fa-github"></i></a>
 
-					<a aria-label="Link to Twitter" href="https://twitter.com/msSFO" target="_blank" rel="noopener" class="social-link"><i aria-hidden="true" class="fab fa-lg fa-twitter-square"></i></a>
+					<a aria-label="Link to Twitter" href="https://twitter.com/msSFO" target="_blank" rel="noopener" class="social-link"><i
+						 aria-hidden="true" class="fab fa-lg fa-twitter-square"></i></a>
 				</span>
 				~ msksfo@gmail.com</p>
-			</div>
+		</div>
 
-			<div class="copyright">
-					<p>Copyright &copy; 2018 TangoEcho Design. All Rights Reserved</p>
-				</div>
-		</footer>
+		<div class="copyright">
+			<p>Copyright &copy; 2018 TangoEcho Design. All Rights Reserved</p>
+		</div>
+	</footer>
 
-		<script src='js/script.js'></script>
-	</body>
+	<script src='js/script.js'></script>
+</body>
+
 </html>
