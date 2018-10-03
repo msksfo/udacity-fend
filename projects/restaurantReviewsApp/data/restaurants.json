@@ -1,639 +1,670 @@
 {
-  "restaurants": [{
-    "id": 1,
-    "name": "Abundant Air Cafe",
-    "neighborhood": "PAO",
-    "photograph": "paloalto.jpg",
-    "alt": "Aerial view of Palo Alto Airport",
-    "photograph2": "abundantAir.jpg",
-    "alt2": "Abundant Air Cafe",
-    "address": "1901 Embarcadero Rd #103, Palo Alto, CA 94303",
-    "latlng": {
-      "lat": 37.454439,
-      "lng": -122.115162
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Abundant Air Cafe",
+      "neighborhood": "PAO",
+      "photograph": "paloalto.jpg",
+      "alt": "Aerial view of Palo Alto Airport",
+      "photograph2": "abundantAir.jpg",
+      "alt2": "Abundant Air Cafe",
+      "address": "1901 Embarcadero Rd #103, Palo Alto, CA 94303",
+      "latlng": {
+        "lat": 37.454439,
+        "lng": -122.115162
+      },
+      "cuisine_type": "American",
+      "operating_hours": {
+        "Monday": "08:00 - 15:00",
+        "Tuesday": "08:00 - 15:00",
+        "Wednesday": "08:00 - 15:00",
+        "Thursday": "08:00 - 15:00",
+        "Friday": "08:00 - 15:00",
+        "Saturday": "Closed",
+        "Sunday": "Closed"
+      },
+      "reviews": [
+        {
+          "name": "Steve",
+          "date": "May 26, 2018",
+          "rating": 4,
+          "comments": "This place is located at the airport, so you can also do some plane spotting, if you have the interest. Customer service is really good and the place is super clean."
+        },
+        {
+          "name": "Morgan",
+          "date": "January 8, 2018",
+          "rating": 3,
+          "comments": "Located next to the golf course. Great paninis and salads! Prompt friendly service. Plenty of parking. Indoor seating is limited but outdoor pet friendly seating is also available. I wouldn't drive across the Bay for it, but if in the area, it's a great spot for a quick lunch."
+        },
+        {
+          "name": "Jason",
+          "date": "October 12, 2017",
+          "rating": 4,
+          "comments": "Food is fresh and consistent. Delicious soups, salads, and paninis, all reasonably priced. I love to grab a bite to eat after my lesson at the nearby flight school."
+        }
+      ]
     },
-    "cuisine_type": "American",
-    "operating_hours": {
-      "Monday": "08:00 - 15:00",
-      "Tuesday": "08:00 - 15:00",
-      "Wednesday": "08:00 - 15:00",
-      "Thursday": "08:00 - 15:00",
-      "Friday": "08:00 - 15:00",
-      "Saturday": "Closed",
-      "Sunday": "Closed"
+    {
+      "id": 2,
+      "name": "Barbara's Fishtrap",
+      "neighborhood": "HAF",
+      "photograph": "haf.jpg",
+      "alt": "Aerial view of Half Moon Bay Airport",
+      "photograph2": "barbarasFishtrap.jpg",
+      "alt2": "Barbara's Fishtrap",
+      "address": "281 Capistrano Rd, Half Moon Bay, CA 94019",
+      "latlng": {
+        "lat": 37.503453,
+        "lng": -122.485072
+      },
+      "cuisine_type": "Seafood",
+      "operating_hours": {
+        "Monday": "11:00 - 20:00",
+        "Tuesday": "11:00 - 20:00",
+        "Wednesday": "11:00 - 20:00",
+        "Thursday": "11:00 - 20:00",
+        "Friday": "11:00 - 21:00",
+        "Saturday": "11:00 - 21:00",
+        "Sunday": "11:00 - 20:00"
+      },
+      "reviews": [
+        {
+          "name": "Harry",
+          "date": "June 24, 2018",
+          "rating": 5,
+          "comments": "Great service and food. Come early, as it gets very busy."
+        },
+        {
+          "name": "Amanda",
+          "date": "June 18, 2018",
+          "rating": 5,
+          "comments": "Been coming here for years, and have never had a bad experience. Friendly service, great view, delicious food. If the line is too long for you, just go to the take out window and get the same food in half the time."
+        },
+        {
+          "name": "Charles",
+          "date": "June 12, 2018",
+          "rating": 5,
+          "comments": "Quintessential coastal restaurant filled with ocean tchotchke. Absolutely delicious seafood with great service in a clean establishment. The calamari is the best I've ever had. The chowder flavorful and full of clams. Food came out fairly quickly. Line up before it opens, or expect to wait."
+        },
+        {
+          "name": "Alex",
+          "date": "June 12, 2018",
+          "rating": 5,
+          "comments": "Cream of the crop fish shop on the coast. Some of the freshest seafood you'll ever have. Shrimp tasted like it was plucked out of the ocian 5 min beforehand! Plenty of tables outside where you can enjoy your meal and the view. Friendly service. An easy enjoyable walk from HAF, if you're flying in. Park at the south end of the field. There is a path that will take you to the main road. From there, maybe a ten minute walk."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Steve",
-        "date": "May 26, 2018",
-        "rating": 4,
-        "comments": "This place is located at the airport, so you can also do some plane spotting, if you have the interest. Customer service is really good and the place is super clean."
+    {
+      "id": 3,
+      "name": "Izzy's",
+      "neighborhood": "SQL",
+      "photograph": "sql.jpg",
+      "alt": "Night shot of a Cirrus in front of SQL tower",
+      "photograph2": "izzys.jpg",
+      "alt2": "Izzy's Steakhouse",
+      "address": "525 Skyway Rd, San Carlos, CA 94070",
+      "latlng": {
+        "lat": 37.515199,
+        "lng": -122.254452
       },
-      {
-        "name": "Morgan",
-        "date": "January 8, 2018",
-        "rating": 3,
-        "comments": "Located next to the golf course. Great paninis and salads! Prompt friendly service. Plenty of parking. Indoor seating is limited but outdoor pet friendly seating is also available. I wouldn't drive across the Bay for it, but if in the area, it's a great spot for a quick lunch."
+      "cuisine_type": "Steakhouse",
+      "operating_hours": {
+        "Monday": "16:00 - 22:00",
+        "Tuesday": "16:00 - 22:00",
+        "Wednesday": "16:00 - 22:00",
+        "Thursday": "16:00 - 22:00",
+        "Friday": "16:00 - 22:00",
+        "Saturday": "16:00 - 22:00",
+        "Sunday": "16:00 - 21:00"
       },
-      {
-        "name": "Jason",
-        "date": "October 12, 2017",
-        "rating": 4,
-        "comments": "Food is fresh and consistent. Delicious soups, salads, and paninis, all reasonably priced. I love to grab a bite to eat after my lesson at the nearby flight school."
-      }
-    ]
-  }, {
-    "id": 2,
-    "name": "Barbara's Fishtrap",
-    "neighborhood": "HAF",
-    "photograph": "haf.jpg",
-    "alt": "Aerial view of Half Moon Bay Airport",
-    "photograph2": "barbarasFishtrap.jpg",
-    "alt2": "Barbara's Fishtrap",
-    "address": "281 Capistrano Rd, Half Moon Bay, CA 94019",
-    "latlng": {
-      "lat": 37.503453,
-      "lng": -122.485072
+      "reviews": [
+        {
+          "name": "Joshua",
+          "date": "June 7, 2018",
+          "rating": 4,
+          "comments": "Service was good. Portions are huge, so try to save room for dessert, which is delicious. I deducted one star because they were slightly unorganized in dealing with our large group. Overall I still recommend it. If you have the time, there is a fantastic air museum nearby- Hiller Aviation Museum. It is an easy walk from the restaurant."
+        },
+        {
+          "name": "Cameron",
+          "date": "May 20, 2018",
+          "rating": 4,
+          "comments": "Doesn't look like much from the outside, but give it a try. You'll be pleasantly surprised. They frequently offer Groupon deals, which are a great value. Service was timely and helpful. The atmosphere was lovely. They brought out a decadent chocolate cake for my girlfriend's birthday. If coming from the airport, park your aircraft in the Northwest overrun lot."
+        },
+        {
+          "name": "Sally",
+          "date": "April 26, 2018",
+          "rating": 3,
+          "comments": "We had a groupon for their dinner- appetizer, 2 entrees, and dessert for $71. The meat very tender and flavorful. The creamed spinach and potatoes were only ok, a little oily in my opinion. The server was friendly and attentive. And our food came out quickly."
+        }
+      ]
     },
-    "cuisine_type": "Seafood",
-    "operating_hours": {
-      "Monday": "11:00 - 20:00",
-      "Tuesday": "11:00 - 20:00",
-      "Wednesday": "11:00 - 20:00",
-      "Thursday": "11:00 - 20:00",
-      "Friday": "11:00 - 21:00",
-      "Saturday": "11:00 - 21:00",
-      "Sunday": "11:00 - 20:00"
+    {
+      "id": 4,
+      "name": "The Runway By Patrick",
+      "neighborhood": "APC",
+      "photograph": "apc.jpg",
+      "alt": "Aerial view of Napa Airport",
+      "photograph2": "theRunway.jpg",
+      "alt2": "The Runway By Patrick",
+      "address": "2030 Airport Rd, Napa, CA 94558",
+      "latlng": {
+        "lat": 38.2172,
+        "lng": -122.272951
+      },
+      "cuisine_type": "American",
+      "operating_hours": {
+        "Monday": "Closed",
+        "Tuesday": "11:30 - 20:00",
+        "Wednesday": "11:30 - 20:00",
+        "Thursday": "11:30 - 20:00",
+        "Friday": "11:30 - 20:00",
+        "Saturday": "11:30 - 20:00",
+        "Sunday": "Closed"
+      },
+      "reviews": [
+        {
+          "name": "Kevin",
+          "date": "June 10, 2018",
+          "rating": 5,
+          "comments": "This place used to be called Jonesys'. My dad is a pilot, and we used to go there all the time when I was a kid. Anyway, now it is owned by Patrick. Food is still great. Beer is still great. Staff is really attentive. This is a great spot for lunch or drinks while plane spotting."
+        },
+        {
+          "name": "Jackie",
+          "date": "April 2, 2018",
+          "rating": 3,
+          "comments": "There are almost no restaurants in this business park area, so this is a welcome new addition. The food however, is pretty run of the mill, in my opinion. Simple appetizers. They really dropped the ball on my burger order. The staff was quick to offer help though. And the desserts are to die for! I will return just for the chocolate cake."
+        },
+        {
+          "name": "Marylin",
+          "date": "December 27, 2017",
+          "rating": 4,
+          "comments": "Flew in with my husband to try the restaurant that took the place of Jonesys'. The food, service, and overall atmosphere were excellent. We both enjoyed it and will perhaps become regulars as we used to be. It's a really fun place. I recommend it."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Harry",
-        "date": "June 24, 2018",
-        "rating": 5,
-        "comments": "Great service and food. Come early, as it gets very busy."
+    {
+      "id": 5,
+      "name": "Beebs's Sports Bar & Grill",
+      "neighborhood": "LVK",
+      "photograph": "lvk.jpg",
+      "alt": "T6 Texan in front of Livermore tower",
+      "photograph2": "beebs.jpg",
+      "alt2": "Bar full of alcohol",
+      "address": "680 Terminal Circle, Livermore, CA 94551",
+      "latlng": {
+        "lat": 37.696097,
+        "lng": -121.819654
       },
-      {
-        "name": "Amanda",
-        "date": "June 18, 2018",
-        "rating": 5,
-        "comments": "Been coming here for years, and have never had a bad experience. Friendly service, great view, delicious food. If the line is too long for you, just go to the take out window and get the same food in half the time."
+      "cuisine_type": "Sports Bar",
+      "operating_hours": {
+        "Monday": "06:00 - 21:00",
+        "Tuesday": "06:00 - 21:00",
+        "Wednesday": "06:00 - 21:00",
+        "Thursday": "06:00 - 21:00",
+        "Friday": "06:00 - 21:00",
+        "Saturday": "06:00 - 21:00",
+        "Sunday": "06:00 - 21:00"
       },
-      {
-        "name": "Charles",
-        "date": "June 12, 2018",
-        "rating": 5,
-        "comments": "Quintessential coastal restaurant filled with ocean tchotchke. Absolutely delicious seafood with great service in a clean establishment. The calamari is the best I've ever had. The chowder flavorful and full of clams. Food came out fairly quickly. Line up before it opens, or expect to wait."
-      },
-      {
-        "name": "Alex",
-        "date": "June 12, 2018",
-        "rating": 5,
-        "comments": "Cream of the crop fish shop on the coast. Some of the freshest seafood you'll ever have. Shrimp tasted like it was plucked out of the ocian 5 min beforehand! Plenty of tables outside where you can enjoy your meal and the view. Friendly service. An easy enjoyable walk from HAF, if you're flying in. Park at the south end of the field. There is a path that will take you to the main road. From there, maybe a ten minute walk."
-      }
-    ]
-  }, {
-    "id": 3,
-    "name": "Izzy's",
-    "neighborhood": "SQL",
-    "photograph": "sql.jpg",
-    "alt": "Night shot of a Cirrus in front of SQL tower",
-    "photograph2": "izzys.jpg",
-    "alt2": "Izzy's Steakhouse",
-    "address": "525 Skyway Rd, San Carlos, CA 94070",
-    "latlng": {
-      "lat": 37.515199,
-      "lng": -122.254452
+      "reviews": [
+        {
+          "name": "Terry",
+          "date": "June 20, 2018",
+          "rating": 4,
+          "comments": "We just love this place. The food is amazing. They have a great happy hour and are always switching up their specials. Great spot to grab a drink, sit outside and enjoy the view."
+        },
+        {
+          "name": "Raymond",
+          "date": "January 17, 2018",
+          "rating": 4,
+          "comments": "We always have a great experience when we come here. We fly in quite often, so they know us by name. It's located right at the golf course. The back patio offers a great view of the course. They are family friendly. There are tv's all over, and they have tons of local beer options."
+        },
+        {
+          "name": "Laurel",
+          "date": "November 26, 2017",
+          "rating": 4,
+          "comments": "Awesome sports bar at the LVK airport. Great food and drinks. Even better wait staff and bartenders. Will definitely return. "
+        }
+      ]
     },
-    "cuisine_type": "Steakhouse",
-    "operating_hours": {
-      "Monday": "16:00 - 22:00",
-      "Tuesday": "16:00 - 22:00",
-      "Wednesday": "16:00 - 22:00",
-      "Thursday": "16:00 - 22:00",
-      "Friday": "16:00 - 22:00",
-      "Saturday": "16:00 - 22:00",
-      "Sunday": "16:00 - 21:00"
+    {
+      "id": 6,
+      "name": "Mezzaluna",
+      "neighborhood": "HAF",
+      "photograph": "haf2.jpg",
+      "alt": "Aerial view of Half Moon Bay Airport",
+      "photograph2": "pasta.jpg",
+      "alt2": "Big bowl of pasta",
+      "address": "459 Prospect Way, Half Moon Bay, CA 94109",
+      "latlng": {
+        "lat": 37.5051,
+        "lng": -122.486836
+      },
+      "cuisine_type": "Italian",
+      "operating_hours": {
+        "Monday": "11:30 - 14:30, 17:00 - 21:30",
+        "Tuesday": "11:30 - 14:30, 17:00 - 21:30",
+        "Wednesday": "11:30 - 14:30, 17:00 - 21:30",
+        "Thursday": "11:30 - 14:30, 17:00 - 21:30",
+        "Friday": "11:30 - 14:30, 17:00 - 22:00",
+        "Saturday": "11:30 - 22:00",
+        "Sunday": "11:30 - 21:30"
+      },
+      "reviews": [
+        {
+          "name": "Wanda",
+          "date": "June 26, 2018",
+          "rating": 5,
+          "comments": "We come here about once a week. The food and service are so consistently excellent. They have nice oceanview tables. Tiramisu is amazing. Easy walk over from Half Moon Bay Airport, if you are flying in."
+        },
+        {
+          "name": "Michelle",
+          "date": "May 29, 2018",
+          "rating": 5,
+          "comments": "Overall, a great Italian restaurant right near the Half Moon Bay Airport. Servers are friendly. Food comes out quickly, and is so fresh and tasty. Make a reservation because it can be quite busy. The house Pinot is smooth and not too sweet. Highly recommended. This is my favorite place to fly into in the Bay Area."
+        },
+        {
+          "name": "Don",
+          "date": "May 13, 2018",
+          "rating": 4,
+          "comments": "A delicious family run Italian restaurant located in Half Moon Bay along the ocean. Great food at reasonable prices. Park your plane on the south side of the field and walk over in about five minutes. Totally recommend this place."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Joshua",
-        "date": "June 7, 2018",
-        "rating": 4,
-        "comments": "Service was good. Portions are huge, so try to save room for dessert, which is delicious. I deducted one star because they were slightly unorganized in dealing with our large group. Overall I still recommend it. If you have the time, there is a fantastic air museum nearby- Hiller Aviation Museum. It is an easy walk from the restaurant."
+    {
+      "id": 7,
+      "name": "Harris Ranch",
+      "neighborhood": "3O8",
+      "photograph": "harrisRanchAirport.jpg",
+      "alt": "Aerial View of Harris Ranch",
+      "photograph2": "harrisRanch.jpg",
+      "alt2": "Harris Ranch Restaurant",
+      "address": "24505 W Dorris Ave, Coalinga, CA 93210",
+      "latlng": {
+        "lat": 36.253719,
+        "lng": -120.237355
       },
-      {
-        "name": "Cameron",
-        "date": "May 20, 2018",
-        "rating": 4,
-        "comments": "Doesn't look like much from the outside, but give it a try. You'll be pleasantly surprised. They frequently offer Groupon deals, which are a great value. Service was timely and helpful. The atmosphere was lovely. They brought out a decadent chocolate cake for my girlfriend's birthday. If coming from the airport, park your aircraft in the Northwest overrun lot."
+      "cuisine_type": "Steakhouse",
+      "operating_hours": {
+        "Monday": "06:00 - 22:00",
+        "Tuesday": "06:00 - 22:00",
+        "Wednesday": "06:00 - 22:00",
+        "Thursday": "06:00 - 22:00",
+        "Friday": "06:00 - 22:00",
+        "Saturday": "06:00 - 22:00",
+        "Sunday": "06:00 - 22:00"
       },
-      {
-        "name": "Sally",
-        "date": "April 26, 2018",
-        "rating": 3,
-        "comments": "We had a groupon for their dinner- appetizer, 2 entrees, and dessert for $71. The meat very tender and flavorful. The creamed spinach and potatoes were only ok, a little oily in my opinion. The server was friendly and attentive. And our food came out quickly."
-      }
-    ]
-  }, {
-    "id": 4,
-    "name": "The Runway By Patrick",
-    "neighborhood": "APC",
-    "photograph": "apc.jpg",
-    "alt": "Aerial view of Napa Airport",
-    "photograph2": "theRunway.jpg",
-    "alt2": "The Runway By Patrick",
-    "address": "2030 Airport Rd, Napa, CA 94558",
-    "latlng": {
-      "lat": 38.2172,
-      "lng": -122.272951
+      "reviews": [
+        {
+          "name": "Nicole",
+          "date": "June 28, 2018",
+          "rating": 4,
+          "comments": "Fantastic! This place is in the middle of nowhere, but we were flying back to socal after spending a week up north, and thought we'd give it a try. We ordered the rib eye and New York steak both with the house rub. The steaks were perfectly seasoned and cooked. So flavorful. I really enjoyed it and would definitely return if in the area."
+        },
+        {
+          "name": "Gabriel",
+          "date": "June 26, 2018",
+          "rating": 5,
+          "comments": "The best steak I've ever had. You could cut it with a butter knife! Perfectly seasoned, and cooked perfectly. There is a charming little country store with some delicious treats and other fun stuff. Great place to eat in the central valley."
+        },
+        {
+          "name": "Steve",
+          "date": "March 2, 2018",
+          "rating": 4,
+          "comments": "Friendly service, amazing food. Nice ambiance. The runway is super narrow, and rather short as well. A fun dinner date spot about 90 min flight (in a cessna) from the Bay Area."
+        }
+      ]
     },
-    "cuisine_type": "American",
-    "operating_hours": {
-      "Monday": "Closed",
-      "Tuesday": "11:30 - 20:00",
-      "Wednesday": "11:30 - 20:00",
-      "Thursday": "11:30 - 20:00",
-      "Friday": "11:30 - 20:00",
-      "Saturday": "11:30 - 20:00",
-      "Sunday": "Closed"
+    {
+      "id": 8,
+      "name": "Delgada Pizza And Bakery",
+      "neighborhood": "OQ5",
+      "photograph": "shelterCove.jpg",
+      "alt": "Aerial view of Shelter Cove Airport",
+      "photograph2": "bakery.jpg",
+      "alt2": "Delicious looking baked goods",
+      "address": "205 Wave Dr, Whitehorn, CA 95589",
+      "latlng": {
+        "lat": 40.034627,
+        "lng": -124.078429
+      },
+      "cuisine_type": "Pizza / Bakery",
+      "operating_hours": {
+        "Monday": "16:00 - 21:00",
+        "Tuesday": "16:00 - 21:00",
+        "Wednesday": "16:00 - 21:00",
+        "Thursday": "16:00 - 21:00",
+        "Friday": "16:00 - 21:00",
+        "Saturday": "16:00 - 21:00",
+        "Sunday": "16:00 - 21:00"
+      },
+      "reviews": [
+        {
+          "name": "Ava",
+          "date": "May 13, 2018",
+          "rating": 5,
+          "comments": "Delgada has excellent pizza, ice cream, and beer/whine. Be aware the airport does not offer fuel, nor does it offer instrument proceedures. Alternates in the area (within 60 nm) would be KEKA, KFOT, KAVC. Gorgeous fly in!!! Just be prepared in case you have to wait out the fog."
+        },
+        {
+          "name": "Loren",
+          "date": "April 6, 2018",
+          "rating": 4,
+          "comments": "The pizza is ok. The bakery items are delicious! Fly in, go for a hike. Enjoy the view. Grab something to eat in this tiny, charming cafe."
+        },
+        {
+          "name": "John",
+          "date": "October 26, 2017",
+          "rating": 4,
+          "comments": "We've wanted to come to Shelter Cove for ages. It's a bit challenging with the fog, as this airport is not ifr equipped. But we finally made it! Just the most beautiful setting you could imagine. We had the pizza here at Delgada's. Tons of options. Bountiful toppings, perfect crust. Hope the weather cooperates for a return visit."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Kevin",
-        "date": "June 10, 2018",
-        "rating": 5,
-        "comments": "This place used to be called Jonesys'. My dad is a pilot, and we used to go there all the time when I was a kid. Anyway, now it is owned by Patrick. Food is still great. Beer is still great. Staff is really attentive. This is a great spot for lunch or drinks while plane spotting."
+    {
+      "id": 9,
+      "name": "Ella's At The Airport",
+      "neighborhood": "WVI",
+      "photograph": "wvi.jpg",
+      "alt": "Aerial view of Watsonville Airport",
+      "photograph2": "ellas.jpg",
+      "alt2": "Cafe Ella",
+      "address": "100 Aviation Way, Watsonville, CA 95076",
+      "latlng": {
+        "lat": 36.934189,
+        "lng": -121.788025
       },
-      {
-        "name": "Jackie",
-        "date": "April 2, 2018",
-        "rating": 3,
-        "comments": "There are almost no restaurants in this business park area, so this is a welcome new addition. The food however, is pretty run of the mill, in my opinion. Simple appetizers. They really dropped the ball on my burger order. The staff was quick to offer help though. And the desserts are to die for! I will return just for the chocolate cake."
+      "cuisine_type": "Italian",
+      "operating_hours": {
+        "Monday": "Closed",
+        "Tuesday": "11:00 - 21:00",
+        "Wednesday": "11:00 - 21:00",
+        "Thursday": "11:00 - 21:00",
+        "Friday": "11:00 - 22:00",
+        "Saturday": "11:00 - 22:00",
+        "Sunday": "11:00 - 21:00"
       },
-      {
-        "name": "Marylin",
-        "date": "December 27, 2017",
-        "rating": 4,
-        "comments": "Flew in with my husband to try the restaurant that took the place of Jonesys'. The food, service, and overall atmosphere were excellent. We both enjoyed it and will perhaps become regulars as we used to be. It's a really fun place. I recommend it."
-      }
-    ]
-  }, {
-    "id": 5,
-    "name": "Beebs's Sports Bar & Grill",
-    "neighborhood": "LVK",
-    "photograph": "lvk.jpg",
-    "alt": "T6 Texan in front of Livermore tower",
-    "photograph2": "beebs.jpg",
-    "alt2": "Bar full of alcohol",
-    "address": "680 Terminal Circle, Livermore, CA 94551",
-    "latlng": {
-      "lat": 37.696097,
-      "lng": -121.819654
+      "reviews": [
+        {
+          "name": "Kyle",
+          "date": "June 16, 2018",
+          "rating": 4,
+          "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+        },
+        {
+          "name": "Brittany",
+          "date": "June 1, 2018",
+          "rating": 4,
+          "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+        },
+        {
+          "name": "Kenneth",
+          "date": "May 26, 2018",
+          "rating": 3,
+          "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+        }
+      ]
     },
-    "cuisine_type": "Sports Bar",
-    "operating_hours": {
-      "Monday": "06:00 - 21:00",
-      "Tuesday": "06:00 - 21:00",
-      "Wednesday": "06:00 - 21:00",
-      "Thursday": "06:00 - 21:00",
-      "Friday": "06:00 - 21:00",
-      "Saturday": "06:00 - 21:00",
-      "Sunday": "06:00 - 21:00"
+    {
+      "id": 10,
+      "name": "Sky Lounge",
+      "neighborhood": "STS",
+      "photograph": "sts2.jpg",
+      "alt": "Aerial view of Santa Rosa Airport",
+      "photograph2": "stsSushi.jpg",
+      "alt2": "Sushi",
+      "address": "2200 Airport Blvd, Santa Rosa, CA 95403",
+      "latlng": {
+        "lat": 38.510346,
+        "lng": -122.805648
+      },
+      "cuisine_type": "Steakhouse / Sushi Bar",
+      "operating_hours": {
+        "Monday": "08:00 - 21:00",
+        "Tuesday": "08:00 - 21:00",
+        "Wednesday": "08:00 - 21:00",
+        "Thursday": "08:00 - 21:00",
+        "Friday": "08:00 - 21:00",
+        "Saturday": "08:00 - 21:00",
+        "Sunday": "08:00 - 21:00"
+      },
+      "reviews": [
+        {
+          "name": "Mike",
+          "date": "June 25, 2018",
+          "rating": 5,
+          "comments": "Sushi at the airport? Delicious, and so fresh! The staff was great, asking if we were flying out and would need our food quickly. Very accommodating. Being smack in the middle of wine country, they also have some fine wines to choose from. Go, relax, and enjoy your meal before flying out."
+        },
+        {
+          "name": "Rob",
+          "date": "May 21, 2018",
+          "rating": 4,
+          "comments": "We flew in for the sushi, which I highly recommend! We love to fly in, order some food and sit out on the patio and do some plane spotting. Service is always great."
+        },
+        {
+          "name": "Kelly",
+          "date": "May 4, 2018",
+          "rating": 3,
+          "comments": "Hubby loves the sushi here. I'm not really a seafood person, so I wouldn't know, but the meatball sandwhich was delicious! Service is prompt and friendly. Would come again."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Terry",
-        "date": "June 20, 2018",
-        "rating": 4,
-        "comments": "We just love this place. The food is amazing. They have a great happy hour and are always switching up their specials. Great spot to grab a drink, sit outside and enjoy the view."
+    {
+      "id": 11,
+      "name": "3-Zero Cafe",
+      "neighborhood": "HAF",
+      "photograph": "haf3.jpg",
+      "alt": "Collage of Half Moon Bay Images",
+      "photograph2": "haf3.jpg",
+      "alt2": "3-Zero Cafe",
+      "address": "9850 Cabrillo Hwy, Half Moon Bay, CA 94019",
+      "latlng": {
+        "lat": 37.514107,
+        "lng": -122.495126
       },
-      {
-        "name": "Raymond",
-        "date": "January 17, 2018",
-        "rating": 4,
-        "comments": "We always have a great experience when we come here. We fly in quite often, so they know us by name. It's located right at the golf course. The back patio offers a great view of the course. They are family friendly. There are tv's all over, and they have tons of local beer options."
+      "cuisine_type": "American",
+      "operating_hours": {
+        "Monday": "08:00 - 14:00",
+        "Tuesday": "08:00 - 14:00",
+        "Wednesday": "08:00 - 14:00",
+        "Thursday": "08:00 - 14:00",
+        "Friday": "08:00 - 14:00",
+        "Saturday": "07:00 - 14:00",
+        "Sunday": "07:00 - 14:00"
       },
-      {
-        "name": "Laurel",
-        "date": "November 26, 2017",
-        "rating": 4,
-        "comments": "Awesome sports bar at the LVK airport. Great food and drinks. Even better wait staff and bartenders. Will definitely return. "
-      }
-    ]
-  }, {
-    "id": 6,
-    "name": "Mezzaluna",
-    "neighborhood": "HAF",
-    "photograph": "haf2.jpg",
-    "alt": "Aerial view of Half Moon Bay Airport",
-    "photograph2": "pasta.jpg",
-    "alt2": "Big bowl of pasta",
-    "address": "459 Prospect Way, Half Moon Bay, CA 94109",
-    "latlng": {
-      "lat": 37.5051,
-      "lng": -122.486836
+      "reviews": [
+        {
+          "name": "Christopher",
+          "date": "July 1, 2018",
+          "rating": 4,
+          "comments": "Solid place for breakfast. Great scenery. Many pilots fly in to eat here, and they park their plane just feet away from the entrance to the restaurant. So sit outside on a sunny day, and enjoy the view."
+        },
+        {
+          "name": "Sean",
+          "date": "June 19, 2018",
+          "rating": 4,
+          "comments": "Pretty good food. Friendly staff. Nice place to fly in for breakfast or lunch."
+        },
+        {
+          "name": "Andrea",
+          "date": "May 26, 2018",
+          "rating": 3,
+          "comments": "Great place for breakfast, good coffee. Fun decor- aviation and local history memorabilia. It is attached to the airport, so you might see planes taking off/landing just outside."
+        }
+      ]
     },
-    "cuisine_type": "Italian",
-    "operating_hours": {
-      "Monday": "11:30 - 14:30, 17:00 - 21:30",
-      "Tuesday": "11:30 - 14:30, 17:00 - 21:30",
-      "Wednesday": "11:30 - 14:30, 17:00 - 21:30",
-      "Thursday": "11:30 - 14:30, 17:00 - 21:30",
-      "Friday": "11:30 - 14:30, 17:00 - 22:00",
-      "Saturday": "11:30 - 22:00",
-      "Sunday": "11:30 - 21:30"
+    {
+      "id": 12,
+      "name": "Joe's One-Niner Diner",
+      "neighborhood": "PRB",
+      "photograph": "pasoRobles.jpg",
+      "alt": "Aerial view of Paso Robles Airport",
+      "photograph2": "pasoRoblesPancakes.jpg",
+      "alt2": "Stack of pancakes",
+      "address": "4912 Wing Way, Paso Robles, CA 93446",
+      "latlng": {
+        "lat": 35.672001,
+        "lng": -120.637921
+      },
+      "cuisine_type": "Diner",
+      "operating_hours": {
+        "Monday": "06:00 - 14:00",
+        "Tuesday": "06:00 - 14:00",
+        "Wednesday": "06:00 - 14:00",
+        "Thursday": "06:00 - 14:00",
+        "Friday": "06:00 - 14:00",
+        "Saturday": "06:00 - 14:00",
+        "Sunday": "07:00 - 14:00"
+      },
+      "reviews": [
+        {
+          "name": "Cynthia",
+          "date": "July 2, 2018",
+          "rating": 4,
+          "comments": "Menu is standard diner fare. Come hungry- portions are huge. Food came out quickly. Service is always friendly."
+        },
+        {
+          "name": "Zuil",
+          "date": "July 3, 2018",
+          "rating": 4,
+          "comments": "We've been regulars here for years. They never disappoint. Awesome Reuben sandwhich!  Cute aviation theme, which is to be expected. Reasonable prices"
+        },
+        {
+          "name": "Charles",
+          "date": "June 32, 2018",
+          "rating": 3,
+          "comments": "Awesome place! A+ service, not loud, food is AWESOME. Eat here before you hit the wineries. We'll be back for sure."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Wanda",
-        "date": "June 26, 2018",
-        "rating": 5,
-        "comments": "We come here about once a week. The food and service are so consistently excellent. They have nice oceanview tables. Tiramisu is amazing. Easy walk over from Half Moon Bay Airport, if you are flying in."
+    {
+      "id": 13,
+      "name": "Raja Indian Cuisine",
+      "neighborhood": "HWD",
+      "photograph": "hwd.jpg",
+      "alt": "Nice plane in front of Hayward tower",
+      "photograph2": "hwdIndian.jpg",
+      "alt2": "Indian food",
+      "address": "1275 West Winton Ave, Hayward, CA 94545",
+      "latlng": {
+        "lat": 37.653456,
+        "lng": -122.115179
       },
-      {
-        "name": "Michelle",
-        "date": "May 29, 2018",
-        "rating": 5,
-        "comments": "Overall, a great Italian restaurant right near the Half Moon Bay Airport. Servers are friendly. Food comes out quickly, and is so fresh and tasty. Make a reservation because it can be quite busy. The house Pinot is smooth and not too sweet. Highly recommended. This is my favorite place to fly into in the Bay Area."
+      "cuisine_type": "Indian",
+      "operating_hours": {
+        "Monday": "Closed",
+        "Tuesday": "10:30 - 21:00",
+        "Wednesday": "10:30 - 21:00",
+        "Thursday": "10:30 - 21:00",
+        "Friday": "10:30 - 21:00",
+        "Saturday": "10:30 - 21:00",
+        "Sunday": "10:30 - 21:00"
       },
-      {
-        "name": "Don",
-        "date": "May 13, 2018",
-        "rating": 4,
-        "comments": "A delicious family run Italian restaurant located in Half Moon Bay along the ocean. Great food at reasonable prices. Park your plane on the south side of the field and walk over in about five minutes. Totally recommend this place."
-      }
-    ]
-  }, {
-    "id": 7,
-    "name": "Harris Ranch",
-    "neighborhood": "3O8",
-    "photograph": "harrisRanchAirport.jpg",
-    "alt": "Aerial View of Harris Ranch",
-    "photograph2": "harrisRanch.jpg",
-    "alt2": "Harris Ranch Restaurant",
-    "address": "24505 W Dorris Ave, Coalinga, CA 93210",
-    "latlng": {
-      "lat": 36.253719,
-      "lng": -120.237355
+      "reviews": [
+        {
+          "name": "Matt",
+          "date": "July 2, 2018",
+          "rating": 5,
+          "comments": "Wow, the food is amazing! Best Indian restaurant in the bay area! I found out they cater, and host a lot of events, just fyi. I definitely recommend them! Just outstanding food."
+        },
+        {
+          "name": "Preethi",
+          "date": "June 8, 2018",
+          "rating": 5,
+          "comments": "Flew into HWD and came here for an engagement party. The decor was very pretty. Staff was attentive and friendly. The food though! Just amazing! Will definitely return."
+        },
+        {
+          "name": "Erica",
+          "date": "June 20, 2018",
+          "rating": 5,
+          "comments": "Great Indian food and impeccable service. Even the chef came out and greated us. We accidentally discovered this place after flying in, and I'm so glad we gave it a shot. Will definitely recommend to those in the general aviation community to eat here when flying into HWD."
+        }
+      ]
     },
-    "cuisine_type": "Steakhouse",
-    "operating_hours": {
-      "Monday": "06:00 - 22:00",
-      "Tuesday": "06:00 - 22:00",
-      "Wednesday": "06:00 - 22:00",
-      "Thursday": "06:00 - 22:00",
-      "Friday": "06:00 - 22:00",
-      "Saturday": "06:00 - 22:00",
-      "Sunday": "06:00 - 22:00"
+    {
+      "id": 14,
+      "name": "Flying Artichoke",
+      "neighborhood": "SNS",
+      "photograph": "salinas.jpg",
+      "alt": "Aerial view of Salinas Airport",
+      "photograph2": "salinasBurger.jpg",
+      "alt2": "Hamburger and Fries",
+      "address": "40 Mortensen Ave, Salinas, CA 93905",
+      "latlng": {
+        "lat": 36.665479,
+        "lng": -121.612643
+      },
+      "cuisine_type": "American",
+      "operating_hours": {
+        "Monday": "08:00 - 15:00",
+        "Tuesday": "08:00 - 15:00",
+        "Wednesday": "08:00 - 15:00",
+        "Thursday": "08:00 - 15:00",
+        "Friday": "08:00 - 15:00",
+        "Saturday": "08:00 - 15:00",
+        "Sunday": "Closed"
+      },
+      "reviews": [
+        {
+          "name": "Kyle",
+          "date": "June 16, 2018",
+          "rating": 4,
+          "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+        },
+        {
+          "name": "Brittany",
+          "date": "June 1, 2018",
+          "rating": 4,
+          "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+        },
+        {
+          "name": "Kenneth",
+          "date": "May 26, 2018",
+          "rating": 3,
+          "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+        }
+      ]
     },
-    "reviews": [{
-        "name": "Nicole",
-        "date": "June 28, 2018",
-        "rating": 4,
-        "comments": "Fantastic! This place is in the middle of nowhere, but we were flying back to socal after spending a week up north, and thought we'd give it a try. We ordered the rib eye and New York steak both with the house rub. The steaks were perfectly seasoned and cooked. So flavorful. I really enjoyed it and would definitely return if in the area."
+    {
+      "id": 15,
+      "name": "Two Niner Diner",
+      "neighborhood": "O69",
+      "photograph": "petaluma.jpg",
+      "alt": "Cute dog in front of nice plane Petaluma Airport",
+      "photograph2": "petalumaRestaurant.jpg",
+      "alt2": "Two Niner Diner Interior",
+      "address": "561 Sky Ranch Dr. #A, Petaluma, CA 94954",
+      "latlng": {
+        "lat": 38.259301,
+        "lng": -122.614113
       },
-      {
-        "name": "Gabriel",
-        "date": "June 26, 2018",
-        "rating": 5,
-        "comments": "The best steak I've ever had. You could cut it with a butter knife! Perfectly seasoned, and cooked perfectly. There is a charming little country store with some delicious treats and other fun stuff. Great place to eat in the central valley."
+      "cuisine_type": "Diner",
+      "operating_hours": {
+        "Monday": "Closed",
+        "Tuesday": "Closed",
+        "Wednesday": "08:30 - 15:00",
+        "Thursday": "08:30 - 15:00",
+        "Friday": "08:30 - 15:00",
+        "Saturday": "08:30 - 15:00",
+        "Sunday": "08:30 - 15:00"
       },
-      {
-        "name": "Steve",
-        "date": "March 2, 2018",
-        "rating": 4,
-        "comments": "Friendly service, amazing food. Nice ambiance. The runway is super narrow, and rather short as well. A fun dinner date spot about 90 min flight (in a cessna) from the Bay Area."
-      }
-    ]
-  }, {
-    "id": 8,
-    "name": "Delgada Pizza And Bakery",
-    "neighborhood": "OQ5",
-    "photograph": "shelterCove.jpg",
-    "alt": "Aerial view of Shelter Cove Airport",
-    "photograph2": "bakery.jpg",
-    "alt2": "Delicious looking baked goods",
-    "address": "205 Wave Dr, Whitehorn, CA 95589",
-    "latlng": {
-      "lat": 40.034627,
-      "lng": -124.078429
-    },
-    "cuisine_type": "Pizza / Bakery",
-    "operating_hours": {
-      "Monday": "16:00 - 21:00",
-      "Tuesday": "16:00 - 21:00",
-      "Wednesday": "16:00 - 21:00",
-      "Thursday": "16:00 - 21:00",
-      "Friday": "16:00 - 21:00",
-      "Saturday": "16:00 - 21:00",
-      "Sunday": "16:00 - 21:00"
-    },
-    "reviews": [{
-        "name": "Ava",
-        "date": "May 13, 2018",
-        "rating": 5,
-        "comments": "Delgada has excellent pizza, ice cream, and beer/whine. Be aware the airport does not offer fuel, nor does it offer instrument proceedures. Alternates in the area (within 60 nm) would be KEKA, KFOT, KAVC. Gorgeous fly in!!! Just be prepared in case you have to wait out the fog."
-      },
-      {
-        "name": "Loren",
-        "date": "April 6, 2018",
-        "rating": 4,
-        "comments": "The pizza is ok. The bakery items are delicious! Fly in, go for a hike. Enjoy the view. Grab something to eat in this tiny, charming cafe."
-      },
-      {
-        "name": "John",
-        "date": "October 26, 2017",
-        "rating": 4,
-        "comments": "We've wanted to come to Shelter Cove for ages. It's a bit challenging with the fog, as this airport is not ifr equipped. But we finally made it! Just the most beautiful setting you could imagine. We had the pizza here at Delgada's. Tons of options. Bountiful toppings, perfect crust. Hope the weather cooperates for a return visit."
-      }
-    ]
-  }, {
-    "id": 9,
-    "name": "Ella's At The Airport",
-    "neighborhood": "WVI",
-    "photograph": "wvi.jpg",
-    "alt": "Aerial view of Watsonville Airport",
-    "photograph2": "ellas.jpg",
-    "alt2": "Cafe Ella",
-    "address": "100 Aviation Way, Watsonville, CA 95076",
-    "latlng": {
-      "lat": 36.934189,
-      "lng": -121.788025
-    },
-    "cuisine_type": "Italian",
-    "operating_hours": {
-      "Monday": "Closed",
-      "Tuesday": "11:00 - 21:00",
-      "Wednesday": "11:00 - 21:00",
-      "Thursday": "11:00 - 21:00",
-      "Friday": "11:00 - 22:00",
-      "Saturday": "11:00 - 22:00",
-      "Sunday": "11:00 - 21:00"
-    },
-    "reviews": [{
-        "name": "Kyle",
-        "date": "June 16, 2018",
-        "rating": 4,
-        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
-      },
-      {
-        "name": "Brittany",
-        "date": "June 1, 2018",
-        "rating": 4,
-        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
-      },
-      {
-        "name": "Kenneth",
-        "date": "May 26, 2018",
-        "rating": 3,
-        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
-      }
-    ]
-  }, {
-    "id": 10,
-    "name": "Sky Lounge",
-    "neighborhood": "STS",
-    "photograph": "sts2.jpg",
-    "alt": "Aerial view of Santa Rosa Airport",
-    "photograph2": "stsSushi.jpg",
-    "alt2": "Sushi",
-    "address": "2200 Airport Blvd, Santa Rosa, CA 95403",
-    "latlng": {
-      "lat": 38.510346,
-      "lng": -122.805648
-    },
-    "cuisine_type": "Steakhouse / Sushi Bar",
-    "operating_hours": {
-      "Monday": "08:00 - 21:00",
-      "Tuesday": "08:00 - 21:00",
-      "Wednesday": "08:00 - 21:00",
-      "Thursday": "08:00 - 21:00",
-      "Friday": "08:00 - 21:00",
-      "Saturday": "08:00 - 21:00",
-      "Sunday": "08:00 - 21:00"
-    },
-    "reviews": [{
-        "name": "Mike",
-        "date": "June 25, 2018",
-        "rating": 5,
-        "comments": "Sushi at the airport? Delicious, and so fresh! The staff was great, asking if we were flying out and would need our food quickly. Very accommodating. Being smack in the middle of wine country, they also have some fine wines to choose from. Go, relax, and enjoy your meal before flying out."
-      },
-      {
-        "name": "Rob",
-        "date": "May 21, 2018",
-        "rating": 4,
-        "comments": "We flew in for the sushi, which I highly recommend! We love to fly in, order some food and sit out on the patio and do some plane spotting. Service is always great."
-      },
-      {
-        "name": "Kelly",
-        "date": "May 4, 2018",
-        "rating": 3,
-        "comments": "Hubby loves the sushi here. I'm not really a seafood person, so I wouldn't know, but the meatball sandwhich was delicious! Service is prompt and friendly. Would come again."
-      }
-    ]
-  }, {
-    "id": 11,
-    "name": "3-Zero Cafe",
-    "neighborhood": "HAF",
-    "photograph": "haf3.jpg",
-    "alt": "Collage of Half Moon Bay Images",
-    "photograph2": "abundantAirCafe.jpg",
-    "alt2": "Abundant Air Cafe",
-    "address": "9850 Cabrillo Hwy, Half Moon Bay, CA 94019",
-    "latlng": {
-      "lat": 37.514107,
-      "lng": -122.495126
-    },
-    "cuisine_type": "American",
-    "operating_hours": {
-      "Monday": "08:00 - 14:00",
-      "Tuesday": "08:00 - 14:00",
-      "Wednesday": "08:00 - 14:00",
-      "Thursday": "08:00 - 14:00",
-      "Friday": "08:00 - 14:00",
-      "Saturday": "07:00 - 14:00",
-      "Sunday": "07:00 - 14:00"
-    },
-    "reviews": [{
-        "name": "Christopher",
-        "date": "July 1, 2018",
-        "rating": 4,
-        "comments": "Solid place for breakfast. Great scenery. Many pilots fly in to eat here, and they park their plane just feet away from the entrance to the restaurant. So sit outside on a sunny day, and enjoy the view."
-      },
-      {
-        "name": "Sean",
-        "date": "June 19, 2018",
-        "rating": 4,
-        "comments": "Pretty good food. Friendly staff. Nice place to fly in for breakfast or lunch."
-      },
-      {
-        "name": "Andrea",
-        "date": "May 26, 2018",
-        "rating": 3,
-        "comments": "Great place for breakfast, good coffee. Fun decor- aviation and local history memorabilia. It is attached to the airport, so you might see planes taking off/landing just outside."
-      }
-    ]
-  }, {
-    "id": 12,
-    "name": "Joe's One-Niner Diner",
-    "neighborhood": "PRB",
-    "photograph": "pasoRobles.jpg",
-    "alt": "Aerial view of Paso Robles Airport",
-    "photograph2": "pasoRoblesPancakes.jpg",
-    "alt2": "Stack of pancakes",
-    "address": "4912 Wing Way, Paso Robles, CA 93446",
-    "latlng": {
-      "lat": 35.672001,
-      "lng": -120.637921
-    },
-    "cuisine_type": "Diner",
-    "operating_hours": {
-      "Monday": "06:00 - 14:00",
-      "Tuesday": "06:00 - 14:00",
-      "Wednesday": "06:00 - 14:00",
-      "Thursday": "06:00 - 14:00",
-      "Friday": "06:00 - 14:00",
-      "Saturday": "06:00 - 14:00",
-      "Sunday": "07:00 - 14:00"
-    },
-    "reviews": [{
-        "name": "Cynthia",
-        "date": "July 2, 2018",
-        "rating": 4,
-        "comments": "Menu is standard diner fare. Come hungry- portions are huge. Food came out quickly. Service is always friendly."
-      },
-      {
-        "name": "Zuil",
-        "date": "July 3, 2018",
-        "rating": 4,
-        "comments": "We've been regulars here for years. They never disappoint. Awesome Reuben sandwhich!  Cute aviation theme, which is to be expected. Reasonable prices"
-      },
-      {
-        "name": "Charles",
-        "date": "June 32, 2018",
-        "rating": 3,
-        "comments": "Awesome place! A+ service, not loud, food is AWESOME. Eat here before you hit the wineries. We'll be back for sure."
-      }
-    ]
-  }, {
-    "id": 13,
-    "name": "Raja Indian Cuisine",
-    "neighborhood": "HWD",
-    "photograph": "hwd.jpg",
-    "alt": "Nice plane in front of Hayward tower",
-    "photograph2": "hwdIndian.jpg",
-    "alt2": "Indian food",
-    "address": "1275 West Winton Ave, Hayward, CA 94545",
-    "latlng": {
-      "lat": 37.653456,
-      "lng": -122.115179
-    },
-    "cuisine_type": "Indian",
-    "operating_hours": {
-      "Monday": "Closed",
-      "Tuesday": "10:30 - 21:00",
-      "Wednesday": "10:30 - 21:00",
-      "Thursday": "10:30 - 21:00",
-      "Friday": "10:30 - 21:00",
-      "Saturday": "10:30 - 21:00",
-      "Sunday": "10:30 - 21:00"
-    },
-    "reviews": [{
-        "name": "Matt",
-        "date": "July 2, 2018",
-        "rating": 5,
-        "comments": "Wow, the food is amazing! Best Indian restaurant in the bay area! I found out they cater, and host a lot of events, just fyi. I definitely recommend them! Just outstanding food."
-      },
-      {
-        "name": "Preethi",
-        "date": "June 8, 2018",
-        "rating": 5,
-        "comments": "Flew into HWD and came here for an engagement party. The decor was very pretty. Staff was attentive and friendly. The food though! Just amazing! Will definitely return."
-      },
-      {
-        "name": "Erica",
-        "date": "June 20, 2018",
-        "rating": 5,
-        "comments": "Great Indian food and impeccable service. Even the chef came out and greated us. We accidentally discovered this place after flying in, and I'm so glad we gave it a shot. Will definitely recommend to those in the general aviation community to eat here when flying into HWD."
-      }
-    ]
-  }, {
-    "id": 14,
-    "name": "Flying Artichoke",
-    "neighborhood": "SNS",
-    "photograph": "salinas.jpg",
-    "alt": "Aerial view of Salinas Airport",
-    "photograph2": "salinasBurger.jpg",
-    "alt2": "Hamburger and Fries",
-    "address": "40 Mortensen Ave, Salinas, CA 93905",
-    "latlng": {
-      "lat": 36.665479,
-      "lng": -121.612643
-    },
-    "cuisine_type": "American",
-    "operating_hours": {
-      "Monday": "08:00 - 15:00",
-      "Tuesday": "08:00 - 15:00",
-      "Wednesday": "08:00 - 15:00",
-      "Thursday": "08:00 - 15:00",
-      "Friday": "08:00 - 15:00",
-      "Saturday": "08:00 - 15:00",
-      "Sunday": "Closed"
-    },
-    "reviews": [{
-        "name": "Kyle",
-        "date": "June 16, 2018",
-        "rating": 4,
-        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
-      },
-      {
-        "name": "Brittany",
-        "date": "June 1, 2018",
-        "rating": 4,
-        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
-      },
-      {
-        "name": "Kenneth",
-        "date": "May 26, 2018",
-        "rating": 3,
-        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
-      }
-    ]
-  }, {
-    "id": 15,
-    "name": "Two Niner Diner",
-    "neighborhood": "O69",
-    "photograph": "petaluma.jpg",
-    "alt": "Cute dog in front of nice plane Petaluma Airport",
-    "photograph2": "petalumaRestaurant.jpg",
-    "alt2": "Two Niner Diner Interior",
-    "address": "561 Sky Ranch Dr. #A, Petaluma, CA 94954",
-    "latlng": {
-      "lat": 38.259301,
-      "lng": -122.614113
-    },
-    "cuisine_type": "Diner",
-    "operating_hours": {
-      "Monday": "Closed",
-      "Tuesday": "Closed",
-      "Wednesday": "08:30 - 15:00",
-      "Thursday": "08:30 - 15:00",
-      "Friday": "08:30 - 15:00",
-      "Saturday": "08:30 - 15:00",
-      "Sunday": "08:30 - 15:00"
-    },
-    "reviews": [{
-        "name": "Kyle",
-        "date": "June 16, 2018",
-        "rating": 4,
-        "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
-      },
-      {
-        "name": "Brittany",
-        "date": "June 1, 2018",
-        "rating": 4,
-        "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
-      },
-      {
-        "name": "Kenneth",
-        "date": "May 26, 2018",
-        "rating": 3,
-        "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
-      }
-    ]
-  }]
+      "reviews": [
+        {
+          "name": "Kyle",
+          "date": "June 16, 2018",
+          "rating": 4,
+          "comments": "Friendly and polite service. Flavorful and delicious food. Good drinks too. Watching the planes come and go is a fun backdrop."
+        },
+        {
+          "name": "Brittany",
+          "date": "June 1, 2018",
+          "rating": 4,
+          "comments": "Flew in with the hubby and decided to grab a bite to eat. It's very cozy and small. Amazing service. The food was pretty good, though perhaps overly seasoned. Dogs are welcome on the patio outside."
+        },
+        {
+          "name": "Kenneth",
+          "date": "May 26, 2018",
+          "rating": 3,
+          "comments": "Pretty good food and service. We had breakfast on a Saturday morning. It's a fun atmosphere and nice spot for plane spotting."
+        }
+      ]
+    }
+  ]
 }
